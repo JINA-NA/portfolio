@@ -15,16 +15,19 @@
 #headBox {width: 100%; height: 68px; background-color: #777;}
 .head_area {padding-top: 10px;}
   h1 {float: left; width: 96px; height: 50px;  background-color: #fff;} 
-  .gnb {float: right; width: 374px; height: 22px;}
+  .gnb {float: right; width: 374px; height: 22px; margin-top: 10px;}
     .gnb>ul {width: 100%; height: 22px; }
-    .gnb>ul >li {float:left; width: 90px; height: 100%; margin-right: 1px; border-right: 3px solid #111;}
+    .gnb>ul >li {float:left; width: 90px; height: 100%; margin-right: 1px; border-right: 2px solid #fff;}
     .gnb>ul >li:last-child {margin-right: 0; border-right: none;}
     
-    .gnb dl {width: 100%; height: auto; background-color: #fff;}  
-    .gnb dt {background-color: #fa1234; text-align: center;}  
-    .gnb dt>a {display: inline-block; background-color: #456;}  
-    .gnb dd {background-color: #aef111; text-align: center;}  
-    .gnb dd a {display: inline-block; }  
+    .gnb dl {width: 100%; height: auto;}  
+    .gnb dt {width: 100%; height: 30px; padding-top: 4px; box-sizing: border-box; text-align: center; font-size: 1rem;  color: #fff; font-weight: bold;}  
+    .gnb dd {display: none; width: 100%; background-color: #aef111; text-align: center; font-size: 1rem; }  
+    .gnb dd a {display: inline-block; width: 100%; height: 40px; padding: 4px 0; line-height: 30px;}  
+
+    .gnb ul:hover dd {display: block;}
+    .gnb dd a:hover {color: #fff;}
+
 
 
 /* #viewBox */
@@ -60,6 +63,11 @@
 
 /* #footBox */
 #footBox {width: 100%; height: 250px; background-color: #777;}
+  .cs_num {width: 100%; height: 35px; padding-top: 8px; background-color: #666;}
+    .cs_num p {float: left; margin: auto; text-align: center;}
+  .sns_zone {width: 100%; height: 60px; background-color: #555;}
+  .company_info {width: 100%; height: 66px; background-color: #666;}
+
 
 /* #quickBox */
 #quickBox {display: none; width: 50px; height: 160px; background-color: #666;}
