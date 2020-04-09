@@ -14,7 +14,7 @@
 /* #headBox */
 
 /* #contBox */
-#contBox {width: 100%; height: auto; background-color: #eee;}
+#contBox {width: 100%; height: auto;}
   .cont_area {padding-top: 68px; margin-bottom: 30px;}
     .detail_summary {width: 780px; height: 390px; margin: auto;}
       .summary_img {float: left; width: 380px; height: 100%; background-color: #ccc;}

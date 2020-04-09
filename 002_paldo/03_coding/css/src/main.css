@@ -17,9 +17,9 @@
 /* #viewBox */
 #viewBox {position: relative; width: 100%; height: 550px; background-color: #666;}
   .view_cont {position: absolute; top: 30%; left: 50%; margin-left: -200px; width: 400px; height: 205px;}
-    .view_title {width: 400px; height: 24px; margin-bottom: 12px; background-color: #999; text-align: center;}
-    .view_subtitle {width: 400px; height: 110px; margin-bottom: 23px;  background-color: #999;}
-    .view_more {width: 110px; height: 36px; margin: auto; padding-top: 6px; box-sizing: border-box; background-color: #999; text-align: center;}
+    .view_title {width: 400px; height: 24px; margin-bottom: 12px; text-align: center;}
+    .view_subtitle {width: 400px; height: 110px; margin-bottom: 23px; text-align: center;}
+    .view_more {width: 110px; height: 36px; margin: auto; padding-top: 6px; box-sizing: border-box; background-color: #eee;text-align: center;}
 
 
 /* #categoryBox */
