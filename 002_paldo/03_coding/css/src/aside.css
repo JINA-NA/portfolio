@@ -1,0 +1,8 @@
+/* #quickBox */
+
+#quickBox {position: fixed; top: 20%; left: 88.7%; width: 80px; height: 242px; background-color: #666;}
+  .quick_part {width: 80px; height: 80px; margin-bottom: 6px; background-color: #999;}
+  .quick_part:last-child {margin-bottom: 0;}
+
+  .quick_img {width: 100%; height: 60px; background-color: #888;} 
+  .quick_part p {width: 100%; height: 20px; font-size: 0.8rem; text-align: center;}

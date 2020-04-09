@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* product_detail.css */
+
+/* 공통적인 속성들 =============================== */
+/* full */
+.full_area {width: 940px; height: auto; min-height: 100px; margin: auto; box-sizing: border-box;}
+
+
+/* #wrap */
+#wrap {width: 1200px; height: auto; min-height: 500px; margin: auto;}
+
+
+/* 개별적인 속성들 =============================== */
+/* #headBox */
+
+/* #contBox */
+#contBox {width: 100%; height: auto; background-color: #eee;}
+  .cont_area {padding-top: 68px; margin-bottom: 30px;}
+    .detail_summary {width: 780px; height: 390px; margin: auto;}
+      .summary_img {float: left; width: 380px; height: 100%; background-color: #ccc;}
+      .summary_text {float: left; width: 340px; height: 100%; margin-left: 60px; }
+        .badge {width: 44px; height: 22px; padding-left: 6px; box-sizing: border-box; background-color: #f54b42; font-size: 1rem;}
+        .name {width: 100%; height: 30px; margin: 9px 0; font-weight: bold; font-size: 1.375rem;}
+        .description {width: 100%; height: 16px; margin-bottom: 9px; font-size: 0.5625rem;}
+        .nutrient {width: 100%; height: 11px; border-top: 1px solid #fff; padding-top: 14px; font-size: 0.5625rem;}
+            .nutrient_title {margin-bottom: 5px;}
+            .nutrient_cont {}
+              .nutrient_cont dl {float: left; width: 111px; height: 24px; border: 1px solid #888; background-color: #eee;}
+              .nutrient_cont dt {float: left; padding: 4px 3px;}
+              .nutrient_cont dd {float: left; padding: 4px 0px;}
+        .more_img {width: 100%; height: 80px; margin-top: 189px; background-color: #ddd;}
+        .more_img div {float: left; width: 80px; height: 80px; margin-right: 10px; background-color: #aaa;}
+        .more_img div:last-child {margin-right: 0;}
+
+    .detail_spread {width: 780px; height: auto; min-height: 800px; margin: auto; padding-top: 34px;}
+      .spread_part_01 {width: 100%; height: 130px; margin-bottom: 22px; background-color: #aaa;}
+      .spread_part_02 {width: 100%; height: 970px; background-color: #aaa;}
+      
+
+
+/* #footBox */
+
+/* #quickBox */

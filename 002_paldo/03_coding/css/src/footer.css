@@ -1,0 +1,10 @@
+/* #footBox */
+#footBox {width: 100%; height: 160px; padding-top: 20px; text-align: center; background-color: #eee;}
+  .cs_num {width: 100%; height: 35px; padding-top: 8px; font-size: 0.75rem;}
+    
+  .sns_zone {width: 100%; height: 60px;}
+    .sns_zone div {width: 288px; height: 50px; margin: auto; padding-top: 12px; box-sizing: border-box;}
+    .sns_zone ul {width: 100%; height: 100%; margin-left: 9px;}
+    .sns_zone li {float: left; width: 30px; height: 30px; margin-right: 10px; border-radius: 100%; background-color: #aaa;}
+    .sns_zone li:last-child { margin-right: 0;}
+  .company_info {width: 100%; height: 66px; font-size: 0.75rem;}
