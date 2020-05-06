@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+/* rwd_paldoStroy.css */
+/* 반응형 - '팔도이야기' */
+
+@import url('../base/rwd_header.css');
+@import url('../rwd/paldoStory_mob_v.css');
+@import url('../rwd/paldoStory_tab_android.css');
+@import url('../rwd/paldoStory_tab.css');
+@import url('../rwd/paldoStory_labtop.css');
+@import url('../base/rwd_footer.css');
