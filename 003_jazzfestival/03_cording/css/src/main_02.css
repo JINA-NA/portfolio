@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+/* main_02.css */
+/* 제이쿼리 반영 재구성안 */
+
+
+/* #wrap ================================= */
+#wrap {
+	width: 100%; max-width: 1600px; height: auto;
+	margin: auto;
+	font-family: 'Noto Serif', serif;
+font-family: 'Noto Serif KR', serif;
+}
+
+/* #headBox ================================= */
+#headBox {
+	position: fixed; top: 0;  z-index: 1000;
+	width: 30%; max-width: 280px; height: 800px; 
+	padding: 20px; box-sizing: border-box;
+	background-color: #007f76;
+}
+/* #gnbBox ================================= */
+#gnbBox {
+	position: relative;
+	float: right;
+	margin-top: 250px;
+	width: 80%; height: auto;
+	/* background-color: rgba(255, 255, 255, 0.5); */
+}
+
+h1 {
+	position: absolute; top: -70px; right: 0;
+	width: 50px; height: 50px;
+	background-color: #fff;
+}
+
+
+/* .navi ================================= */
+.navi {width: 100%; height: auto;}
+.navi ul {width: 100%;  height: auto;}
+.navi li {
+	width: 100%; height: 30px; 
+	margin: 8px 0; 
+	text-align: right;
+	font-size: 1.2rem; color: #fff; font-weight: 400;
+}
+.navi li a {display: block; width: 100%; height: 100%;}
+
+.sns_zone{
+	position: absolute; bottom: 10px;
+	width: 30px; height: auto; 
+}
+.sns_zone ul {width: 100%; height: auto;}
+.sns_zone li {width: 30px; height: 30px; margin-bottom: 12px; background-color: #aaa;}
+
+/* #viewBox ================================= */
+#viewBox {
+	width: 100%; height: 800px; 
+	background-color: #ddd;
+}
+
+/* #ticketBox ================================= */
+#ticketBox {
+	width: 100%; height: 800px; 
+	padding-top: 120px; 
+	background-color: #211aa1;
+}
+.ticket_area {
+	width: 600px; height: 400px; 
+	margin: auto; 
+	/* background-color: royalblue; */
+}
+.ticket_area .ticket_text{
+	width: 100%; height: 260px;
+	padding: 10px; box-sizing: border-box;
+	margin-bottom: 20px;
+	/* background-color: rgba(255, 255, 255, 0.5); */
+}
+.ticket_area  p {
+	text-align: center;
+	color: #fff; 
+}
+.title_text { font-size: 3rem;}
+.sub_text {font-size:1.2rem;}
+.ticket_area .ticket_btn {
+	width: 180px; height: 50px; 
+	margin: auto;
+	background-color: #fff;
+	border-radius: 0.3rem;
+	text-align: center;
+	line-height: 50px;
+}
+.ticket_area .ticket_btn a {
+	display: block; width: 100%; height: 100%;
+}
+
+/* #timetableBox ================================= */
+#timetableBox {
+	width: 100%; height: 800px; 
+	background-color: #33a211;
+}
+#timetableBox > div {
+	float: left;
+	width: 50%; height: 100%;
+}
+.titmetable_view {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+.titmetable_cont { position: relative;}
+.titmetable_cont ul {
+	position: absolute; left:0; right:0; top: 20%;
+	margin: auto;
+	width: 80%; height: auto; 
+	/* background-color: #fff; */
+}
+.titmetable_cont li {
+	float: left;
+	width: 200px; height: 300px; 
+	margin-right: 5%;
+}
+.titmetable_cont li:last-child{transform: translateY(150px);}
+.titmetable_cont li div {width: 100%; height: 250px;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 30% 0;
+}
+.titmetable_cont li:last-of-type div{border-radius: 0 30%;}
+.titmetable_cont li p {
+	width: 100%; height: 50px; 
+	text-align: center; line-height: 50px;
+	font-size: 1.2rem; color: #333;
+}
+/* #locationBox ================================= */
+#locationBox {
+	width: 100%; height: 800px; 
+	background-color: #d1dd00;
+}
+
+/* #gallaryBox ================================= */
+#gallaryBox {
+	width: 100%; height: 800px; 
+	background-color: #aa11aa;
+}
+
+/* #footBox ================================= */
+#footBox {
+	width: 100%; height: 800px; 
+	background-color: #ffaa00;
+}
