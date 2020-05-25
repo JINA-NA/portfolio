@@ -1,0 +1,291 @@
+@charset "utf-8";
+
+/* labtop.css */
+/* 제이쿼리 반영 재구성안 */
+/* 디바이스 크기: 랩탐 | 최소 940px */
+
+@media screen and (min-width: 940px){
+
+
+	/* #wrap ================================= */
+	#wrap {
+		width: 100%; min-width: 940px; max-width: 1600px; height: auto;
+		margin: auto;
+		font-family: 'Noto Serif', serif;
+	font-family: 'Noto Serif KR', serif;
+	}
+	
+	/* #headBox ================================= */
+	#headBox {
+		position: fixed; top: 0;  z-index: 1000;
+		width: 30%; max-width: 280px; height: 800px; 
+		padding: 20px; box-sizing: border-box;
+		background-color: rgba(30, 100, 80, 1);
+	}
+	/* #gnbBox ================================= */
+	#gnbBox {
+		position: relative;
+		float: right;
+		margin-top: 250px;
+		width: 80%; height: auto;
+		/* background-color: rgba(255, 255, 255, 0.5); */
+	}
+	
+	h1 {
+		position: absolute; top: -70px; right: 0;
+		width: 50px; height: 50px;
+		background-color: #fff;
+	}
+	
+	
+	/* .navi ================================= */
+	.navi {width: 100%; height: auto;}
+	.navi ul {width: 100%;  height: auto;}
+	.navi li {
+		width: 100%; height: 30px; 
+		margin: 8px 0; 
+		text-align: right;
+		font-size: 1.2rem; color: #fff;
+	}
+	.navi li a {display: block; width: 100%; height: 100%;}
+	
+	.sns_zone{
+		position: absolute; bottom: 10px;
+		width: 30px; height: auto; 
+	}
+	.sns_zone ul {width: 100%; height: auto;}
+	.sns_zone li {width: 30px; height: 30px; margin-bottom: 12px; background-color: #aaa;}
+	
+	/* #viewBox ================================= */
+	#viewBox {
+		position: relative;
+		width: 100%; height: 800px; 
+		/* background-color: #ddd; */
+	}
+	.view_text {
+		position: absolute; bottom: 10px; right: 10px; z-index: 500;
+		width: 400px; height: 40%;
+	}
+	.view_text span:before,
+	.view_text span::before {
+		position: absolute; left: 120px; top: 10px;
+		content: " "; 
+		display: block;
+		width: 120px; height: 2px;
+		background-color: #fff;
+	}
+	.view_text span {
+		float: right;
+		margin-right: 20px;
+		color: #fff; font-family: sans-serif;
+	}
+	.view_text div {
+		float: right;
+		width: 400px; height: 600px;
+		background-image: url(../../../img/logo_big.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: 0 20px;
+		/* background-color: #211aa1; */
+	}
+	.view_area {
+		position: relative;
+		width:100%; height:100%;
+		background-image: url(../../../img/hall.jpg);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+	}
+	.view_area:before,
+	.view_area::before{
+		position: absolute; top: 0; left: 0;
+		content: " ";
+		width: 100%; height: 100%; 
+		background-color: rgba(30, 30, 30, 0.6);
+	}
+	
+	
+	
+	/* #ticketBox ================================= */
+	#ticketBox {	
+		width: 100%; height: 800px; 
+		padding-top: 250px; 
+		background-color: #211aa1;
+		background-image: url(../../../img/audience.jpg);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	
+	.ticket_area {
+		width: 600px; height: 400px; 
+		margin: auto; 
+		/* background-color: royalblue; */
+	}
+	.ticket_area .ticket_text{
+		width: 100%; height: 260px;
+		padding: 10px; box-sizing: border-box;
+		margin-bottom: 20px;
+		/* background-color: rgba(255, 255, 255, 0.5); */
+	}
+	.ticket_area  p {
+		text-align: center;
+		color: #222; 
+	}
+	.title_text { font-size: 3.2rem;}
+	.sub_text {font-size:1.2rem;}
+	.ticket_area .ticket_btn {
+		width: 180px; height: 50px; 
+		margin: auto;
+		background-color: #fff;
+		border-radius: 0.3rem;
+		text-align: center;
+		line-height: 50px;
+	}
+	.ticket_area .ticket_btn a {
+		display: block; width: 100%; height: 100%;
+	}
+	
+	/* #timetableBox ================================= */
+	#timetableBox {
+		width: 100%; height: 800px; 
+		/* background-color: #33a211; */
+	}
+	#timetableBox > div {
+		float: left;
+		width: 50%; height: 100%;
+	}
+	.titmetable_view {
+		background-color: rgba(255, 255, 255, 0.3);
+		background-image: url(../../../img/microphone.jpg);
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: auto 100% ;
+	}
+	.titmetable_cont { position: relative;}
+	.titmetable_cont ul {
+		position: absolute; left:0; right:0; top: 40%;
+		margin: auto;
+		width: 80%; min-width:450px;  height: auto; 
+		/* background-color: #fff; */
+	}
+	.titmetable_cont li {
+		float: left;
+		width: 200px; height: 300px; 
+		margin-right: 5%;
+	}
+	.titmetable_cont li:last-child{transform: translateY(150px);}
+	.titmetable_cont li div {width: 100%; height: 250px;
+		background-color: rgba(30, 100, 80, 1);
+		border-radius: 30% 0;
+	}
+	.titmetable_cont li:last-of-type div{
+		border-radius: 0 30%;}
+	.titmetable_cont li p {
+		width: 100%; height: 50px; 
+		text-align: center; line-height: 50px;
+		font-size: 1.2rem; color: #333;
+	}
+	/* #locationBox ================================= */
+	#locationBox {
+		width: 100%; height: 350px; 
+		padding-left: 30%; padding-top: 180px; box-sizing: border-box;
+		background-color: rgba(30, 100, 80, 1);
+	}
+	
+	.location_info {
+		width: 940px; height: auto;
+		margin:auto;
+	}
+	.location_info li {
+		float: left;
+		width: 250px; height: 100px; 
+		margin-right: 20px;
+		background-color: #fff;
+		text-align: center; line-height: 100px;
+	}
+	.location_info li a {
+		display: block;
+		width: 100%; height:100%;
+		font-size: 1.2rem; 
+	}
+	.location_info li a:hover {
+		background-color: #007f76;
+		color: #fff;
+	}
+	
+	/* #gallaryBox ================================= */
+	#gallaryBox {
+		width: 100%; height: auto; min-height: 500px;
+		padding: 150px; padding-left: 500px; box-sizing: border-box;
+		background-color: #333;
+	}
+	#gallaryBox h2 {
+		width: 100px; height: 50px; 
+		margin-bottom: 50px;
+		color:  #fff;
+	}
+	.gallary_area {
+		width: 100%; min-width: 700px; 
+		height: auto; min-height: 300px;
+	}
+	.gallary_area li  {
+		float: left; 
+		width: 30%; min-width: 240px; height: 300px; 
+		margin-right: 3%; margin-bottom: 3%;
+		background-color: #fff;
+	}
+	.gallary_area li:nth-child(3n) {margin-right: 0;}
+	
+	
+	
+	/* #footBox ================================= */
+	#footBox {
+		position: relative;
+		width: 100%; height: 200px; 
+		padding-left: 300px; box-sizing: border-box;
+		background-color: rgb(54, 54, 54);
+	}
+	
+	.sponsor {
+		width: 100%; height: 100px;
+		/* background-color: #ddd; */
+	}
+	.sponsor ul {
+		overflow: hidden;
+		width: 940px; height: 80px;
+		margin: auto; padding-top: 20px; box-sizing: border-box;
+	}
+	.sponsor li {
+		float: left;
+		width: 100px; height: 80px;
+		margin-right: 20px; 
+		background-color: #aaa;
+	}
+	
+	.copyright {
+		width: 100%; height: 80px;
+		text-align: center; line-height: 80px;
+		font-size: 0.875rem; color: #fff;
+		/* background-color: #fff; */
+	}
+	/* topBtn ================================= */
+	.topBtn {
+		/* display: none; */
+		position: absolute; bottom: 30px; left: 50%; z-index: 1000;
+		width: 50px; height: 50px;
+		margin-left: 680px;
+		background-color: #fa0;
+		border-radius: 100%;
+		box-shadow: 0rem 0rem 0.3rem rgba(30, 30, 30, 0.5);
+	}
+	.topBtn button {
+		width: 100%; height: 100%;
+		font-size: 1.8rem; color: #fff;
+	}
+	
+	
+	
+	/* @media 종료태그 */
+	}
