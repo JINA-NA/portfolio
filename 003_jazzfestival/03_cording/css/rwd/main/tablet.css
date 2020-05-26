@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* labtop.css */
+/* tablet.css */
 /* 제이쿼리 반영 재구성안 */
 /* 디바이스 크기: 태블릿 | 최소 767px ~ 최대 939px*/
 
@@ -9,7 +9,9 @@
 
 	/* #wrap ================================= */
 	#wrap {
-		width: 100%; min-width: 767px; max-width: 939px; height: auto;
+		width: 100%; 
+		/* min-width: 767px; max-width: 939px;  */
+		height: auto;
 		margin: auto;
 		font-family: 'Noto Serif', serif;
 	font-family: 'Noto Serif KR', serif;
@@ -17,50 +19,72 @@
 	
 	/* #headBox ================================= */
 	#headBox {
-		position: fixed; top: 0; left:0; z-index: 1000;
-		width: 100%; height: 50px; 
-		/* padding: 20px; box-sizing: border-box; */
+		position: relative; top: 0; left: 0; z-index: 1000;
+		width: 100%; height: 60px; 
+		padding: 10px; box-sizing: border-box;
 		background-color: rgba(30, 100, 80, 1);
 	}
 	/* #gnbBox ================================= */
 	#gnbBox {
-		/* position: relative; */
-		float: right;
-		margin-top: 250px;
-		width: 80%; height: auto;
+		position: relative;
+		float: left;
+		width:100%; height: 100%;
 		/* background-color: rgba(255, 255, 255, 0.5); */
 	}
 	
 	h1 {
 		position: absolute; top:0; left: 50%;
 		width: 150px; height: 40px;
-		margin-top: 5px; margin-left:-75px;
+		margin-left: -75px; 
 		background-color: #fff;
 	}
 	
 	
+	.navi_menu_btn{
+		float: left; 
+		width: 40px; height: 40px; 
+		
+	}
+	.navi_menu_btn button{
+		width:100%; height: 100%;
+		text-align: center; color: #fff;
+		font-size: 2rem; line-height: 40px; 
+	}
 	/* .navi ================================= */
 	.navi {
 		display: none;
-		width: 100%; height: auto;
+		position: fixed; top:0; left:0; z-index:1000;
+		width: 30%; max-width: 300px; 
+		height: 60%; min-height: 600px;
+		padding: 100px 20px 20px 50px; box-sizing: border-box;
+		background-color: #fff;
 	}
-
-	.navi ul {width: 100%;  height: auto;}
-	.navi li {
-		width: 100%; height: 30px; 
-		margin: 8px 0; 
-		text-align: right;
-		font-size: 1.2rem; color: #fff;
+	.navi_exit_btn {
+		position: absolute; top: 10px; right: 10px; 
+		width: 40px; height: 40px; 
 	}
-	.navi li a {display: block; width: 100%; height: 100%;}
+	.navi_exit_btn button {
+		width: 100%; height: 100%; 
+		font-size: 2.2rem; text-align: center;
+		color: #333;
+	}
+	.navi_list {width: 100%;  height: auto; margin-bottom: 80px;}
+	.navi_list li {
+		width: 100%; height: 40px; 
+		margin: 10px 0; 
+		font-size: 1.2rem; color: #333;
+	}
+	.navi_list li a {display: block; width: 100%; height: 100%;}
 	
 	.sns_zone{
-		display: none;
-		position: absolute; bottom: 10px;
-		width: 30px; height: auto; 
+		/* display: none; */
+	/* position: absolute; top:530px; left: 40px; */
+		width: 100%; height: 30px; 
 	}
 	.sns_zone ul {width: 100%; height: auto;}
-	.sns_zone li {width: 30px; height: 30px; margin-bottom: 12px; background-color: #aaa;}
+	.sns_zone li {
+		float: left; 
+		width: 30px; height: 30px; margin-right: 12px; background-color: #aaa;}
 	
 	/* #viewBox ================================= */
 	#viewBox {
@@ -115,7 +139,7 @@
 	/* #ticketBox ================================= */
 	#ticketBox {	
 		width: 100%; height: 800px; 
-		padding-top: 250px; 
+		padding-top: 300px; 
 		background-color: #211aa1;
 		background-image: url(../../../img/audience.jpg);
 		background-repeat: no-repeat;
@@ -168,7 +192,7 @@
 		background-size: cover ;
 	}
 	.titmetable_cont { 
-		width: 100%; height: 300px;
+		width: 100%; height: 250px;
 		position: relative;}
 	.titmetable_cont ul {
 		position: absolute; left:50%; top:-40%; 
@@ -257,12 +281,13 @@
 	}
 	
 	.sponsor {
+		overflow: hidden;
 		width: 100%; height: 100px;
 		/* background-color: #ddd; */
 	}
 	.sponsor ul {
-		overflow: hidden;
-		width: 940px; height: 80px;
+		width: 100%; max-width: 900px; height: 80px;
+		margin:auto;
 		margin: auto; padding-top: 20px; box-sizing: border-box;
 	}
 	.sponsor li {
@@ -280,10 +305,10 @@
 	}
 	/* topBtn ================================= */
 	.topBtn {
-		/* display: none; */
-		position: absolute; bottom: 30px; left: 50%; z-index: 1000;
+		display: none;
+		position: fixed; bottom: 30px; left: 50%; z-index: 1000;
 		width: 50px; height: 50px;
-		margin-left: 680px;
+		margin-left: 80px;
 		background-color: #fa0;
 		border-radius: 100%;
 		box-shadow: 0rem 0rem 0.3rem rgba(30, 30, 30, 0.5);
