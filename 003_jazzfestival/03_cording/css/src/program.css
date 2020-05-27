@@ -12,3 +12,5 @@
 @import url('../rwd/program/mobile.css');
 @import url('../rwd/program/tablet.css');
 @import url('../rwd/program/labtop.css');
+
+@import url('../rwd/common/footer.css')

@@ -205,50 +205,6 @@
 	
 	
 	
-	/* #footBox ================================= */
-	#footBox {
-		position: relative;
-		width: 100%; height: 200px; 
-		padding-left: 300px; box-sizing: border-box;
-		background-color: rgb(54, 54, 54);
-	}
-	
-	.sponsor {
-		overflow: hidden;
-		width: 100%; height: 100px;
-		/* background-color: #ddd; */
-	}
-	.sponsor ul {
-		width: 940px; height: 80px;
-		margin: auto; padding-top: 20px; box-sizing: border-box;
-	}
-	.sponsor li {
-		float: left;
-		width: 100px; height: 80px;
-		margin-right: 20px; 
-		background-color: #aaa;
-	}
-	
-	.copyright {
-		width: 100%; height: 80px;
-		text-align: center; line-height: 80px;
-		font-size: 0.875rem; color: #fff;
-		/* background-color: #fff; */
-	}
-	/* topBtn ================================= */
-	.topBtn {
-		display: none;
-		position: absolute; bottom: 30px; left: 50%; z-index: 1000;
-		width: 50px; height: 50px;
-		margin-left: 680px;
-		background-color: #fa0;
-		border-radius: 100%;
-		box-shadow: 0rem 0rem 0.3rem rgba(30, 30, 30, 0.5);
-	}
-	.topBtn button {
-		width: 100%; height: 100%;
-		font-size: 1.8rem; color: #fff;
-	}
 	
 	
 	

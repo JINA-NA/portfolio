@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* laptop.css */
+/* program 페이지 laptop  */
+
+#lineUpBox{
+	width: 100%;
+	height:auto; min-height: 800px;
+	padding: 100px; padding-left: 350px; box-sizing: border-box;
+	margin: auto;
+	background-color: #334;
+}
+#lineUpBox h2 {
+	width: 100%; height: auto;
+	border-bottom: 2px solid #007f76;
+	text-align: center;
+	color: #fff; font-size: 2rem;
+}
+
+.lineUp_area{
+	width: 100%;  max-width: 940px; 
+	height: auto;
+	padding-top: 40px; box-sizing: border-box;
+}
+.lineUp_area ul {
+	width: 100%; height: auto;
+	/* background-color: #fda; */
+}
+.lineUp_area li {
+	float:left;
+	width: 32%; height: 350px;
+	margin-right: 2%;
+	margin-bottom: 15%;
+	background-color: #fff;
+}
+.lineUp_area li:nth-child(3n) {margin-right: 0;}
+
+.lineUp_area li div {
+	width: 100%; height: 280px;
+	background-color:#aad;
+}
+.lineUp_area li p {
+	width: 100%; height: 70px;
+	padding: 0 4px; box-sizing: border-box;
+	font-size: 1.1rem; text-align: center;
+	line-height: 70px;
+}
+
+
+
+
+
+#timeTableBox{
+	width: 100%;
+	height:auto; min-height: 800px;
+	padding: 100px; padding-left: 350px; box-sizing: border-box;
+	margin: auto;
+	background-color: #ada;
+}
+
+#timeTableBox p {
+	text-align:center;
+	font-size: 2rem;
+}
