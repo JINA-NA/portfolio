@@ -6,85 +6,7 @@
 
 @media screen and (min-width: 767px) and (max-width: 939px){
 
-
-	/* #wrap ================================= */
-	#wrap {
-		width: 100%; 
-		/* min-width: 767px; max-width: 939px;  */
-		height: auto;
-		margin: auto;
-		font-family: 'Noto Serif', serif;
-	font-family: 'Noto Serif KR', serif;
-	}
 	
-	/* #headBox ================================= */
-	#headBox {
-		position: relative; top: 0; left: 0; z-index: 1000;
-		width: 100%; height: 60px; 
-		padding: 10px; box-sizing: border-box;
-		background-color: rgba(30, 100, 80, 1);
-	}
-	/* #gnbBox ================================= */
-	#gnbBox {
-		position: relative;
-		float: left;
-		width:100%; height: 100%;
-		/* background-color: rgba(255, 255, 255, 0.5); */
-	}
-	
-	h1 {
-		position: absolute; top:0; left: 50%;
-		width: 150px; height: 40px;
-		margin-left: -75px; 
-		background-color: #fff;
-	}
-	
-	
-	.navi_menu_btn{
-		float: left; 
-		width: 40px; height: 40px; 
-		
-	}
-	.navi_menu_btn button{
-		width:100%; height: 100%;
-		text-align: center; color: #fff;
-		font-size: 2rem; line-height: 40px; 
-	}
-	/* .navi ================================= */
-	.navi {
-		display: none;
-		position: fixed; top:0; left:0; z-index:1000;
-		width: 30%; max-width: 300px; 
-		height: 60%; min-height: 600px;
-		padding: 100px 20px 20px 50px; box-sizing: border-box;
-		background-color: #fff;
-	}
-	.navi_exit_btn {
-		position: absolute; top: 10px; right: 10px; 
-		width: 40px; height: 40px; 
-	}
-	.navi_exit_btn button {
-		width: 100%; height: 100%; 
-		font-size: 2.2rem; text-align: center;
-		color: #333;
-	}
-	.navi_list {width: 100%;  height: auto; margin-bottom: 80px;}
-	.navi_list li {
-		width: 100%; height: 40px; 
-		margin: 10px 0; 
-		font-size: 1.2rem; color: #333;
-	}
-	.navi_list li a {display: block; width: 100%; height: 100%;}
-	
-	.sns_zone{
-		/* display: none; */
-	/* position: absolute; top:530px; left: 40px; */
-		width: 100%; height: 30px; 
-	}
-	.sns_zone ul {width: 100%; height: auto;}
-	.sns_zone li {
-		float: left; 
-		width: 30px; height: 30px; margin-right: 12px; background-color: #aaa;}
 	
 	/* #viewBox ================================= */
 	#viewBox {
@@ -93,8 +15,8 @@
 		/* background-color: #ddd; */
 	}
 	.view_text {
-		position: absolute; bottom: 10px; right: 10px; z-index: 500;
-		width: 400px; height: 40%;
+		position: absolute; bottom: 30px; right: 30px; z-index: 500;
+		width: 400px; height: auto;
 	}
 	.view_text span:before,
 	.view_text span::before {
@@ -111,11 +33,11 @@
 	}
 	.view_text div {
 		float: right;
-		width: 400px; height: 600px;
-		background-image: url(../../../img/logo_big.png);
+		width: 400px; height: 400px;
+		background-image: url(../../../img/view_logo.svg);
 		background-repeat: no-repeat;
 		background-size: contain;
-		background-position: 0 20px;
+		background-position: 50% 50%;
 		/* background-color: #211aa1; */
 	}
 	.view_area {
@@ -308,7 +230,7 @@
 		display: none;
 		position: fixed; bottom: 30px; left: 50%; z-index: 1000;
 		width: 50px; height: 50px;
-		margin-left: 80px;
+		margin-left: 300px;
 		background-color: #fa0;
 		border-radius: 100%;
 		box-shadow: 0rem 0rem 0.3rem rgba(30, 30, 30, 0.5);
