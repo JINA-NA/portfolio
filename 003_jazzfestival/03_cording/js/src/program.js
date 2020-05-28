@@ -45,6 +45,9 @@ for(; i < lineUpContent.length ; i++ ){
 }
 
 
+//스크롤 할 때 아티스트 사진 하나씩 위로 두둥실
+
+
 
 // jQuery 종료
 })(jQuery);

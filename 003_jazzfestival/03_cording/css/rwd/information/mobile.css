@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+/* laptop.css */
+/* information 페이지 laptop */
+@media screen and (max-width: 766px){
+
+#giude_info, #audience_info, #location_info{
+	width: 100%; max-width: 1200px; 
+	height:auto;
+	padding: 20px; padding-top: 80px; box-sizing:border-box;
+	margin: auto;
+	/* background-color: #334; */
+}
+#audience_info, #location_info {
+	padding-top: 0;
+}
+
+#giude_info h2 , #audience_info h2 , #location_info h2 {
+	width: 100%; height: 50px;
+	border-bottom: 2px solid #007f76;
+	margin-top: 5px;
+	text-align: center;
+	color: #333; font-size: 1.2rem;
+}
+.giude_area, .audience_area, .location_area{
+	width:100%; max-width: 940px; height: auto; 
+	margin:auto;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: 50% 0;
+}
+
+.giude_area {
+ height: 200px;
+	background-image: url(../../../img/notice_2.png);
+}
+
+.audience_area {
+ height: 750px;
+	background-image: url(../../../img/notice_3.png);
+}
+
+.location_area {
+ height:400px;
+	background-image: url(../../../img/map.png);
+}
+
+	
+}
+
+
+
+/* @media 종료태그 */
+}
+	
