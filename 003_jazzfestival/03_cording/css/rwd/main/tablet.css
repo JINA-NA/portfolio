@@ -151,6 +151,7 @@
 	.location_info {
 		width: 100%; max-width: 767px; height: auto;
 		margin:auto;
+		transform: translateY(30px);
 	}
 	.location_info li {
 		/* float: left; */

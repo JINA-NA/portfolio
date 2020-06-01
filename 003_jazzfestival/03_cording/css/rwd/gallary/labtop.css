@@ -6,7 +6,7 @@
 #contBox{
 	width: 100%;
 	height:auto; min-height: 800px;
-	padding: 100px; padding-left: 350px; box-sizing: border-box;
+	padding: 20px; padding-left: 350px; box-sizing: border-box;
 	margin: auto;
 	background-color: #334;
 }

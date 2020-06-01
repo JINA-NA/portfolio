@@ -1,5 +1,5 @@
 // main_02.js
-// 문서설명
+// main 페이지 반응형 언급
 
 (function($){
 // jQuery 시작

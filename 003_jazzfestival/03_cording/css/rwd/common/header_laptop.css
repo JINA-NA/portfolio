@@ -54,8 +54,9 @@
 	.sns_zone{
 		position: absolute; top: 70%; left: 0;
 		width: 30px; height: auto; 
+		
 	}
-	.sns_zone ul {width: 100%; height: auto;}
+	.sns_zone ul {width: 100%; height: auto; background-color:rgba(200, 200, 200, 0);}
 	.sns_zone li {
 		width: 30px; height: 30px; margin-bottom: 12px;
 		background-repeat: no-repeat;
