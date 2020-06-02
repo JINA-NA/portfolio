@@ -8,7 +8,6 @@ var laptop = function(){
 
 var wrap = $('#wrap');
 var headBox =  $('#headBox');
-var viewBox =  $('#viewBox');
 
 var headBoxW = headBox.innerWidth();
 var win = $(window);
@@ -16,7 +15,6 @@ var winHeight;
 var WinHeightSet = function(){
 	winHeight = win.height();
 	headBox.innerHeight( winHeight );
-	viewBox.innerHeight( winHeight );
 };
 WinHeightSet();
 
@@ -38,25 +36,26 @@ headBoxBg[1] = 'rgba(30, 100, 80, 0)';
 
 
 //스크롤시, headBox 변화
-var myScroll;
-win.on('scroll',function(e){
-	e.preventDefault();
-	myScroll = win.scrollTop();
-	// console.log(myScroll, winHeight);
+var myScroll = win.scrollTop();
+// win.on('scroll',function(e){
+// 	e.preventDefault();
+// 	myScroll = win.scrollTop();
+// 	// console.log(myScroll, winHeight);
 	
+// 	//헤드박스 배경색상 변경
+// 	if( myScroll+300 <  winHeight ){
+// 		headBox.find('li').stop().animate({color:'#fff'});
+// 		headBox.stop().animate({'backgroundColor':headBoxBg[0]});
+// 		headBox.find('.sns_zone').find('ul').stop().animate({'backgroundColor':'rgba(200, 200, 200, 0)'});
+// 	} else {
+// 		headBox.find('li').stop().animate({color:'#333'});
+// 		headBox.stop().animate({'backgroundColor':headBoxBg[1]});
+// 		headBox.find('.sns_zone').find('ul').stop().animate({'backgroundColor':'rgba(200, 200, 200, 1)'});
+// 	}
+// });
 	//헤드박스 배경색상 변경
-	if( myScroll+300 <  winHeight ){
 		headBox.find('li').stop().animate({color:'#fff'});
-		headBox.stop().animate({'backgroundColor':headBoxBg[0]});
-		headBox.find('.sns_zone').find('ul').stop().animate({'backgroundColor':'rgba(200, 200, 200, 0)'});
-	} else {
-		headBox.find('li').stop().animate({color:'#333'});
 		headBox.stop().animate({'backgroundColor':headBoxBg[1]});
-		headBox.find('.sns_zone').find('ul').stop().animate({'backgroundColor':'rgba(200, 200, 200, 1)'});
-	}
-});
-
-
 
 
 
@@ -117,7 +116,51 @@ sponsorUl.animate({left:-sponLiFistSize + 'px'}, function(){
 
 
 //개별적인 페이지 속성 ====================
+var textArr = [
+	'Omara Portuondo – Omara Es Cuba (오마라 포르투온도 – 오마라 에스 쿠바) / John Scofield ’s “Combo 66" (존 스코필드 “콤보 66”) featuring Vicente Archer, Gerald Clayton & Bill Stewart / Christian McBride And Tip City (크리스찬 맥브라이드 앤드 팁 시티) / Clean Bandit (클린 밴딧) / 에픽하이 (EPIK HIGH) / Aloe Blacc (알로에 블라크) / 루시드폴 모르폴린 앙상블 (Lucid Fall morpholine ensemble) / The Puppini Sisters (더 퍼피니 시스터즈) / 송영주 쿼텟 (Youngjoo Song Quartet) / 규현 (Kyuhyun) / 장범준(Jang Beom June) / Wouter Hamel (바우터 하멜) / Bahamas (바하마스) / 박원 with 윤석철&권영찬 (Park Won) / 김필 (Feel Kim) / 딘 (DEAN) / 라비 (Ravi) / 카더가든 (Car, the Garden) / 강이채 (Echae Kang) / 적재 (Jukjae) / 김사월 (Kim Sawol) / KATIE (케이티) / 1415 / 콕배스 (Cokebath)',
+	'Wynton Marsalis (윈튼 마살리스) / Brad Mehldau Trio (브레드 멜다우 트리오) / Pink Martini (핑크 마티니) / Tommy Emmanuel (토미 엠마뉴엘)/ Andy McKee (앤디 맥키)/ Rudimental Live Set (루디멘탈 라이브셋) / Fitz and the Tantrums (피츠 앤드 더 탠트럼스) / 크러쉬 (Crush) / Lauv (라우브) / Leon Bridges (리온 브릿지스) / 정재형 AVEC PIANO (Jung Jaeyung AVEC PIANO) / 선우정아 (sunwoojunga) / Julia Michaels (줄리아 마이클스) / Nick Hakim (닉 하킴) / 이하이 (LEEHI) / 정승환 (Jung Seung Hwan) / 이진아 트리오 (Lee Jin Ah Trio) / 최고은 (GONNE CHOI) / 고상지 밴드 (SANGJI KOH BAND) / 정세운 (Jeong Sewoon) / 하성운 (HA SUNGWOON) / Bulow (뷜로우) / 황소윤 (So!YoOn!) / 황호규 쿼텟 (Hogyu Hwang Quartet)'
+];
 
+
+var historyArr = [
+	{year:'2019', count: '13th', img: '2019.jpg', text: textArr[9] },
+	{year:'2018', count: '12th', img: '2018.jpg', text: textArr[8] },
+	{year:'2017', count: '11th', img: '2017.jpg', text: textArr[7] },
+	{year:'2016', count: '10th', img: '2016.jpg', text: textArr[6] },
+	{year:'2015', count: '9th', img: '2015.jpg', text: textArr[5] },
+	{year:'2014', count: '8th', img: '2014.jpg', text: textArr[4] },
+	{year:'2013', count: '7th', img: '2013.jpg', text: textArr[3] },
+	{year:'2012', count: '6th', img: '2012.jpg', text: textArr[2] },
+	{year:'2011', count: '5th', img: '2011.jpg', text: textArr[1] },
+	{year:'2010', count: '4th', img: '2010.jpg', text: textArr[0] }
+];
+var imgUrl = '../img/poster/';
+
+
+var contBox = $('#contBox');
+contBox.append('<ul class="history_list"></ul>');
+
+var historyUl = contBox.find('.history_list');
+var i=0;
+for(; i < historyArr.length ; i++ ){
+	historyUl.append('<li><div class="year_count"></div> <div class="img_poster"></div> <div class="cont_text"></div></li>');
+	historyUl.find('.year_count').eq(i).html('<h3><span class="year">' + historyArr[i].year + '</span> <span class="count">' + historyArr[i].count + '</span></h3>');
+	historyUl.find('li').find('.img_poster').eq(i).css({backgroundImage:'url(' + imgUrl+ historyArr[i].img + ')'});
+	historyUl.find('li').find('.cont_text').eq(i).html('<p>' + historyArr[i].text + '</p>');
+}
+
+var historyLi = historyUl.find('li');
+var historyLiOffset = historyLi.offset().top;
+
+
+// ====스크롤 시 위로 두둥실
+win.on('scroll',function(e){
+	for(; i < historyArr.length; i++){
+		if( myScroll > historyArr[0].offset().top ){
+			historyLi.eq(0).addClass('active');
+		}
+	}
+});
 
 
 

@@ -37,25 +37,26 @@ headBoxBg[1] = 'rgba(30, 100, 80, 0)';
 
 
 //스크롤시, headBox 변화
-var myScroll;
-win.on('scroll',function(e){
-	e.preventDefault();
-	myScroll = win.scrollTop();
-	// console.log(myScroll, winHeight);
+// var myScroll;
+// win.on('scroll',function(e){
+// 	e.preventDefault();
+// 	myScroll = win.scrollTop();
+// 	// console.log(myScroll, winHeight);
 	
+// 	//헤드박스 배경색상 변경
+// 	if( myScroll+300 <  winHeight ){
+// 		headBox.find('li').stop().animate({color:'#fff'});
+// 		headBox.stop().animate({'backgroundColor':headBoxBg[0]});
+// 		headBox.find('.sns_zone').find('ul').stop().animate({'backgroundColor':'rgba(200, 200, 200, 0)'});
+// 	} else {
+// 		headBox.find('li').stop().animate({color:'#333'});
+// 		headBox.stop().animate({'backgroundColor':headBoxBg[1]});
+// 		headBox.find('.sns_zone').find('ul').stop().animate({'backgroundColor':'rgba(200, 200, 200, 1)'});
+// 	}
+// });
 	//헤드박스 배경색상 변경
-	if( myScroll+300 <  winHeight ){
 		headBox.find('li').stop().animate({color:'#fff'});
-		headBox.stop().animate({'backgroundColor':headBoxBg[0]});
-		headBox.find('.sns_zone').find('ul').stop().animate({'backgroundColor':'rgba(200, 200, 200, 0)'});
-	} else {
-		headBox.find('li').stop().animate({color:'#333'});
 		headBox.stop().animate({'backgroundColor':headBoxBg[1]});
-		headBox.find('.sns_zone').find('ul').stop().animate({'backgroundColor':'rgba(200, 200, 200, 1)'});
-	}
-});
-
-
 
 
 
@@ -108,6 +109,18 @@ sponsorUl.animate({left:-sponLiFistSize + 'px'}, function(){
 	sponsorLi = sponsorUl.find('li');
 });
 },3000);
+
+
+
+
+// 페이지 개별 속섣============================
+var contBox = $('#contBox');
+var dateList = contBox.find('.date_list');
+var imageList = contBox.find('.image_list');
+
+
+
+
 
 
 

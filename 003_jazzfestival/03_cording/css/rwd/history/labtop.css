@@ -34,7 +34,13 @@
 	position: relative;
 	width: 100%; height: 452px;
 	margin-bottom: 160px; 
+	transform: translateY(150px);
+	transition: all 1000ms ease-out;
 }
+.history_list li.active {
+ transform: translateY(0);
+}
+
 .layout_01:after, .layout_02:after {
 	position: absolute; bottom: -40px; 
 	content: " "; width: 100%; height: 1px;
