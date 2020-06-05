@@ -87,7 +87,7 @@
 
 .cont_area p.bold
  {font-size: 1.1rem; font-weight: bold; color: #e8328e;}
-
+p.bold:before{content: "*"  }
 
 
 /* @media 종료태그 */

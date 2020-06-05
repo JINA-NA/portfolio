@@ -13,7 +13,8 @@
 @import url('../rwd/main/tablet.css');
 @import url('../rwd/main/labtop.css');
 
-@import url('../rwd/common/footer.css')
+@import url('../rwd/common/footer_main.css');
+/* @import url('../rwd/common/footer.css') */
 
 /* ----------------- */
 

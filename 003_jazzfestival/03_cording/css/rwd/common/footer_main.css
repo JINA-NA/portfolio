@@ -9,15 +9,32 @@
 	
 	#footBox {
 		position: relative;
-		width: 100%; height: 60px; 
-		margin:auto; padding-top: 10px; box-sizing: border-box;
+		width: 100%; height: 200px; 
+		padding: 20px; box-sizing: border-box;
+		margin:auto;
 		background-color: #666;
 	}
-
+	
+	.sponsor {
+		overflow: hidden;
+		width: 100%; height: 50px;
+		/* background-color: #ddd; */
+	}
+	.sponsor ul {
+		width: 100%; height: 100%;
+		margin: auto;
+	}
+	.sponsor li {
+		float: left;
+		width: 100px; height: 100%;
+		margin-right: 10px; 
+	}
+	
 	.copyright {
-		width: 100%; height: 60px;
-		text-align: center;
-		font-size: 0.8125rem; color: #fff;
+		width: 100%; height: 80px;
+		text-align: center; 
+		font-size: 0.875rem; color: #fff;
+		/* background-color: #fff; */
 	}
 	/* topBtn ================================= */
 	.topBtn {
@@ -44,14 +61,32 @@
 	
 	#footBox {
 		position: relative;
-		width: 100%; height: 80px; 
+		width: 100%; height: 200px; 
+		padding: 30px;box-sizing: border-box;
 		margin:auto; 
 		background-color: #666;
 	}
 	
+	.sponsor {
+		overflow: hidden;
+		width: 100%; height: 100px;
+		/* background-color: #ddd; */
+	}
+	.sponsor ul {
+		width: 100%; max-width: 900px; height: 80px;
+		margin:auto;
+		margin: auto; padding-top: 20px; box-sizing: border-box;
+	}
+	.sponsor li {
+		float: left;
+		width: 100px; height: 80px;
+		margin-right: 20px; 
+		/* background-color: #aaa; */
+	}
+	
 	.copyright {
-		width: 100%; height: 80px;
-		text-align: center; padding-top: 20px; box-sizing: border-box;
+		width: 100%; height: 60px;
+		text-align: center; line-height: 60px;
 		font-size: 0.875rem; color: #fff; font-weight: normal;
 		/* background-color: #fff; */
 	}
@@ -82,14 +117,33 @@
 	
 	#footBox {
 		position: relative;
-		width: 100%; max-width: 1600px; height: 80px; 
-		margin:auto; margin-left: 280px;
-		background-color: #666;
+		width: 100%; max-width: 1600px; height: 200px; 
+		margin:auto;
+		padding-left: 300px; padding-top: 20px;  box-sizing: border-box;
+		background-color: rgb(94, 94, 104);
+
+	}
+	
+	.sponsor {
+		overflow: hidden;
+		width: 100%; height: 100px;
+	}
+	.sponsor ul {
+		width: 940px; height: 100%;
+		margin: auto; padding-top: 20px; box-sizing: border-box;
+	}
+	.sponsor li {
+		float: left;
+		width: 120px; height: 100%;
+		margin-right: 20px; 
+	}
+	.sponsor_btn {
+		width: 20px; height: 20px; 
 	}
 	
 	.copyright {
 		width: 100%; height: 80px;
-		padding-left: 50px; padding-top: 20px; box-sizing: border-box;
+		line-height: 80px;
 		font-size: 0.875rem; color: #fff;
 		/* background-color: #fff; */
 	}

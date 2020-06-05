@@ -33,7 +33,7 @@
 	font-weight: bold;
 	color: #e8328e; font-size: 1rem; line-height: 40px; 
 }
-#giude_info p , #audience_info p , #location_info p {
+p {
 	position: relative;
 	width: auto; height:auto;
 	margin-bottom: 0.5rem;
@@ -41,13 +41,12 @@
 	color: #333; font-size: 0.9375rem; line-height: 1.5rem;
  word-break: keep-all;
 }
-#giude_info p:before , #audience_info p:before , #location_info p:before {
+p:before {
 	position: absolute; top: 2px; left: 10px; 
 	content: "-"; width: auto; height: auto; 
 }
-
-#giude_info p.bold , #audience_info p.bold, #location_info p.bold
- {font-weight: bold; color: #e8328e;}
+p.bold {font-weight: bold; color: #e8328e;}
+p.bold:before {	content: "*"; }
 
 .notice_icon_02 {
 	width: 100%; max-width: 280px; height: 100px; 
