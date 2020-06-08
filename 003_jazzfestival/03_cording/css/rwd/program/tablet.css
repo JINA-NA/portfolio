@@ -9,7 +9,8 @@
 	height:auto; min-height: 800px;
 	padding: 80px;  box-sizing: border-box;
 	margin: auto;
-	background-color: #334;
+	/* background-color: #334; */
+	background-image:linear-gradient(rgb(19, 31, 24),#4b0914);
 }
 #lineUpBox h2 {
 	width: 100%; height: auto;

@@ -38,7 +38,11 @@ var laptop = function(){
 	// console.log(headBoxBg[0]);
 	
 	
-
+	//처음 헤드박스 색상
+	headBox.find('li').stop().animate({color:'#fff'});
+	headBox.stop().animate({'backgroundColor':headBoxBg[1]});
+	headBox.find('.sns_zone').find('ul').stop().animate({'backgroundColor':'rgba(0, 128, 118, 1)'});
+	
 	//스크롤시, headBox 변화
 	var myScroll;
 	win.on('scroll',function(e){
@@ -46,13 +50,13 @@ var laptop = function(){
 		myScroll = win.scrollTop();
 		// console.log(myScroll, winHeight);
 			//헤드박스 배경색상 변경
-	if( myScroll+300 <  lineUpBox.height() ){
+	if( myScroll+350 <  lineUpBox.height() ){
 		headBox.find('li').stop().animate({color:'#fff'});
-		headBox.stop().animate({'backgroundColor':headBoxBg[0]});
+		headBox.stop().animate({'backgroundColor':headBoxBg[1]});
 		headBox.find('.sns_zone').find('ul').stop().animate({'backgroundColor':'rgba(0, 128, 118, 0)'});
 	} else {
 		headBox.find('li').stop().animate({color:'#333'});
-		headBox.stop().animate({'backgroundColor':headBoxBg[1]});
+		// headBox.stop().animate({'backgroundColor':headBoxBg[0]});
 		headBox.find('.sns_zone').find('ul').stop().animate({'backgroundColor':'rgba(0, 128, 118, 1)'});
 	}
 });

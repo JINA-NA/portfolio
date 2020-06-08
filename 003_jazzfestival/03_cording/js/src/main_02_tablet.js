@@ -24,14 +24,14 @@ WinHeightSet();
 
 var wrapOffsetL;
 
-win.on('resize',function(){
-	//세로 길이 꽉차게
-	WinHeightSet();
+// win.on('resize',function(){
+// 	//세로 길이 꽉차게
+// 	WinHeightSet();
 
-	//헤드박스 left제한
-	wrapOffsetL = wrap.offset().left;
-	headBox.css({'left':wrapOffsetL});
-});
+// 	//헤드박스 left제한
+// 	wrapOffsetL = wrap.offset().left;
+// 	headBox.css({'left':wrapOffsetL});
+// });
 
 var headBoxBg = [];
 headBoxBg[0] = 'rgba(30, 100, 80, 1)';

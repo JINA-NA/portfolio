@@ -10,7 +10,8 @@
 	var deviceWidth = [
 		{ 'size' : 640 ,  'title'  : deviceName[0]},
 		{ 'size' : 768 , 'title'  : deviceName[1]},
-		{ 'size' : 940 , 'title'  : deviceName[2]}
+		{ 'size' : 940 , 'title'  : deviceName[2]},
+		{ 'size' : 941 , 'title'  : deviceName[3]}
 	];
 	
 	var win = $(window);
@@ -23,8 +24,10 @@
 			sizeDevice = deviceName[0];
 		}else if(ww < deviceWidth[1].size){
 			sizeDevice = deviceName[1];
-		}else {
+		}else if(ww < deviceWidth[2].size){
 			sizeDevice = deviceName[2];
+		}else{
+			sizeDevice = deviceName[3];
 		}
 		// console.log(sizeDevice);
 		return sizeDevice;
@@ -36,7 +39,9 @@
 			mobile();
 		} else if ( $(window).innerWidth() <= deviceWidth[1].size ){
 			tablet();
-		} else {
+		} else if ( $(window).innerWidth() <= deviceWidth[2].size ){
+			tablet();
+		} else{
 			laptop();
 		}
 	};
@@ -48,7 +53,7 @@
 	$(window).on('resize',function(){
 		var nw = win.innerWidth();
 		var afterD = sizeCheck(nw);
-	
+		console.log(afterD)
 		if(afterD !== beforeD){
 			location.reload();
 		}

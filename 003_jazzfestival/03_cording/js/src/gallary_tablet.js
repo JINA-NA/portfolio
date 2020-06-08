@@ -7,7 +7,6 @@ var tablet = function(){
 
 var wrap = $('#wrap');
 var headBox =  $('#headBox');
-var viewBox =  $('#viewBox');
 
 var headBoxW = headBox.innerWidth();
 var win = $(window);
@@ -15,7 +14,6 @@ var winHeight;
 var WinHeightSet = function(){
 	winHeight = win.height();
 	// headBox.innerHeight( winHeight );
-	viewBox.innerHeight( winHeight );
 };
 WinHeightSet();
 
@@ -38,8 +36,6 @@ headBoxBg[1] = 'rgba(30, 100, 80, 0)';
 
 //스크롤시, headBox 변화 ===========================
 var myScroll;
-var timetableBoxList = timetableBox.find('li');
-var locationBoxList = locationBox.find('li');
 win.on('scroll',function(e){
 	e.preventDefault();
 	myScroll = win.scrollTop();
@@ -86,51 +82,6 @@ topBtn.children('button').on('click',function(e){
 	e.preventDefault();
 	$('html,body').scrollTop(0);
 });
-
-
-
-
-// footer 후원사 무한 슬라이드
-var sponsorArr=[
-	{logoImg: 'sponsor_edelweless.png', companyName: 'edelweless'},
-	{logoImg: 'sponsor_interpark.png', companyName: '인터파크'},
-	{logoImg: 'sponsor_KSPO.png', companyName: 'KSPO'},
-	{logoImg: 'sponsor_privateCurve.png', companyName: 'privateCurve'},
-	{logoImg: 'sponsor_sbs.png', companyName: 'sbs'},
-	{logoImg: 'sponsor_sbsContentsHub.png', companyName: 'sbsContentsHub'},
-	{logoImg: 'sponsor_songpagu.png', companyName: '송파구'},
-	{logoImg: 'sponsor_theGlenlivet.png', companyName: '질레트'},
-	{logoImg: 'sponsor_wemep.png', companyName: '위메프'}
-];
-var logoImgUrl = '../img/sponsor/';
-
-var footBox = $('#footBox');
-var sponsor = footBox.find('.sponsor');
-sponsor.append('<ul class="clearfix hidden_wrap"></ul>');
-
-var sponsorUl = sponsor.find('ul');
-var sponsorLeng = sponsorArr.length;
-var n = 0;
-for(; n < sponsorLeng ; n++ ){
-	sponsorUl.append('<li><span>'+ sponsorArr[n].companyName +'</span></li>');
-	sponsorUl.find('li').eq(n).css({backgroundImage: 'url(' + logoImgUrl + sponsorArr[n].logoImg + ')', backgroundRepeat:'no-repeat', backgroundSize: '80% auto', backgroundPosition: '50% 50%'});
-}
-var sponsorLi = sponsorUl.children('li');
-
-sponsorLiLast = sponsorLi.eq(-1).clone(true);
-var sponLiFistSize =sponsorLi.eq(1).outerWidth(true);
-sponsorUl.css({width:sponsorLeng*100+'%', position:'relative',top:0,left:0});
-
-setInterval(function(){
-	sponsorUl.animate({left:-sponLiFistSize + 'px'}, function(){
-		sponsorLi.eq(1).prevAll('li').appendTo(sponsorUl);
-		sponsorUl.css({left:0});
-		sponsorLi = sponsorUl.find('li');
-	});
-},3000);
-// ==========
-
-
 
 
 

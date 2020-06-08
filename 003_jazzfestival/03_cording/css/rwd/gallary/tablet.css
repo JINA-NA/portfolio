@@ -6,7 +6,7 @@
 #contBox{
 	width: 100%;
 	height:auto; min-height: 800px;
-	padding: 100px; box-sizing: border-box;
+	padding: 20px; box-sizing: border-box;
 	margin: auto;
 	background-color: #334;
 }
@@ -48,8 +48,8 @@
 }
 .image_list li {
 	display: inline-block;
-	width: 12vw; min-width: 100px; max-width: 120px; 
-	height: 12vw; min-height: 100px; max-height: 120px;
+	width: 30vw; min-width: 100px; max-width: 180px; 
+	height: 30vw; min-height: 100px; max-height: 180px;
 	margin: 0 1vw 3vw;
 	background-color: #fff;
 }

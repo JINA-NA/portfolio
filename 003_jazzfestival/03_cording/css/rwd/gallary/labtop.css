@@ -8,7 +8,8 @@
 	height:auto; min-height: 800px;
 	padding: 20px; padding-left: 350px; box-sizing: border-box;
 	margin: auto;
-	background-color: #334;
+	/* background-color: #334; */
+	background-image:linear-gradient(#334 50%,#4b0914);
 }
 #contBox h2 {
 	width: 100%; height: auto;

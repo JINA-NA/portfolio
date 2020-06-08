@@ -41,14 +41,14 @@
 
 
 .image_list ul {
-	width: auto; max-width: 940px; height: auto;
+	width: auto; max-width: 570px; height: auto;
 	margin:auto;
 	text-align:center;
 }
 .image_list li {
 	display: inline-block;
-	width: 12vw; min-width: 70px; max-width: 100px; 
-	height: 12vw; min-height: 70px; max-height: 100px;
+	width: 40vw; min-width: 100px; max-width: 150px; 
+	height: 40vw; min-height: 100px; max-height: 150px;
 	margin: 0 1vw 3vw;
 	background-color: #fff;
 }
