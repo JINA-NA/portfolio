@@ -51,7 +51,8 @@
 .lineUp_area li div {
 	width: 100%; height: 150px;
 	background-color:#ddd;	
-	background-size: 100% auto;
+	background-size: 110% auto;
+	background-position: 50% 50%;
 	border-radius: 10px;
 	transition: all 300ms ease;
 }
@@ -72,14 +73,20 @@
 .lineUp_area li p {
 	position: relative; z-index: 10;
 	width: 100%; height: 70px;
+	
 	font-size: 0.875rem; text-align: center;
 }
+.lineUp_area li:first-of-type p,
+.lineUp_area li:nth-of-type(6) p {font-size:0.75rem;}
+
 .lineUp_area li p span {
 	position: absolute; top: 50%;
 	display: block;
 	width: 100%; height: auto; 
 	margin:auto;	
+	padding:0 5px; box-sizing: border-box;
 	transform: translateY(-50%);
+	word-break: keep-all;
 }
 
 #timeTableBox{
@@ -110,8 +117,8 @@
 	width: 100%; height: 1050px;
 	margin-bottom: 20px; 
 	background-repeat: no-repeat;
-	background-position: 0 0;
-	background-size: 100% auto;
+	background-position: 50% 50%;
+	background-size:  auto 100%;
 }
 .timeTable_area div:nth-child(1) {
 	background-image: url(../../../img/lineUp_1.png);

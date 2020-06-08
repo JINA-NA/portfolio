@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* tablet.css */
 /* gallary 페이지 tablet  */
-@media screen and (min-width: 767px) and (max-width: 939px) {
+@media screen and (min-width: 768px) and (max-width: 939px) {
 
 #contBox{
 	width: 100%;
@@ -42,18 +42,17 @@
 
 
 .image_list ul {
-	width: 100%; max-width: 940px; height: auto;
-
+	width: auto; max-width: 940px; height: auto;
+	margin:auto;
+	text-align:center;
 }
 .image_list li {
-	float: left;
-	width: 12vw; min-width: 200px; max-width: 400px; height: 12vw; min-height: 200px; max-height: 400px;
-	margin-right: 1%; margin-bottom: 3%;
+	display: inline-block;
+	width: 12vw; min-width: 100px; max-width: 120px; 
+	height: 12vw; min-height: 100px; max-height: 120px;
+	margin: 0 1vw 3vw;
 	background-color: #fff;
 }
-/* .image_list li:nth-child(5n) {margin-left:0;} */
-
-
 
 
 

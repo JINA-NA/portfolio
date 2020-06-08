@@ -47,11 +47,11 @@ win.on('scroll',function(e){
 	if( myScroll+300 <  winHeight ){
 		headBox.find('li').stop().animate({color:'#fff'});
 		headBox.stop().animate({'backgroundColor':headBoxBg[0]});
-		headBox.find('.sns_zone').find('ul').stop().animate({'backgroundColor':'rgba(200, 200, 200, 0)'});
+		headBox.find('.sns_zone').find('ul').stop().animate({'backgroundColor':'rgba(0, 128, 118, 0)'});
 	} else {
 		headBox.find('li').stop().animate({color:'#333'});
 		headBox.stop().animate({'backgroundColor':headBoxBg[1]});
-		headBox.find('.sns_zone').find('ul').stop().animate({'backgroundColor':'rgba(200, 200, 200, 1)'});
+		headBox.find('.sns_zone').find('ul').stop().animate({'backgroundColor':'rgba(0, 128, 118, 1)'});
 	}
 });
 

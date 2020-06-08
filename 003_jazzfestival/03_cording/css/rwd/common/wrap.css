@@ -12,6 +12,7 @@
 		min-width: 320px; 
 		height: auto;
 		margin: auto;
+		overflow: hidden;
 		font-family: 'Noto Serif', serif;
 		font-family: 'Noto Serif KR', serif;
 	}
@@ -29,6 +30,7 @@
 		/* min-width: 767px; max-width: 939px;  */
 		height: auto;
 		margin: auto;
+		overflow: hidden;
 		font-family: 'Noto Serif', serif;
 		font-family: 'Noto Serif KR', serif;
 	}
@@ -45,6 +47,7 @@
 	#wrap {
 		width: 100%; min-width: 940px; max-width: 1600px; height: auto;
 		margin: auto;
+		overflow: hidden;
 		font-family: 'Noto Serif', serif;
 		font-family: 'Noto Serif KR', serif;
 	}

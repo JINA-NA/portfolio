@@ -23,7 +23,7 @@ var sizeCheck = function(ww){
 		sizeDevice = deviceName[0];
 	}else if(ww < deviceWidth[1].size){
 		sizeDevice = deviceName[1];
-	}else if(ww < deviceWidth[2].size){
+	}else{
 		sizeDevice = deviceName[2];
 	}
 	// console.log(sizeDevice);
@@ -36,7 +36,7 @@ var winWDevice = function(){
 		mobile();
 	} else if ( $(window).innerWidth() <= deviceWidth[1].size ){
 		tablet();
-	} else if ( $(window).innerWidth() >= deviceWidth[2].size ){
+	} else{
 		laptop();
 	}
 };
@@ -48,7 +48,7 @@ var activeRwd =
 $(window).on('resize',function(){
 	var nw = win.innerWidth();
 	var afterD = sizeCheck(nw);
-
+	console.log(afterD)
 	if(afterD !== beforeD){
 		location.reload();
 	}

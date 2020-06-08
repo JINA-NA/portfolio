@@ -74,7 +74,7 @@
 	/* #ticketBox ================================= */
 	#ticketBox {	
 		width: 100%; height: 800px; 
-		padding-top: 250px; 
+		padding-top: 250px; padding-left: 200px; box-sizing: border-box;
 		background-color: #211aa1;
 		background-image: url(../../../img/audience.jpg);
 		background-repeat: no-repeat;

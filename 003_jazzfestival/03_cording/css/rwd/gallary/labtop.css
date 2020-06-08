@@ -42,17 +42,18 @@
 
 
 .image_list ul {
-	width: 100%; max-width: 940px; height: auto;
-
+	width: auto; max-width: 940px; height: auto;
+	margin:auto;
+	text-align:center;
 }
 .image_list li {
-	float: left;
-	width: 12vw; min-width: 200px; max-width: 400px; height: 12vw; min-height: 200px; max-height: 400px;
-	margin-right: 1%; margin-bottom: 3%;
+	display: inline-block;
+	width: 12vw; min-width: 120px; max-width: 300px; 
+	height: 12vw; min-height: 120px; max-height: 300px;
+	margin: 0 1vw 3vw;
 	background-color: #fff;
 }
-/* .image_list li:nth-child(5n) {margin-left:0;} */
-
+.image_list li:first-child{margin-left: 1vw;}
 
 
 
