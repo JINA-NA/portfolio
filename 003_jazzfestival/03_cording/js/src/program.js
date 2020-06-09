@@ -37,8 +37,6 @@
 	var winWDevice = function(){
 		if( $(window).innerWidth() <= deviceWidth[0].size ){
 			mobile();
-		} else if ( $(window).innerWidth() <= deviceWidth[1].size ){
-			tablet();
 		} else if ( $(window).innerWidth() <= deviceWidth[2].size ){
 			tablet();
 		} else{
@@ -57,7 +55,7 @@
 		if(afterD !== beforeD){
 			location.reload();
 		}
-		winWDevice();
+		// winWDevice();
 	});
 	
 	
