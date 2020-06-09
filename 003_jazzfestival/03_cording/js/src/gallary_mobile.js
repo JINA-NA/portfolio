@@ -93,48 +93,77 @@ topBtn.children('button').on('click',function(e){
 
 
 
-// footer 후원사 무한 슬라이드
-var sponsorArr=[
-	{logoImg: 'sponsor_edelweless.png', companyName: 'edelweless'},
-	{logoImg: 'sponsor_interpark.png', companyName: '인터파크'},
-	{logoImg: 'sponsor_KSPO.png', companyName: 'KSPO'},
-	{logoImg: 'sponsor_privateCurve.png', companyName: 'privateCurve'},
-	{logoImg: 'sponsor_sbs.png', companyName: 'sbs'},
-	{logoImg: 'sponsor_sbsContentsHub.png', companyName: 'sbsContentsHub'},
-	{logoImg: 'sponsor_songpagu.png', companyName: '송파구'},
-	{logoImg: 'sponsor_theGlenlivet.png', companyName: '질레트'},
-	{logoImg: 'sponsor_wemep.png', companyName: '위메프'}
+
+//페이지 개별 속성
+
+var imgArr = [
+	'01.jpg',
+	'02.jpg',
+	'03.jpg',
+	'04.jpg',
+	'05.jpg',
+	'06.jpg',
+	'07.jpg',
+	'08.jpg',
+	'09.jpg',
+	'10.jpg'
 ];
-var logoImgUrl = '../img/sponsor/';
 
-var footBox = $('#footBox');
-var sponsor = footBox.find('.sponsor');
-sponsor.append('<ul class="clearfix hidden_wrap"></ul>');
+var imgUrl2012 = '../img/gallary/2012/2012_';
+var imgUrl2013 = '../img/gallary/2013/2013_';
+var imgUrl2014 = '../img/gallary/2014/2014_';
+var imgUrl2015 = '../img/gallary/2015/2015_';
+var imgBaseUrl = '../img/gallary/';
+var imgUrlYear = [
+	'2012/2012_',
+	'2013/2013_',
+	'2014/2014_',
+	'2015/2015_'
+];
 
-var sponsorUl = sponsor.find('ul');
-var sponsorLeng = sponsorArr.length;
-var n = 0;
-for(; n < sponsorLeng ; n++ ){
-	sponsorUl.append('<li><span>'+ sponsorArr[n].companyName +'</span></li>');
-	sponsorUl.find('li').eq(n).css({backgroundImage: 'url(' + logoImgUrl + sponsorArr[n].logoImg + ')', backgroundRepeat:'no-repeat', backgroundSize: '80% auto', backgroundPosition: '50% 50%'});
-}
-var sponsorLi = sponsorUl.children('li');
+// =============
+var contBox = $('#contBox');
+var dateList = contBox.find('.date_list');
+var imageList = contBox.find('.image_list');
+var imageUl = imageList.children('ul');
+var i = 0;
+var imageLi;
+var imageLiLink;
 
-sponsorLiLast = sponsorLi.eq(-1).clone(true);
-var sponLiFistSize =sponsorLi.eq(1).outerWidth(true);
-sponsorUl.css({width:sponsorLeng+100+'%', position:'relative',top:0,left:0});
 
-setInterval(function(){
-	sponsorUl.animate({left:-sponLiFistSize + 'px'}, function(){
-		sponsorLi.eq(1).prevAll('li').appendTo(sponsorUl);
-		sponsorUl.css({left:0});
-		sponsorLi = sponsorUl.find('li');
+var FnYear = function(n){
+	imageUl.empty();
+	var listEl = '<li><a href="#"></a></li>';
+	for(i=0; i < imgArr.length ; i++ ){
+		// imageUl.append( textEl(i) );
+		imageUl.append( listEl );
+		imageUl.children('li').eq(i).find('a').css({backgroundImage: 'url(' + imgBaseUrl + 	imgUrlYear[n] + imgArr[i] + ')', backgroundRepeat:'no-repeat', backgroundPosition:'50% 50%'});
+	}
+	
+	imageLi = $(document).find(imageUl).children('li');
+	imageLiLink = $(document).find(imageUl).children('li').find('a');
+	
+	//mouseenter 하면 이미지 크게
+	imageLiLink.on('mouseenter',function(){
+		var thisParenti = $(this).parentsUntil('ul').index();
+		console.log(thisParenti);
+		imageLi.eq(thisParenti).addClass('active');
+		imageLi.eq(thisParenti).siblings('li').removeClass('active');
 	});
-},3000);
 
+	imageLiLink.on('mouseleave',function(){
+		imageLi.removeClass('active');
+	});
 
+};
 
+FnYear(0);
 
+dateList.find('li').find('button').on('click',function(e){
+	e.preventDefault();
+	var thisIndex = $(this).parent('li').index();
+	FnYear(thisIndex);
+});
 
 
 

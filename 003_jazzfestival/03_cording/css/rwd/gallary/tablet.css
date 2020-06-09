@@ -52,8 +52,30 @@
 	height: 30vw; min-height: 100px; max-height: 180px;
 	margin: 0 1vw 3vw;
 	background-color: #fff;
+	transition: all 300ms ease;
 }
 .image_list li:first-child{margin-left:1vw}
+
+.image_list li.active a{
+	background-size: 130%;
+}
+
+.image_list li a {
+	position: relative;
+	display:block; width: 100%; height: 100%;
+	background-size: 100% auto;
+}
+
+.image_list li a:before{
+	content:""; display: block; 
+	position: absolute; top: 0; left: 0; 
+	width: 100%; height: 100%; 
+	background-color: rgba(0, 127, 118, 0); 
+	transition: all 300ms ease;
+}
+.image_list li.active a:before{
+	background-color: rgba(0, 127, 118, 0.7); 
+}
 
 
 /* @media 종료태그 */

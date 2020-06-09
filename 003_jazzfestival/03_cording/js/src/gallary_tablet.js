@@ -85,6 +85,78 @@ topBtn.children('button').on('click',function(e){
 
 
 
+//페이지 개별 속성
+
+var imgArr = [
+	'01.jpg',
+	'02.jpg',
+	'03.jpg',
+	'04.jpg',
+	'05.jpg',
+	'06.jpg',
+	'07.jpg',
+	'08.jpg',
+	'09.jpg',
+	'10.jpg'
+];
+
+var imgUrl2012 = '../img/gallary/2012/2012_';
+var imgUrl2013 = '../img/gallary/2013/2013_';
+var imgUrl2014 = '../img/gallary/2014/2014_';
+var imgUrl2015 = '../img/gallary/2015/2015_';
+var imgBaseUrl = '../img/gallary/';
+var imgUrlYear = [
+	'2012/2012_',
+	'2013/2013_',
+	'2014/2014_',
+	'2015/2015_'
+];
+
+// =============
+var contBox = $('#contBox');
+var dateList = contBox.find('.date_list');
+var imageList = contBox.find('.image_list');
+var imageUl = imageList.children('ul');
+var i = 0;
+var imageLi;
+var imageLiLink;
+
+
+var FnYear = function(n){
+	imageUl.empty();
+	var listEl = '<li><a href="#"></a></li>';
+	for(i=0; i < imgArr.length ; i++ ){
+		// imageUl.append( textEl(i) );
+		imageUl.append( listEl );
+		imageUl.children('li').eq(i).find('a').css({backgroundImage: 'url(' + imgBaseUrl + 	imgUrlYear[n] + imgArr[i] + ')', backgroundRepeat:'no-repeat', backgroundPosition:'50% 50%'});
+	}
+	
+	imageLi = $(document).find(imageUl).children('li');
+	imageLiLink = $(document).find(imageUl).children('li').find('a');
+	
+	//mouseenter 하면 이미지 크게
+	imageLiLink.on('mouseenter',function(){
+		var thisParenti = $(this).parentsUntil('ul').index();
+		console.log(thisParenti);
+		imageLi.eq(thisParenti).addClass('active');
+		imageLi.eq(thisParenti).siblings('li').removeClass('active');
+	});
+
+	imageLiLink.on('mouseleave',function(){
+		imageLi.removeClass('active');
+	});
+
+};
+
+FnYear(0);
+
+dateList.find('li').find('button').on('click',function(e){
+	e.preventDefault();
+	var thisIndex = $(this).parent('li').index();
+	FnYear(thisIndex);
+});
+
+
 
 // jQuery 종료
 };
