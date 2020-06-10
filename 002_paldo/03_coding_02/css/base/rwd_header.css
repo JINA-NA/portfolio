@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+/* rwd_header.css */
+/* 반응형고려 header 통합 */
+
+@media screen and (min-width: 280px) and (max-width: 959px) {
+
+#headBox {
+	position: relative;
+	padding: 15px 10px; box-sizing: border-box;
+	width: 100%; height: 50px; background-color: #F7F4EF;}
+
+h1 {
+	position: absolute; left: 0; right: 0; top: 8px;
+	margin: auto; 
+	width: 60px; height:30px; }
+h1 a {
+	display: block;
+	width:100%; height:100%;
+	background-image: url('../../img/logo.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: contain;}
+
+.gnb {width: 24px; height: 18px;}
+.gnb_btn {width: 24px; height: 18px; 
+	background-image: url('../../img/gnb_btn.png');
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: contain;}
+
+.gnb_mobile_menu {
+	display: none;
+	position: fixed; top: 0; left:0; z-index: 500;
+	width: 60vw; height: 100vh; 
+	padding: 20px 20px; box-sizing: border-box;
+	background-color: #ddd;}
+
+	.gnb_mobile_menu .exit_btn {
+	float: right;
+	width: 24px; height: 24px; 
+	background-image: url(../../img/exit_btn.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: contain;
+}
+.m_menu_area {float: left; width: 100%; height: auto; margin-top: 20px; overflow: hidden;}
+	.m_menu_area ul {width: 100%; height: auto; overflow: scroll;}
+	.m_menu_area li {width: 100%; height: auto;}
+	
+	.m_menu_area dt {width: 90%; height: 30px; margin: 8px;}
+	.m_menu_area dt a {display: block; width: 100%; height:  100%; line-height: 30px; font-size: 1.2rem; color: #333;}
+	.m_menu_area dt a:hover {font-weight: bold; color: #ED3424;}
+
+	.m_menu_area dd {width: 90%; height: auto; text-indent: 14px;}
+	.m_menu_area dd a {display: block; line-height: 30px; font-size: 1.125rem; color: #666A6B}
+	.m_menu_area dd a:hover {font-weight: bold; color: #ED3424;}
+
+	.gnb_btn:active~.gnb_mobile_menu  {display: block;}
+	/* 아래 주석단 부분 성립안됨-js로 제어 */
+	/* .exit_btn:active .gnb_mobile_menu  {display: none;} */
+	.m_menu_area dd {display: none;}
+	.m_menu_area li:hover dd {display: block;}
+
+
+	/* pc용 gnb - display:none */
+.gnb_btn:active .gnb_mobile_menu {display: block;}
+.gnb_area {display: none;}
+
+/* @media 종료태그 */
+}
+
+
+/* labtop이후부터 스타일 바뀜 ========================================*/
+@media screen and (min-width: 960px) {
+
+#headBox {
+	position: absolute; top:0; left: 0; z-index: 1000;
+	padding: 10px 30px; box-sizing: border-box;
+	width: 100%; height: 50px; background-color: #F7F4EF;}
+
+h1 {
+	float: left;
+	width: 80px; height:30px;}
+
+h1 a {
+	display: block;
+	width:100%; height:100%;
+	background-image: url('../../img/logo.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: contain;}
+
+#gnb {float: right; width: 350px; height: 30px;}
+
+.gnb_area {width: 100%; height: auto;}
+.gnb_area ul {width: 100%; height: 100%;}
+.gnb_area li {float: left; width: 24%; height: 100%;}
+.gnb_area dl {width: 100%; height: auto; background-color: rgba(250, 250, 250, 0.9);}
+.gnb_area dl dt {background-color:#F7F4EF; 
+	text-align: center; font-size: 1rem; line-height: 30px; color: #666A6B; cursor: pointer;}
+.gnb_area dl dd {display: none; text-align: center; font-size: 0.9375rem; color: #666A6B;}
+.gnb_area dd a {display:block; width: 98%; height: 100%; line-height: 30px;}
+
+.gnb_area:hover dd {display: block;}
+.gnb_area dt:hover{color:#ED3424; font-weight: bold;}
+.gnb_area dd a:hover {color: #ED3424;}
+
+
+.gnb_btn {display: none;}
+.gnb_mobile_menu {display: none;}
+
+
+/* @media 종료태그  */
+}
