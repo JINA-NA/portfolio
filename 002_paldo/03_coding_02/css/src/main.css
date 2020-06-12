@@ -4,115 +4,18 @@
 /* 팔도 메인페이지 */
 /* 디바이스 환경: 940px 에 최적화 */
 
-#wrap {
-	width: 100%; max-width: 1600px;
-	height: auto; min-height:200px;
-	margin:auto;
-}
 
-
-/* #headBox ================ */
-#headBox {
-	position: fixed; top:0; left:0; z-index:1000;
-	width: 100%; height: 70px;
-	padding: 15px 80px; box-sizing: border-box;
-	background-color:rgba(255,255,255,0);
-}
-.head_area{
-	width: 100%; min-width: 940px; max-width: 1200px;
-	margin:auto;
-}
-h1{
-	float:left;
-	width: 110px; height: 40px;
-	/* background-color:#76BC21; */
-	background-image:url(../../img/logo.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: 50% 50%;
-}
-h1 a {
-	display: block; width: 100%; height: 100%;
-}
-#gnbBox {
-	position: relative;
-	float: right;
-	width: 500px; height: auto; min-height: 40px;
-	padding-bottom:20px; box-sizing: border-box;
-}
-#gnbBox:before,
-#gnbBox::before {
-	position: absolute; top: 55px; right: 0px; z-index: -1;
-	content: ""; width: 500px; height: 0;
-	background-color:rgba(255,255,255,0.6);
-	transition: all 500ms ease;
-}
-#gnbBox.active:before,
-#gnbBox.active::before {
-	height: 170px;
-}
-
-#gnbBox ul{
-	position: relative; z-index: 0;
-	width: 100%; height:auto;
-}
-#gnbBox li {
-	float:left;
-	width:24%; height: auto;
-	margin-right: 1%;
-}
-#gnbBox li:last-child{margin-right:0;}
-
-#gnbBox dl {
-	width: 100%; height: auto;
-	text-align: center;
-}
-
-	#gnbBox dt {
-		width: 100%; height: 40px;
-		line-height: 40px;
-	}
-	#gnbBox dt a {
-		display: block; width: 100%; height: 100%;
-	}
-	#gnbBox dd {
-		display: none;
-		width: 100%; height: auto;
-		margin-top: 20px;
-		/* background-color:#fff; */
-		
-	}
-		#gnbBox dd ul {
-			width:100%; height: auto;
-		}
-			#gnbBox dd li {
-				width: 100%; height: 30px;
-				line-height: 30px; 
-				margin-bottom: 10px;
-				
-			}
-			#gnbBox dd li:last-child{margin-bottom:0;}
-
-			#gnbBox dd li a {
-				display: block; width: 100%; height: 100%;
-				color:#333;
-			}
-
-
-/* active시 */
-#gnbBox li:focus dt,
-#gnbBox li:hover dt,
-#gnbBox li.active dt {font-weight: bold;}
-/* #gnbBox li.active dd {font-weight: bold; background-color:#fff; color:#E43D30} */
-
-
-
+/* header,footer 영역은 공통적으로 제어 */
+@import url('../common/wrap.css');
+@import url('../common/header.css');
+@import url('../common/footer.css');
+/* ======================== */
 
 
 /* #viewBox ================ */
 #viewBox {
 	width: 100%;
-	height: auto; min-height: 600px;
+	height: auto; min-height: 700px;
 	/* background-color:#777; */
 }
 .view_area {
@@ -124,18 +27,18 @@ h1 a {
 }
 .view_text {
 	float:left;
-	width: 300px; height: 240px;
+	width: 320px; height: 240px;
 	margin-top: 180px; 
 }
 .view_text h3 {
-	width: 310px; height: 80px;
-	font-size: 1.875rem;
-	margin-bottom: 10px;
+	width: 360px; height: 80px;
+	font-size: 2.2rem;
+	margin-bottom: 30px;
 }
 .view_text p {
 	width: 100%; height: auto;
-	font-size: 0.875rem;
-	margin-bottom: 70px;
+	font-size: 1.1rem;
+	margin-bottom: 150px;
 }
 .view_text p.recipe_link:before, 
 .view_text p.recipe_link::before{
@@ -147,6 +50,7 @@ h1 a {
 }
 .view_text p.recipe_link {
 	position: relative; left:30px; z-index: 0; 
+	font-size: 1.3rem;
 	
 }
 .view_text p.recipe_link:hover:before{
@@ -179,7 +83,7 @@ h1 a {
 	background-size: 100%;
 }
 .view_bg {
-	position: absolute; top:-10px; right:-10px; z-index: -1;
+	position: absolute; top:30px; right:0px; z-index: -1;
 	width: 660px; height: 590px;
 	/* background-color:#76BC21; */
 	background-image: url(../../img/1x/bg_01.png);
@@ -188,7 +92,7 @@ h1 a {
 	background-size: 100%;
 }
 .view_mouse_icon {
-	position: absolute; left:0; right:0; bottom:-70px;
+	position: absolute; left:0; right:0; bottom:-100px;
 	margin:auto;
 	width: 23px; height: 75px;
 	/* background-color:#D8CE0E; */
@@ -213,20 +117,25 @@ h1 a {
 	width: 100%; height: auto; min-height:600px;
 	/* background-color:#666; */
 }
+.video_area {
+	width: 100%; max-width: 1600px;
+	height: auto;
+}
 .video_bg{
 	float:right;
 	width: 520px; height: 410px;
-	margin-top: 114px; margin-left:-100px;
+	margin-top: 114px; 
 	background-image: url(../../img/1x/bg_04.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: 100%;
 }
-.video_area{
-	position: absolute; top: 100px; left: 100px;
+.video_container{
+	position: absolute; top: 100px; left: 0; right:0;
 	width: 700px; height: 400px;
+	margin:auto;
 }
-.video_area iframe{
+.video_container iframe{
 	width:100%; height:100%;
 	border: none;
 }
@@ -245,14 +154,14 @@ h1 a {
 	background-image: url(../../img/1x/bg_center_01_long.png);
 	background-repeat: no-repeat;
 	background-position: 50% 0;
-	background-size: auto 100%;
+	background-size: 100% 100%;
 }
 #eventBox h2 {
 	width: 300px; height: auto;
 	margin:auto; margin-bottom: 40px; 
 	font-size: 1.875rem;
 	text-align: center;
-	color:#fff;
+	color:#333;
 }
 .event_banner{
 	width: 780px; height: 140px;
@@ -269,6 +178,11 @@ h1 a {
 .event_banner:hover{
 	background-size: 103%;
 }
+
+
+
+
+
 /* #productBox ================ */
 #productBox {
 	width: 100%; height: auto; min-height:200px;
@@ -400,6 +314,37 @@ background-color:#D8CE0E;
 	height: 15px;
 }
 
+
+.motto{
+	position: absolute; bottom: 0; left:0; right:0;
+	width: 300px; height: 20px;
+	margin:auto;
+}
+.motto p{
+	font-size: 0.875rem;
+	text-align: center;
+	color:#666656;
+}
+.motto:before, .motto::before{
+	position: absolute; top: 10px; left: -10px;
+	content: ""; width: 30px; height:28px;
+	background-image: url(../../img/1x/icon_paldo_01.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 100%;
+}
+.motto:after, .motto::after{
+	position: absolute; top: -20px; right: -10px;
+	content: ""; width: 30px; height:28px;
+	background-image: url(../../img/1x/icon_paldo_02.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 100%;
+}
+
+
+
+
 /* #instaBox ================ */
 #instaBox {
 	width: 100%; height: auto; min-height:500px;
@@ -413,17 +358,17 @@ background-color:#D8CE0E;
 }
 .insta_area h2 {
 	width: 300px; height: auto;
-	margin-bottom: 40px; margin-left: 100px;
+	margin-bottom: 40px;
 	font-size: 1.875rem;
 }
 .insta_area ul {
-	width:700px; height: auto;
+	width:100%; height: auto;
 	margin:auto;
 	margin-bottom: 40px;
 }
 .insta_area li {
 	float: left;
-	width: 160px; height: 160px;
+	width: 220px; height: 220px;
 	margin-right: 20px;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
@@ -443,7 +388,8 @@ background-color:#D8CE0E;
 	display: block;  width: 100%; height: 100%;
 }
 .insta_area p {
-	width: 100%; height: auto;
+	width: 200px; height: auto;
+	margin:auto;
 	text-align: center;
 	color:#333;
 }
@@ -452,104 +398,3 @@ background-color:#D8CE0E;
 }
 
 
-
-/* #footBox ================ */
-#footBox {
-	width: 100%; height: auto;
-	/* background-color:#222; */
-}
-.foot_area {
-	width: 100%; max-height: 1600px; height: auto;
-}
-.foot_bg {
-	width: 100%; height: 150px;
-	background-image: url(../../img/1x/bg_center_02_long.png);
-	background-repeat: no-repeat;
-	background-position: 50% 100%;
-	background-size: 100% auto;
-}
-.foot_info {
-	float:left;
-	width: 100%; min-width: 940px;
-	height: auto;
-	padding: 20px; box-sizing: border-box;
-	background-color:#3C3C3C;
-}
-.foot_text {
-	width: 800px; height:auto;
-}
-.foot_text p {
-	margin-bottom:5px;
-	font-size: 0.875rem; color:#fff;
-	text-align: left;
-}
-.cs_group {
-	width: 100%; height: 30px;
-}
-	.cs_group >p {
-		display: inline-block;
-		margin-right: 20px;
-		font-size: 1rem; font-weight: bold;
-	}
-.site_group {
-	width: 100%; height: 24px;
-}
-	.site_group >p  {
-		display: inline-block;
-		position: relative;
-		margin-right: 18px;
-	}
-	.site_group >p:after, 
-	.site_group >p::after{
-		content:"";
-		position: absolute; top:3px; left :-9px; 
-		width: 2px; height: 80%; 
-		background-color:#fff;
-	}
-	.site_group >p:nth-child(1):after, 
-	.site_group >p:nth-child(1)::after{
-		display:none;
-	}
-	/* .site_group p a {
-		display: inline-block; width: 100%; height: 100%;
-	} */
-.company_group {
-	width: 100%; height: 24px;
-}
-	.company_group >p {
-		display: inline-block;
-		margin-right: 10px;
-	}
-.copyright_group {
-	width: 100%; height: 24px;
-}
-.sns_zone{
-	float:right;
-	width: 150px; height: 40px;
-	transform: translateY(-100px);
-}
-.sns_zone ul {
-	width: 100%; height: 100%;
-}
-.sns_zone li {
-	float: left;
-	width: 40px; height: 40px;
-	margin-right: 10px;
-	background-image: url(../../img/sns_icon.png);
-	background-repeat: no-repeat;
-	background-size: auto;
-	background-position-y: 5px;
-}
-.sns_zone li:nth-child(1){
-	background-position-x: 5px;
-}
-.sns_zone li:nth-child(2){
-	background-position-x: -75px;
-}
-.sns_zone li:nth-child(3){
-	background-position-x: -112px;
-}
-.sns_zone li:last-child{margin-right:0}
-.sns_zone li a {
-	display: block; width: 100%; height: 100%;
-}

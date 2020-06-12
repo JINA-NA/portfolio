@@ -38,7 +38,7 @@ gnbDdLink.eq(-1).on('blur',function(){
 });
 //dd mouseenter 시 속성
 gnbDdLink.on('mouseenter focus',function(){
-	$(this).css({color:'#222', fontWeight:'bold'});
+	$(this).css({color:'#E43D30', fontWeight:'bold'});
 	$(this).parent('li').siblings().find('a').removeAttr('style');
 
 	$(this).parents('li').addClass('active');
@@ -57,23 +57,35 @@ var productBox = $('#productBox');
 var iconLi = productBox.find('li');
 
 
-win.on('scroll',function(e){
-console.log(myScroll)
-	myScroll = win.scrollTop();
-	if( myScroll >= 200 ){
-		headBox.stop().animate({backgroundColor:'rgba(255,255,255,0.8)'});
-	} else {
-		headBox.stop().animate({backgroundColor:'rgba(255,255,255,0)'});
-	}
+// win.on('scroll',function(e){
+// console.log(myScroll)
+// 	myScroll = win.scrollTop();
+// 	if( myScroll >= 200 ){
+// 		headBox.stop().animate({backgroundColor:'rgba(255,255,255,0.8)'});
+// 	} else {
+// 		headBox.stop().animate({backgroundColor:'rgba(255,255,255,0)'});
+// 	}
 
-		//제품군 샤샤샥 올라오기
-	if( myScroll > 1300){
-		iconLi.eq(0).css({transform: 'translateY(100)'});
-		iconLi.eq(1).delay(200).addClass('active');
-		iconLi.eq(2).delay(300).addClass('active');
-	}
+// 		//제품군 샤샤샥 올라오기
+// 	if( myScroll > 1300){
+// 		iconLi.eq(0).css({transform: 'translateY(100)'});
+// 		iconLi.eq(1).delay(200).addClass('active');
+// 		iconLi.eq(2).delay(300).addClass('active');
+// 	}
+// //scroll 종료태그
+// });
+
+//mousewheel 시, header 나왔다가 들어왔다가
+win.on('mousewheel DOMMouseScroll',function(e){
+	var eo = e.originalEvent;
+	var delta = eo.wheelDelta;
+	// console.log(delta)
+	if(delta <= 0){
+		headBox.hide();
+		} else {
+			headBox.show();
+		}
 });
-
 
 // jQuery 종료
 })(jQuery);

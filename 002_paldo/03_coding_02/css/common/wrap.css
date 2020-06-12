@@ -1,0 +1,11 @@
+/* wrap.css */
+/* 팔도- 공통 영역 */
+
+
+
+#wrap {
+	width: 100%; 
+	max-width: 1920px;
+	height: auto; min-height:200px;
+	margin: auto;
+}
