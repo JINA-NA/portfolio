@@ -34,7 +34,7 @@ h1 a {
 }
 #gnbBox:before,
 #gnbBox::before {
-	position: absolute; top: 70px; right: 0px; z-index: -1;
+	position: absolute; top: 80px; right: 0px; z-index: -1;
 	content: ""; width: 1200px; height: 0;
 	border-top: 0 solid #80BA27;
 	background-color:rgba(245,245,245,1);
@@ -81,7 +81,7 @@ h1 a {
 	}
 		#gnbBox dd ul {
 			width:100%; height: auto;
-			padding-top: 30px; box-sizing: border-box;
+			padding-top: 50px; box-sizing: border-box;
 		}
 			#gnbBox dd li {
 				width: 100%; height: 30px;
