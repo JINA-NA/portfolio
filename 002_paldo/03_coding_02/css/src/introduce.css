@@ -23,14 +23,18 @@
 	/* max-width: 1600px;  */
 	height:350px;
 	margin:auto;
-	background-color:#ddf;
+	background-color:#fff;
+	background-image: url(../../img/illust/illust_01.svg);
+	background-repeat: no-repeat;
+	background-position: 50% 30%;
+	background-size: 100%;
 }
 
 
 /*  #depthBox ============== */
 #depthBox {
 	width: 100%; height: 50px;
-	background-color:#faa;
+	background-color:#80ba27;
 }
 .depth_area {
 	width: 100%; min-width: 940px; max-width: 1200px;
@@ -44,10 +48,13 @@
 .depth_area li {
 	float: left;
 	width: 130px; height: 100%;
-	border: 1px solid #333; box-sizing: border-box;
-	font-size: 0.875rem;
+	/* border: 1px solid #333;  */
+	box-sizing: border-box;
+	font-size: 1rem;
 	line-height: 50px; 
 	text-indent: 10px;
+	color: #333;
+	font-weight: bold;
 }
 .depth_area li:first-child{
 	position: relative;
@@ -76,7 +83,7 @@
 }
 .cont_title p {
 	text-align: center;
-	font-size: 1.5rem; font-weight: bold;
+	font-size: 1.8rem; font-weight: bold;
 
 }
 
@@ -105,5 +112,6 @@
 	background-color: #ff9;
 }
 .cont_area p{
-	font-size: 1.1rem;
+	font-size: 1.25rem;
+	color:#333; font-weight: normal;
 }
