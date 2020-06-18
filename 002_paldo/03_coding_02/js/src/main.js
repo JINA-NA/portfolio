@@ -51,29 +51,28 @@ gnbDdLink.on('mouseleave blur',function(){
 
 //스크롤시 headBox 색상 생성
 var win = $(window);
+var winH = win.outerHeight();
 var myScroll;
 
 var productBox = $('#productBox');
-var iconLi = productBox.find('li');
+var iconLi = productBox.find('.product_group').find('li');
 
 
-// win.on('scroll',function(e){
-// console.log(myScroll)
-// 	myScroll = win.scrollTop();
-// 	if( myScroll >= 200 ){
-// 		headBox.stop().animate({backgroundColor:'rgba(255,255,255,0.8)'});
-// 	} else {
-// 		headBox.stop().animate({backgroundColor:'rgba(255,255,255,0)'});
-// 	}
-
-// 		//제품군 샤샤샥 올라오기
-// 	if( myScroll > 1300){
-// 		iconLi.eq(0).css({transform: 'translateY(100)'});
-// 		iconLi.eq(1).delay(200).addClass('active');
-// 		iconLi.eq(2).delay(300).addClass('active');
-// 	}
-// //scroll 종료태그
-// });
+//각각 offset 파악
+var iconLiArr = [];
+for(var i = 0; i < 3; i++){
+	iconLiArr[i] = iconLi.eq(i).offset().top;
+}
+win.on('scroll',function(){
+	myScroll = win.scrollTop();
+	if( myScroll + (winH/6*5) > iconLiArr[0]){
+		iconLi.eq(0).addClass('active');
+		iconLi.eq(1).addClass('active');
+		iconLi.eq(2).addClass('active');
+	}
+	
+//scroll 종료태그
+});
 
 //mousewheel 시, header 나왔다가 들어왔다가
 win.on('mousewheel DOMMouseScroll',function(e){

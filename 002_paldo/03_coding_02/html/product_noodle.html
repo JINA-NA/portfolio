@@ -53,7 +53,7 @@
           </li>
           <li>
             <dl>
-              <dt><a href="newsroom.html">뉴스룸</a></dt>
+              <dt><a href="./newsroom.html">뉴스룸</a></dt>
               <dd>
                 <ul>
                   <li><a href="#">공지사항</a></li>
@@ -84,7 +84,7 @@
     <!-- #viewBox -->
     <section id="viewBox">
       <div class="view_area">
-        <h2>제품 소개</h2>
+        <h2 class="hidden_wrap"><span>제품 소개</span></h2>
       </div>
     </section>
   
@@ -93,19 +93,29 @@
       <div class="depth_area">
         <ul class="clearfix">
           <li>팔도이야기</li>
-          <li>기업소개</li>
+          <li>
+            <form action="#" id="page">
+              <select name="pageLink" id="pageLink" form="pageForm">
+                <option value="./introduce.html">기업소개</option>
+                <option value="./recruit.html">인재채용</option>
+                <option value="./history.html">팔도history</option>
+                <option value="./ci.html">CI소개</option>
+                <option value="./map.html">오시는 길</option>
+              </select>
+            </form>
+          </li>
         </ul>
       </div>
     </section>
 
-    <!-- #menuBox -->
-    <section id="menuBox">
-    <h2 class="hidden">팔도의 제품군에 대한 나열입니다.</h2>
-      <div class="submenu_list">
+    <!-- #categoryBox -->
+    <section id="categoryBox">
+     <h2 class="hidden">팔도의 제품군에 대한 나열입니다.</h2>
+      <div class="category_area">
         <ul>
-          <li><a href="#">면 제품</a></li>
-          <li><a href="#">음료 제품</a></li>
-          <li><a href="#">간편식 제품</a></li>
+          <li><a href="#">면</a></li>
+          <li><a href="#">음료</a></li>
+          <li><a href="#">간편식</a></li>
         </ul>
       </div>
     </section>
@@ -113,7 +123,7 @@
 
     <!-- #contBox -->
     <section id="contBox">
-    <h2 class="hidden">팔도의 다양한 면 제품을 나열합니다</h2>
+    <h2 class="hidden">팔도의 다양한 면 제품</h2>
       <div class="cont_area clearfix">
         <div class="product_list">
           <ul>
@@ -244,5 +254,12 @@
       </div>
     </aside>
   </div>
+
+  <!-- script -->
+	<script src="../js/base/jquery-3.5.1.min.js"></script>
+	<script src="../js/base/jquery-ui.min.js"></script>
+
+	<script src="../js/src/product_noodle.js"></script>
 </body>
+
 </html>
