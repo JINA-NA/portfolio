@@ -15,7 +15,7 @@
 	background-image: url(../../img/1x/bg_center_02_long.png);
 	background-repeat: no-repeat;
 	background-position: 50% 0%;
-	background-size: 100% auto;
+	background-size: 100% 100%;
 }
 .foot_info {
 	float:left;
