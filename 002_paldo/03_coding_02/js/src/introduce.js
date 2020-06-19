@@ -44,18 +44,6 @@ for(var i = 0; i < 4; i++){
 win.on('scroll',function(){
 	myScroll = win.scrollTop();
 	
-	// if( myScroll+500 > contOffArr[3] ){
-	// 	contBody.eq(3).addClass('active');
-	// }
-	// if( myScroll+500 > contOffArr[2] ){
-	// 	contBody.eq(2).addClass('active');
-	// }
-	// if( myScroll+500 > contOffArr[1] ){
-	// 	contBody.eq(1).addClass('active');
-	// }
-	// if( myScroll+500 > contOffArr[0] ){
-	// 	contBody.eq(0).addClass('active');
-	// }
 	for(var j=0; j < 4; j++){
 		if( myScroll + (winH/6*5) > contOffArr[j] ){
 			contBody.eq(j).addClass('active');
