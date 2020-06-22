@@ -25,6 +25,14 @@
 	margin:auto;
 	/* padding: 80px; box-sizing: border-box; */
 }
+.slide_wrap {
+	width: 300%; height: 100%;
+}
+.slide_wrap li {
+	float:left;
+	width: 33.333333%; height: 100%;
+}
+
 .view_text {
 	float:left;
 	width: 320px; height: 320px;
