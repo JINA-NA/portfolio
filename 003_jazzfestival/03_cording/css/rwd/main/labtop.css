@@ -17,6 +17,13 @@
 	.view_text {
 		position: absolute; bottom: 30px; right: 30px; z-index: 500;
 		width: 400px; height: auto;
+		transition: all 1000ms ease;
+		transform: translateX(500px); 
+		opacity: 0;
+	}
+	.view_text.active{
+		transform: translateX(0); 
+		opacity: 1;
 	}
 	.view_text span:before,
 	.view_text span::before {

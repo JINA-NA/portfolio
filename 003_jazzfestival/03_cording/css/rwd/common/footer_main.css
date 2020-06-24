@@ -52,6 +52,7 @@
 		font-size: 1.2rem; color: #3B3B3B;
 	}
 	
+	.mobile_br {display:block;}
 /* @media 종료태그 */
 }
 
@@ -107,7 +108,7 @@
 		font-size: 1.8rem; color: #3B3B3B;
 	}
 	
-	
+	.mobile_br {display:none;}
 /* @media 종료태그 */
 }
 
@@ -165,6 +166,7 @@
 		font-size: 1.8rem; color: #3B3B3B;
 	}
 
+	.mobile_br {display:none;}
 /* @media 종료태그 */
 }
 	

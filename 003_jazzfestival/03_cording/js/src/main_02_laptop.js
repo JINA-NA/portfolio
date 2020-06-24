@@ -71,7 +71,8 @@
 	});
 
 
-
+ //로드시 이미지 나타남
+ viewBox.find('.view_text').addClass('active');
 
 
 
