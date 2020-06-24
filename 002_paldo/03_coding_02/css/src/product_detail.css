@@ -1,0 +1,11 @@
+/* product_detail.css */
+/* 제품소개 > 각 제품 설명 페이지 */
+/* 디바이스 환경: 940px 에 최적화 */
+
+
+/* header,footer 영역은 공통적으로 제어 */
+@import url('../common/wrap.css');
+@import url('../common/header.css');
+@import url('../common/footer.css');
+/* ======================== */
+
