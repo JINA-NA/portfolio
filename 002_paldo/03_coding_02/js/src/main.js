@@ -20,7 +20,7 @@ gnbDtLink.on('mouseenter focus',function(){
 	$(this).parents('li').addClass('active');
 	$(this).parents('li').siblings().removeClass('active');
 
-	gnbBox.addClass('active');
+	headBox.addClass('active');
 });
 
 //mouseleave시에 dd 사라지기
@@ -28,13 +28,13 @@ gnbBox.on('mouseleave',function(){
 	gnbDd.stop().slideUp();
 	gnbBox.find('li').removeClass('active');
 
-	gnbBox.removeClass('active');
+	headBox.removeClass('active');
 });
 
 //blur시에 dd 사라지기
 gnbDdLink.eq(-1).on('blur',function(){
 	gnbDd.stop().slideUp();
-	gnbBox.removeClass('active');
+	headBox.removeClass('active');
 });
 //dd mouseenter 시 속성
 gnbDdLink.on('mouseenter focus',function(){

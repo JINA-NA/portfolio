@@ -4,22 +4,69 @@
 
 (function($){
 	// jQuery 시작 
+	var win = $(window);
+	var winH = win.outerHeight();
+	var myScroll;
 
+// 모든페이지 공통 속성----------------------------
+//headBox 영역 제어 =========================
+// 네비게이션
+var headBox = $('#headBox');
+var gnbBox = $('#gnbBox');
+var gnbDtLink = gnbBox.find('dt').find('a');
+var gnbDd = gnbBox.find('dd')
+var gnbDdLink = gnbBox.find('dd').find('a');
 
+//mouseenter시에 dd 나타나기
+gnbDtLink.on('mouseenter focus',function(){
+	gnbDd.stop().slideDown();
+	$(this).parents('li').addClass('active');
+	$(this).parents('li').siblings().removeClass('active');
 
-var pageLink = $('#pageLink');
-pageLink.find('option')
+	headBox.addClass('active');
+});
 
+//mouseleave시에 dd 사라지기
+gnbBox.on('mouseleave',function(){
+	gnbDd.stop().slideUp();
+	gnbBox.find('li').removeClass('active');
 
+	headBox.removeClass('active');
+});
 
-//다른 페이지로 이동-select 태그
-pageLink.on('change',function(){
-	var v = $(this).val();
-	console.log(v);
-	window.location = v;
+//blur시에 dd 사라지기
+gnbDdLink.eq(-1).on('blur',function(){
+	gnbDd.stop().slideUp();
+	headBox.removeClass('active');
+});
+//dd mouseenter 시 속성
+gnbDdLink.on('mouseenter focus',function(){
+	$(this).css({color:'#E43D30', fontWeight:'bold'});
+	$(this).parent('li').siblings().find('a').removeAttr('style');
+
+	$(this).parents('li').addClass('active');
+	$(this).parents('li').siblings().removeClass('active');
+});
+gnbDdLink.on('mouseleave blur',function(){
+	$(this).removeAttr('style');
 });
 
 
+
+//mousewheel 시, header 나왔다가 들어왔다가
+win.on('mousewheel DOMMouseScroll',function(e){
+	var eo = e.originalEvent;
+	var delta = eo.wheelDelta;
+	// console.log(delta)
+	if(delta <= 0){
+		headBox.hide();
+		} else {
+			headBox.show();
+		}
+});
+
+
+//페이지 개별 속성 ------------------------------
 
 // 제품(면) 리스트 ===============================
 var contBox = $('#contBox');
@@ -87,8 +134,7 @@ var productTypeSelect = function(n){
 	};
 
 	//scroll 시 제품 한줄씩 스르륵 나타나기
-	var win = $(window);
-	var winH = win.outerHeight();
+
 	var liOffArr = [];
 	for(var i = 0; i < selectType.length; i++){
 		liOffArr[i] = proLi.eq(i).offset().top;
@@ -99,7 +145,7 @@ var productTypeSelect = function(n){
 	proLi.eq(1).addClass('active');
 	proLi.eq(2).addClass('active');
 	
-	var myScroll;
+
 	win.on('scroll',function(){
 		myScroll = win.scrollTop();
 		for(var j = 0; j < selectType.length; j++){
