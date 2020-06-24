@@ -14,15 +14,16 @@
 
 /* #viewBox ================ */
 #viewBox {
-	width: 100%;
-	height: auto; min-height: 700px;
+	width: 100%; min-width: 1200px;
+	height: auto; min-height: 300px;
 	/* background-color:#777; */
 }
 .view_area {
 	position: relative; z-index: 0;
-	width:80%;  min-width: 940px;  max-width: 1200px;
-	height: auto;
+	width:100%;  min-width: 940px;  max-width: 1920px;
+	height: 600px;
 	margin:auto;
+	overflow:hidden;
 	/* padding: 80px; box-sizing: border-box; */
 }
 .slide_wrap {
@@ -30,15 +31,20 @@
 }
 .slide_wrap li {
 	float:left;
-	width: 33.333333%; height: 100%;
+	width: 33.333333%; 
+	/* min-width: 940px;  */
+	height: 100%;
+	padding: 0 50px; box-sizing:border-box;
 }
-
+/* .slide_01 {background-color:#Fa0;}
+.slide_02 {background-color:#aa0;}
+.slide_03 {background-color:#0a0;} */
 .view_text {
 	float:left;
 	width: 320px; height: 320px;
 	margin-top: 180px; 
 }
-.view_text h3:before, 
+/* .view_text h3:before, 
 .view_text h3::before {
 	position: absolute; top: 155px; left:-10px; z-index: -1;
 	content: "";
@@ -49,18 +55,19 @@
 @keyframes viewTextUnderline {
 	0% { width: 0px; }
 	100% { width: 210px; }
-}
+} */
 
 .view_text h3 {
 	position: relative;
-	width: 360px; height: 160px;
-	font-size: 2.5rem;
+	width: 390px; height: 100px;
 	margin-bottom: 30px;
+	font-size: 2.5rem; 
+	letter-spacing: -0.2rem;
 }
 .view_text p {
-	width: 350px; height: auto;
+	width: 400px; height: auto;
 	font-size: 1.2rem;
-	margin-bottom: 150px;
+	margin-bottom: 100px;
 }
 .view_text p.recipe_link:before, 
 .view_text p.recipe_link::before{
@@ -72,35 +79,35 @@
 }
 .view_text p.recipe_link {
 	position: relative; left:30px; z-index: 0; 
-	font-size: 1.3rem;
-	
+	font-size: 1.3rem; width: 100px;
+	font-weight: bold;
 }
 .view_text p.recipe_link:hover:before{
-	left: 80px;
+	left: 150px;
 }
 
 
 .view_img {
-	position: relative;
+	position: relative; 
+	/* top: 50px; right: 10px; */
 	float: right;
-	width: 500px; height: 400px;
-	margin-top: 150px; margin-right: 90px;
-	/* background-color:#aad; */
-	background-image: url(../../img/1x/bg_02.png);
+	width: 480px; height: 380px;
+	margin-top: 150px; 
+	margin-right: 70px;
 	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: 90%;
-	animation: viewImg 3000ms ease-in-out infinite alternate;
+	background-position: 0% 50%;
+	background-size: 95% auto;
+	animation: viewImg 1500ms ease-in-out infinite alternate;
 }
+.slide_01 .view_img {background-image:url('../../img/slide_banner_01.png')}
+.slide_02 .view_img {background-image:url('../../img/slide_banner_02.png')}
+.slide_03 .view_img {background-image:url('../../img/slide_banner_03.png')}
+
 @keyframes viewImg{
-	0% {background-position: 0% 0%; width: 480px; }
-	/* 50% {background-size: 81%;} */
-	100% {background-position: 100% 0%; width: 500px; }
+	0% {background-size: 95% auto;}
+	100% {background-size: 100% auto;}
 }
 
-.view_img:hover{
-	background-size: 90% auto;
-}
 .view_img:before,
 .view_img::before{
 	position: absolute; top:50px; left: 380px;

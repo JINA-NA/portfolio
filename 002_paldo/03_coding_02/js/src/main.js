@@ -87,32 +87,36 @@ win.on('mousewheel DOMMouseScroll',function(e){
 });
 
 //슬라이드배너====================================
-var SlideArr = [
-	{text:'무더운 여름엔 시원한 팔도 비빔면', img:'../img/1x/bg_02.png'},
-	{text:'매콤한~ 팔도 비빔면 매운맛 출시', img:'../img/1x/bg_02.png'},
-	{text:'매콤달콤 어쩌구 팔도 면', img:'../img/1x/bg_02.png'},
-];
-
+var viewBox = $('#viewBox');
 var slideWrap = $('.slide_wrap');
 var slideLi = slideWrap.find('li');
 var lastLi = slideLi.eq(-1).clone(true);
 slideWrap.prepend(lastLi);
 slideLi = slideWrap.find('li');
-// console.log(slideLi.length);
-slideWrap.css({width: n*100+'%', position:'relative', left:-100+'%'});
-slideLi.css({width:100/slideLi.length + '%'});
+console.log(slideLi.length);
+
+slideWrap.css({width: 400 +'%', position:'relative', left:-100+'%'});
+slideLi.css({width: 25 + '%'});
 
 var  n = 0;
+var bool = true;
 setInterval(
 	function(){
+		bool = false;
 		n+=1;
-		slideWrap.animate({left: -n * 100 + '%'},500,function(){
-			if( n >= slideLi.length-2 ){
+		slideWrap.animate({left: -n * 100 + '%'}, 1000, function(){
+			if( n >= slideLi.length-1 ){
 				n = 0;
 				slideWrap.css({left: -n * 100 + '%'});
+			bool = true;
 			}
 		})
-	},2000);
+	},4000);
+	viewBox.on('mouseenter',function(){
+		clearInterval();
+	});
+
+	
 
 
 
