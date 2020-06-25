@@ -16,11 +16,11 @@
 }
 
 /* tablet */
-@media all and (min-width: 641px) and (max-width: 1200px) {
+@media all and (min-width: 641px) and (max-width: 940px) {
 
 	#wrap {
 		width: 100%; 
-		min-width:641px; max-width: 1200px;
+		min-width:641px; max-width: 940px;
 		height: auto; min-height:200px;
 		margin: auto;
 	}

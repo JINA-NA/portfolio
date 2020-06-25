@@ -99,9 +99,9 @@
 	transform: scale(0.5);
 	animation: viewImg 1500ms ease-in-out infinite alternate;
 }
-.slide_01 .view_img {background-image:url('../../img/slide_banner_01.png')}
-.slide_02 .view_img {background-image:url('../../img/slide_banner_02.png')}
-.slide_03 .view_img {background-image:url('../../img/slide_banner_03.png')}
+.slide_01 .view_img {background-image:url('../../../img/slide_banner_01.png')}
+.slide_02 .view_img {background-image:url('../../../img/slide_banner_02.png')}
+.slide_03 .view_img {background-image:url('../../../img/slide_banner_03.png')}
 
 @keyframes viewImg{
 	0% {background-size: 95% auto;}
@@ -112,7 +112,7 @@
 .view_img::before{
 	position: absolute; top:50px; left: 380px;
 	content:""; width: 130px; height:130px;
-	background-image: url(../../img/1x/bg_03.png);
+	background-image: url(../../../img/1x/bg_03.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: 100%;
@@ -121,7 +121,7 @@
 	position: absolute; top:30px; right:-100px; z-index: -1;
 	width: 300px; height: 380px;
 	/* background-color:#76BC21; */
-	background-image: url(../../img/1x/bg_01.png);
+	background-image: url(../../../img/1x/bg_01.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: contain;
@@ -140,7 +140,7 @@
 	position: relative;
 	width: 100%; height: auto;
 	/* background-color:#666; */
-	background-image: url(../../img/bg_wave_green.svg);
+	background-image: url(../../../img/bg_wave_green.svg);
 	background-position: 0 0;
 	background-size: 150px;
 }
@@ -153,7 +153,7 @@
 	float:right;
 	width: 100%; height: 300px;
 	margin-top: 120px; 
-	background-image: url(../../img/1x/bg_04.png);
+	background-image: url(../../../img/1x/bg_04.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: 100%;
@@ -180,7 +180,7 @@
 	width: 100%; height: 300px;	
 	padding: 40px 10px; box-sizing: border-box;
 	/* background-color:#80BA27; */
-	background-image: url(../../img/1x/bg_center_01_long.png);
+	background-image: url(../../../img/1x/bg_center_01_long.png);
 	/* background-image: url(../../img/bg_wave.svg); */
 	background-repeat: no-repeat;
 	background-position: 50% 0;
@@ -199,7 +199,7 @@
 	background-color:#fff;
 	margin:auto;
 	border-radius:10px;
-	background-image: url(../../img/banner_03.png);
+	background-image: url(../../../img/banner_03.png);
 	background-repeat: no-repeat;
 	background-position: 50% 100%;
 	background-size: 100%;
@@ -245,7 +245,7 @@
 	display: none;
 	position: absolute; top: 0px; right: 0px; z-index:-1;
 	width: 290px; height: 300px;
-	background-image: url(../../img/1x/bg_05.png);
+	background-image: url(../../../img/1x/bg_05.png);
 	background-repeat: no-repeat;
 	background-position: 50% 0;
 	background-size: contain;
@@ -345,9 +345,9 @@ background-color:#D8CE0E;
 	background-size: 60% auto;
 	transition:all 300ms ease;
 }
-.p_icon_01{background-image:url(../../img/1x/icon_noodle.png)}
-.p_icon_02{background-image:url(../../img/1x/icon_beverage.png)}
-.p_icon_03{background-image:url(../../img/1x/icon_hmr.png)}
+.p_icon_01{background-image:url(../../../img/1x/icon_noodle.png)}
+.p_icon_02{background-image:url(../../../img/1x/icon_beverage.png)}
+.p_icon_03{background-image:url(../../../img/1x/icon_hmr.png)}
 			/* hover 시 동작 */
 .product_group li:hover .icon_area {
 	background-size: 65% auto;
@@ -371,7 +371,7 @@ background-color:#D8CE0E;
 .motto:before, .motto::before{
 	position: absolute; top: 10px; left: 10px;
 	content: ""; width: 30px; height:28px;
-	background-image: url(../../img/1x/icon_paldo_01.png);
+	background-image: url(../../../img/1x/icon_paldo_01.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: 100%;
@@ -380,7 +380,7 @@ background-color:#D8CE0E;
 .motto:after, .motto::after{
 	position: absolute; top: -10px; right:10px;
 	content: ""; width: 30px; height:28px;
-	background-image: url(../../img/1x/icon_paldo_02.png);
+	background-image: url(../../../img/1x/icon_paldo_02.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-size: 100%;
@@ -421,10 +421,10 @@ background-color:#D8CE0E;
 	background-size: 100% auto;
 	transition:all 300ms ease;
 }
-.insta_area li:nth-child(1) {background-image: url(../../img/instagram/01.jpg);}
-.insta_area li:nth-child(2) {background-image: url(../../img/instagram/02.jpg);}
-.insta_area li:nth-child(3) {background-image: url(../../img/instagram/03.jpg);}
-.insta_area li:nth-child(4) {background-image: url(../../img/instagram/04.jpg);}
+.insta_area li:nth-child(1) {background-image: url(../../../img/instagram/01.jpg);}
+.insta_area li:nth-child(2) {background-image: url(../../../img/instagram/02.jpg);}
+.insta_area li:nth-child(3) {background-image: url(../../../img/instagram/03.jpg);}
+.insta_area li:nth-child(4) {background-image: url(../../../img/instagram/04.jpg);}
 
 .insta_area li:last-child{margin-right:0;}
 .insta_area li:hover {

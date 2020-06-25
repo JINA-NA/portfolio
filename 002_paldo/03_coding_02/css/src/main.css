@@ -12,9 +12,9 @@
 
 /* ======================== */
 
-@import url('../rwd/main_m.css');
-@import url('../rwd/main_t.css');
-@import url('../rwd/main_p.css');
+@import url('../rwd/page/main_m.css');
+@import url('../rwd/page/main_t.css');
+@import url('../rwd/page/main_p.css');
 
 /* ======================== */
 @import url('../rwd/common/footer_m.css');
