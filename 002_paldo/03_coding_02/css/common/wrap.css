@@ -27,6 +27,18 @@
 
 }
 
+/* laptop */
+@media all and (min-width: 941px) and (max-width: 1200px) {
+
+	#wrap {
+		width: 100%; 
+		min-width:941px; max-width: 1200px;
+		height: auto; min-height:200px;
+		margin: auto;
+	}
+
+}
+
 
 
 /* pc */

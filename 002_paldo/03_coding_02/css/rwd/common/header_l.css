@@ -1,8 +1,8 @@
-/* header_p.css */
+/* header_l.css */
 /* 반응형  */
-/* 디바이스: pc 1200px~ */
+/* 디바이스: laptop 941~1200px */
 
-@media all and (min-width: 1201px){
+@media all and (min-width: 941px) and (max-width: 1200px){
 	/* @media 시작태그 */
 
 

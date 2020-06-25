@@ -1,8 +1,8 @@
-/* main_p.css */
-/* 반응형 */
-/* 디바이스: pc 1200px~ */
+/* main_l.css */
+/* 반응형  */
+/* 디바이스: laptop 941~1200px */
 
-@media all and (min-width: 1201px){
+@media all and (min-width: 941px) and (max-width: 1200px){
 	/* @media 시작태그 */
 
 	.m_br{display: none;}
