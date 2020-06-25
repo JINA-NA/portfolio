@@ -89,54 +89,111 @@
     <section id="contBox">
     <h2 class="hidden">각 제품에 대한 상세한 내용</h2>
       <div class="cont_area">
-        <div class="detail_summary">
-          <div class="summary_img">제품 이미지</div>
+
+				<!-- 제품 요약 정보 -->
+        <div class="summary_cont">
+					<!-- 이미지 -->
+					<div class="summary_img hidden_wrap"><span>제품 이미지</span>
+						<div class="big_img"></div>
+						<div class="thum_img">
+							<!-- js에서 반복 생성 -->
+							<!-- <ul>
+								<li><a href="#"><span></span></a></li>
+								<li><a href="#"><span></span></a></li>
+								<li><a href="#"><span></span></a></li>
+							</ul> -->
+            </div>
+					</div>
+					
+					<!-- 텍스트 -->
           <div class="summary_text">
-            <div class="badge">best</div>
-            <div class="name">비빔면</div>
-            <div class="description">어떻게 비벼도 맛있다! 매콤달콤한 소스와 면을 신나게 비벼서 드세요!</div>
-            <div class="nutrient">
-              <div class="nutrient_title">영양성분</div>
-              <div class="nutrient_cont">
-                <dl>
-                  <dt>열량 :</dt><dd>530kcal</dd>
-                </dl>
-                <dl>
-                  <dt>단백질 :</dt><dd>9g(16%)</dd>
-                </dl>
-                <dl>
-                  <dt>트랜스지방 :</dt><dd>0g</dd>
-                </dl>
-                <dl>
-                  <dt>탄수화물 :</dt><dd>80g(24%)</dd>
-                </dl>
-                <dl>
-                  <dt>지방 :</dt><dd>19g(37%)</dd>
-                </dl>
-                <dl>
-                  <dt>콜레스트롤 :</dt><dd>0mg(0%)</dd>
-                </dl>
-                <dl>
-                  <dt>당류 :</dt><dd>12g</dd>
-                </dl>
-                <dl>
-                  <dt>포화지방 :</dt><dd>9g(60%)</dd>
-                </dl>
-                <dl>
-                  <dt>나트륨 :</dt><dd>1,090mg(55%)</dd>
-                </dl>
-              </div>
-            </div>
-            <div class="more_img">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          </div>
-        </div>
-        <div class="detail_spread">
-          <div class="spread_part_01"></div>
-          <div class="spread_part_02"></div>
+						<p class="badge">best</p>
+            <p class="name">비빔면</p>
+            <p class="description">어떻게 비벼도 맛있다! <br>매콤달콤한 소스와 면을 신나게 비벼서 드세요!</p>
+					</div>
+					
+					<!-- 영양정보 -->
+					<div class="nutrient">
+						<div class="nutrient_title">영양성분</div>
+						<div class="nutrient_cont">
+							<dl>
+								<dt>열량 :</dt><dd>530kcal</dd>
+							</dl>
+							<dl>
+								<dt>단백질 :</dt><dd>9g(16%)</dd>
+							</dl>
+							<dl>
+								<dt>트랜스지방 :</dt><dd>0g</dd>
+							</dl>
+							<dl>
+								<dt>탄수화물 :</dt><dd>80g(24%)</dd>
+							</dl>
+							<dl>
+								<dt>지방 :</dt><dd>19g(37%)</dd>
+							</dl>
+							<dl>
+								<dt>콜레스트롤 :</dt><dd>0mg(0%)</dd>
+							</dl>
+							<dl>
+								<dt>당류 :</dt><dd>12g</dd>
+							</dl>
+							<dl>
+								<dt>포화지방 :</dt><dd>9g(60%)</dd>
+							</dl>
+							<dl>
+								<dt>나트륨 :</dt><dd>1,090mg(55%)</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 제품 상세정보 -->
+				<div class="detail_cont">
+					<h2>제품 특징</h2>
+          <div class="detail_part_01">
+						<div class="img_ice"></div>
+						<p>온 국민이 사랑하는 비빔면</p>
+						<ul class="icon_wrap clearfix">
+							<li>
+								<div class="icon_img"></div>
+								<div class="icon_text">
+									<span>특제양념비법</span><br>
+									팔도만의 노하우로 만든<br>
+									매콤,새콤,달콤한<br>
+									마성의 액상스프!
+								</div>
+							</li>
+							<li>
+								<div class="icon_img"></div>
+								<div class="icon_text">
+									<span>다양한 요리궁합</span><br>
+									비빔면과 함께라면<br>
+									어떠한 음식이라도<br>
+									환상의 조합!</div>
+							</li>
+							<li>
+								<div class="icon_img"></div>
+								<div class="icon_text">
+									<span>화끈한 매운맛 출시</span><br>
+									비빔면 매운맛의 출시로<br>
+									더 화끈한 매운맛 <br>매니아의 취향을 저격!</div>
+							</li>
+						</ul>
+						<p>그냥 먹어도 맛있는 비빔면<br>
+							더 맛있게 먹는 요리팁!</p>
+						<div class="recipe_tip">
+							<ul class="clearfix">
+								<li><span>골뱅이는 기본!</span></li>
+								<li><span>삼겹살과 함께!</span></li>
+								<li><span>매콤화끈 닭발과!</span></li>
+								<li><span>편육과 같이!</span></li>
+							</ul>
+						</div>
+					</div>
+          <div class="detail_part_02">
+						<p>제품 성분 정보</p>
+						<div class="nutrient_img"></div>
+					</div>
         </div>
       </div>
     </section>
