@@ -2,10 +2,41 @@
 /* 팔도- 공통 영역 */
 
 
+/* mobile */
+@media all and (max-width: 640px){
 
-#wrap {
+	#wrap {
+		width: 100%; 
+		min-width: 320px; max-width: 640px;
+		height: auto; min-height:200px;
+		margin: auto;
+	}
+
+
+}
+
+/* tablet */
+@media all and (min-width: 641px) and (max-width: 1200px) {
+
+	#wrap {
+		width: 100%; 
+		min-width:641px; max-width: 1200px;
+		height: auto; min-height:200px;
+		margin: auto;
+	}
+
+}
+
+
+
+/* pc */
+@media all and (min-width: 1201px) {
+
+	#wrap {
 	width: 100%; 
 	max-width: 1920px;
 	height: auto; min-height:200px;
 	margin: auto;
+}
+
 }
