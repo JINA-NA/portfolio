@@ -81,12 +81,7 @@ var contBody = contBox.find('.cont_body').children('li');
 
 
 //제목 나타나기
-win.on('load',function(){
-	myScroll = win.scrollTop();
-	if( myScroll + (winH/6*5) > contTitleOff ){
-		contTitle.addClass('active');
-	}
-});
+contTitle.addClass('active');
 
 //각각 바디텍스트(li)순서대로 나타나기
 var contOffArr = [];
