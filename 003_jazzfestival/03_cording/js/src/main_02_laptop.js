@@ -49,7 +49,7 @@
 		myScroll = win.scrollTop();
 		// console.log(myScroll, winHeight);
 		
-		//헤드박스 배경색상 변경
+		//스크롤시
 		if( myScroll+300 <  winHeight ){
 			headBox.stop().animate({'backgroundColor':headBoxBg[0]});
 		} else {

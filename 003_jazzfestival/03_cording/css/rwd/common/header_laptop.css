@@ -53,8 +53,7 @@
 	
 	.sns_zone{
 		position: absolute; top: 230px; left: 0;
-		width: 30px; height: auto; 
-		
+		width: 30px; height: auto; 		
 	}
 	.sns_zone ul {
 		width: 100%; height: auto; 
@@ -85,4 +84,4 @@
 
 
 /* @media 종료태그 */
-};
+}
