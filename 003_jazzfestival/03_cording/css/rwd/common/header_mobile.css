@@ -14,16 +14,8 @@
 	padding: 10px; box-sizing: border-box;
 	background-color: rgba(30, 100, 80, 1);
 }
-/* #gnbBox ================================= */
-#gnbBox {
-	position: relative;
-	float: left;
-	width:100%; height: 100%;
-	/* background-color: rgba(255, 255, 255, 0.5); */
-}
-
 h1 {
-	position: absolute; top:0; left: 50%;
+	position: absolute; top:8px; left: 50%;
 	width: 110px; height: 40px;
 	margin-left: -55px; 
 	background-image: url(../../../img/h1_logo_mobile_white.svg);
@@ -32,6 +24,13 @@ h1 {
 	background-position: 50% 50%;
 }
 h1 a {display: block; width: 100%; height:100%;}
+/* #gnbBox ================================= */
+#gnbBox {
+	position: relative;
+	float: left;
+	width:100%; height: 100%;
+	/* background-color: rgba(255, 255, 255, 0.5); */
+}
 
 .navi_menu_btn{
 	float: left; 
