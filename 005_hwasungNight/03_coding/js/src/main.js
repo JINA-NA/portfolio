@@ -17,6 +17,7 @@ var viewBox = $('#viewBox');
 var viewImg = viewBox.find('div');
 var imageMoveStart;
 
+// $('#starBox').show();
 
 win.on('scroll',function(e){
 	e.preventDefault();
@@ -37,26 +38,39 @@ win.on('scroll',function(e){
 	viewImg.eq(1).css({bottom: -myoffset * 100 + '%'});
 
 	// if( myScroll > 1300 && myScroll < 2000){
-		if(myScroll > 1300 ){
-			viewImg.eq(1).css({backgroundSize: myoffset * 110 + '%'},function(){
-				if(myoffset * 110 > 100){ viewImg.eq(1).css({backgroundSize: '100% auto'}); }
-			});
+		if(myScroll > 1500 ){
+			//달 커지게
+			if( (myoffset/3*2) * 100 < 100){
+				viewImg.eq(1).css({backgroundSize:'100% auto'});
+			} else {
+				viewImg.eq(1).css({backgroundSize: (myoffset/3*2) * 100 + '% auto'});
+			}
 			viewImg.eq(2).css({opacity: 2-myoffset});
-	} 
+	}
 
 	if ( myScroll > 1600 && myoffset < 2){
 		viewImg.eq(1).css({opacity:2 - myoffset});
-		viewImg.eq(5).css({top: 0});
+	} 
 
+	if ( myScroll > 1800 && myoffset < 2){
+		viewImg.eq(5).css({opacity: 0});
+		viewImg.eq(6).css({opacity: 0});
+		$('#starBox').hide();
 		// console.log(imageMoveStart)
 		imageMoveStart = win.scrollTop();
+	} else {
+		viewImg.eq(5).css({opacity: 1-myoffset});
+		viewImg.eq(6).css({opacity: 1-myoffset});
+		$('#starBox').show();
 	}
-	
+
+
 	if( myoffset > 2){
 		// console.log(myoffset);
-		viewBox.css({top: imageMoveStart - myScroll})
+		viewBox.css({top: imageMoveStart - myScroll});
+		$('#starBox').hide();
 	}else{
-		viewBox.css({top:0})
+		viewBox.css({top:0});
 	}
 
 

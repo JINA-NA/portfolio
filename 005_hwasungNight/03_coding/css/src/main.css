@@ -42,6 +42,103 @@
       line-height: 50px;
       color: #fff; }
 
+#starBox {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 200px;
+  width: 100%;
+  overflow: hidden; }
+
+#starBox .star {
+  background-size: auto 100%;
+  background-position: 50% 0;
+  background-repeat: repeat-x;
+  height: 200px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translate3d(0, 0, 0);
+  width: 200vw; }
+
+@keyframes twinkle {
+  from {
+    opacity: .3; }
+  to {
+    opacity: 1; } }
+
+@keyframes star-1 {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    transform: translate3d(-689px, 0, 0); } }
+
+#starBox .star:nth-child(1) {
+  animation: twinkle 10s ease-in -5s infinite alternate, star-1 344s linear infinite;
+  background-image: url("http://imgur.com/9beLKl9.png"); }
+
+@keyframes star-2 {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    transform: translate3d(-699px, 0, 0); } }
+
+#starBox .star:nth-child(2) {
+  animation: twinkle 3s ease-in -3s infinite alternate, star-2 349s linear infinite;
+  background-image: url("http://imgur.com/46MRYFa.png"); }
+
+@keyframes star-3 {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    transform: translate3d(-699px, 0, 0); } }
+
+#starBox .star:nth-child(3) {
+  animation: twinkle 3.5s ease-in infinite alternate, star-3 349s linear infinite;
+  background-image: url("http://imgur.com/46MRYFa.png"); }
+
+@keyframes star-4 {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    transform: translate3d(-480px, 0, 0); } }
+
+#starBox .star:nth-child(4) {
+  animation: twinkle 4s ease-in -2s infinite alternate, star-4 240s linear infinite;
+  background-image: url("http://imgur.com/BqkETyl.png"); }
+
+@keyframes star-5 {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    transform: translate3d(-486px, 0, 0); } }
+
+#starBox .star:nth-child(5) {
+  animation: twinkle 5.5s ease-in infinite alternate, star-5 243s linear infinite;
+  background-image: url("http://imgur.com/x1GB77K.png"); }
+
+@keyframes shooting-star {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); }
+  25% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translate3d(-270px, 180px, 0); } }
+
+#starBox:before {
+  animation: 500ms linear 3s shooting-star;
+  background-image: url("http://imgur.com/ilhrli3.png");
+  background-size: 72px 50px;
+  content: ' ';
+  height: 50px;
+  left: 80%;
+  position: absolute;
+  top: -50px;
+  width: 72px;
+  z-index: 100; }
+
 #viewBox {
   position: fixed;
   top: 0;
@@ -75,20 +172,46 @@
     background-image: url("../../img/view_fog_01.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: cover; }
+    background-size: cover;
+    animation: fogRight 8s infinite alternate ease; }
+
+@keyframes fogRight {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(50px); } }
   #viewBox .view_05 {
     background-image: url("../../img/view_fog_02.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: cover; }
+    background-size: cover;
+    animation: fogLeft 9s infinite alternate ease; }
+
+@keyframes fogLeft {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-80px); } }
   #viewBox .view_06 {
-    top: -100%;
     background-image: url("../../img/view_04.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover; }
+
+@keyframes title {
+  0% {
+    transform: translateX(10px);
+    opacity: 1; }
+  20% {
+    opacity: 0.5; }
+  50% {
+    opacity: 0.7; }
+  70% {
+    opacity: 0.5; }
+  100% {
+    transform: translateX(-10px);
+    opacity: 1; } }
   #viewBox .view_07 {
-    display: none;
     background-image: url("../../img/view_05.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -97,3 +220,18 @@
 #contentBox {
   width: 100%;
   height: 6000px; }
+
+#reGuide {
+  width: 100%;
+  height: 400px;
+  background-color: #ddd; }
+
+#guide {
+  width: 100%;
+  height: 400px;
+  background-color: #ccc; }
+
+#fee {
+  width: 100%;
+  height: 400px;
+  background-color: #bbb; }
