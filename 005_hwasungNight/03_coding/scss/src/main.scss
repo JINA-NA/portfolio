@@ -194,6 +194,7 @@
 	}
 	@keyframes fogRight {
 		0% {transform:translateX(0)}
+		20%{opacity: 0.8;}
 		100% {transform:translateX(50px)}
 	}
 		//왼쪽 안개 ---viewImg.eq(4)
@@ -203,6 +204,9 @@
 	}
 	@keyframes fogLeft {
 		0% {transform:translateX(0)}
+		20%{opacity: 0.6;}
+		30%{opacity: 0.7;}
+		90%{opacity: 0.8;}
 		100% {transform:translateX(-80px)}
 	}
 		//달빛정담 ---viewImg.eq(5)
