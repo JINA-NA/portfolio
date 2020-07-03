@@ -4,7 +4,6 @@
 /* 메인페이지 */
 
 
-@import '../setting/variable';
 @import '../setting/color';
 @import '../setting/mixin';
 
@@ -12,20 +11,23 @@
 #wrap {
 	width: 100%; height: 100%;
 	margin: auto;
-	background-color:nth($wireColor,1)
 }
 
 #headBox {
-	position: fixed; z-index:10;
+	position: fixed; z-index:100;
 	width: 100%; height: 80px;
 	padding: 10px 30px; box-sizing: border-box;
-	// background-color: $darkNavy;
-	background-color: transparent;
+	background-color: rgba(22, 20, 17,0);
+	color: $white;
 	
 	h1 {
 		float:left;
 		width: 100px; height: 50px;
-		background-color: $white;
+		margin-top: 5px;
+		// background-color: $white;
+		@include Img($i:'logo_white.svg', $s:contain);
+
+		a {display:block; width: 100%; height:100%;}
 	}
 
 	#gnbBox {
@@ -35,11 +37,25 @@
 			width: 100%; height: 100%;
 		} 
 		> ul li {
+			position: relative;
 			float:left; 
 			width: 33.333333%; height: 100%;
 			text-align: center;
 			line-height: 50px; 
-			color: $white;
+			font-size: 1rem;
+			text-shadow: 0rem 0rem 0.3rem $black;
+			a {display:block; width: 100%; height:100%;}
+		}
+		> ul li:after {
+			content: "";
+			position: absolute; bottom: 0; left:0; right:0;
+			margin:auto;
+			width: 0%; height: 3px;
+			background-color:$white;
+			transition: all 200ms ease;
+		}
+		ul li.active:after {
+			width: 60%;
 		}
 	}
 	
@@ -148,7 +164,7 @@
 
 //  이미지 --------------
 #viewBox {
-	position: fixed; top:0; left:0; 
+	position: fixed; top:0; left:0; z-index:10;
 	width: 100%; height: 100%;
 	background-color: nth($wireColor,3);
 	> div {
@@ -173,7 +189,7 @@
 	
 		//오른쪽 안개 ---viewImg.eq(3)
 	.view_04 {
-		@include Img($i:'view_fog_01.png');
+		@include Img($i:'view_fog_01.png',$s:100% auto);
 		animation: fogRight 8s infinite alternate ease;
 	}
 	@keyframes fogRight {
@@ -182,7 +198,7 @@
 	}
 		//왼쪽 안개 ---viewImg.eq(4)
 	.view_05 {
-		@include Img($i:'view_fog_02.png');
+		@include Img($i:'view_fog_02.png',$s:100% auto);
 		animation: fogLeft 9s infinite alternate ease;
 	}
 	@keyframes fogLeft {
@@ -191,8 +207,13 @@
 	}
 		//달빛정담 ---viewImg.eq(5)
 	.view_06 {
-		// display: none;
-		@include Img($i:'view_04.png');
+		top: 50%; 
+		left: 0; right:0; 
+		z-index: 100;
+		margin:auto; margin-top: -150px;
+		width: 50%; height: 50%;
+		transition: all 100ms ease-out;
+		@include Img($i:'view_04_crop.png',$s:80% auto);
 		// animation: title 10s 5 alternate linear;
 	}
 	@keyframes title {
@@ -205,27 +226,171 @@
 		//화성행궁 야간개장 ---viewImg.eq(6)
 	.view_07 {
 		// display: none;
-		@include Img($i:'view_05.png');
+		@include Img($i:'view_05.png',$s:100% auto);
 	}
 	
 
 	//end-#viewBox
 }
 
+
+
 // 콘텐츠 박스
 #contentBox {
-	width: 100%; height: 6000px;
-	// background-image:linear-gradient(#000,#333);
+	position: relative; z-index:0;
+	width: 100%; height: auto;
+	padding-top: 5500px;
+	// background-image:linear-gradient(#000,#fff);
+	background-color: $black;
+	
+	.cont_area {
+		width:70%; height:auto;
+		margin:auto; 
+		padding-top: 150px;
+	}
+	h2 {
+		position: relative;
+		float:left;
+		width: 20%; height: 100%;
+		margin-right:5%;
+		font-size: 2rem;
+		color:$brown;
+	}
+	h2:before{
+		content: ""; 
+		position: absolute; top: -10px; left:0;
+		width: 50px; height: 4px;
+		background-color: $brown;
+	}
+	.text_area{
+		float:right;
+		width: 75%; height: 200px;
+		p{ 
+			font-size: 1rem;
+			color: $black;
+			>strong {
+				font-size: 1.2rem; margin-bottom: 20px;
+				font-weight: bold;
+			}
+		}
+	}
+	.table_area {
+		float:right; 
+		width: 75%; height: auto;
+	}
+
+	.common_table {
+		width: 100%; height: auto;
+		border-top: 2px solid $brown2;
+		border-bottom: 2px solid $brown2;
+		box-sizing: border-box;
+		color: $textGray;
+		background-color:$lightGray;
+		
+		>dt {
+			float: left;
+			width: 20%; min-width: 125px; height: auto;
+			padding: 15px 20px; box-sizing: border-box;
+			// border-bottom: 2px solid $brown2;
+			font-weight: bold;
+			font-size: 1rem;
+		}
+		
+		>dd {
+			float: left;
+			width: 80%; height: auto; min-height: 30px;
+			// border-bottom: 2px solid $brown2;
+			padding: 15px 25px; box-sizing: border-box;
+			font-size: 1rem;
+			background-color:$white;
+				>ul {width: 100%; height: auto; padding-left: 25px; box-sizing: border-box;}
+				>ul li {	position: relative;		}
+				>ul li:before {
+					content: ""; 
+					position: absolute; top: 9px; left:-20px;
+					width: 6px; height: 6px;
+					background-color:$brown2;
+				}
+		}	
+	}
 }
+
+
 #reGuide {
-	width: 100%; height: 400px;
-	background-color:nth($wireColor,1)
+	width: 100%; height: 800px;	
+	background-color:#fff;
 }
+
 #guide {
-	width: 100%; height: 400px;
-	background-color:nth($wireColor,2)
+	width: 100%; height: 700px;
+	background-color:#fff;
+
+	dd >a {
+		display: inline-block; width:12px; height: 16px;
+		width: 15px; height: 15px;
+		margin: 0 3px;
+		>i {  width: 100%; height: 100%; color:#fa3; }
+	}
 }
+
 #fee {
-	width: 100%; height: 400px;
-	background-color:nth($wireColor,3)
+	width: 100%; height: 500px;
+	background-color:#fff;
+	
+	.fee_table_01 {
+		width: 100%; height: auto;
+		border-top: 2px solid $brown2;
+		border-bottom: 2px solid $brown2;
+		box-sizing: border-box;
+		color: $textGray;
+		text-align: center;
+	
+		
+		>dt ul {width: 100%; height:auto;}
+		>dt ul li {
+			float:left;
+			width: 25%; height: 60px;
+			line-height: 60px;
+			border-bottom: 2px solid $brown2;
+			font-weight: bold;
+			background-color:$lightGray;
+		}
+	}
+
+	.fee_table_02 {
+		>dt {
+			float: left;
+			width: 25%;
+			>ul {width: 100%; height: auto;}
+			>ul li {
+				width: 100%; height: 60px;
+				line-height: 60px;
+				font-weight: bold;
+				background-color:$lightGray;
+			}
+		}
+		
+		>dd {
+			float: left;
+			width: 75%;
+			>ul {width: 100%; height: auto;}
+			>ul li{
+				float: left;
+				width: 33.333333%; height: 60px;
+				line-height: 60px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+// footer
+#footBox {
+	width: 100%; height: 100px;
+	background-color: $black;
 }

@@ -2,31 +2,33 @@
 /* main.css */
 /* 화성행궁 야간개장 사이트 */
 /* 메인페이지 */
-#gnb {
-  font-family: "myriad pro", "arial", "malgun gothic", "noto sans", sans-serif;
-  font-size: 3rem;
-  background-image: linear-gradient(45deg, #fa0);
-  border-radius: 0.5rem; }
-
 #wrap {
   width: 100%;
   height: 100%;
-  margin: auto;
-  background-color: #ddd; }
+  margin: auto; }
 
 #headBox {
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   width: 100%;
   height: 80px;
   padding: 10px 30px;
   box-sizing: border-box;
-  background-color: transparent; }
+  background-color: rgba(22, 20, 17, 0);
+  color: #fff; }
   #headBox h1 {
     float: left;
     width: 100px;
     height: 50px;
-    background-color: #fff; }
+    margin-top: 5px;
+    background-image: url("../../img/logo_white.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain; }
+    #headBox h1 a {
+      display: block;
+      width: 100%;
+      height: 100%; }
   #headBox #gnbBox {
     float: right;
     width: 500px;
@@ -35,12 +37,31 @@
       width: 100%;
       height: 100%; }
     #headBox #gnbBox > ul li {
+      position: relative;
       float: left;
       width: 33.333333%;
       height: 100%;
       text-align: center;
       line-height: 50px;
-      color: #fff; }
+      font-size: 1rem;
+      text-shadow: 0rem 0rem 0.3rem #161411; }
+      #headBox #gnbBox > ul li a {
+        display: block;
+        width: 100%;
+        height: 100%; }
+    #headBox #gnbBox > ul li:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 0%;
+      height: 3px;
+      background-color: #fff;
+      transition: all 200ms ease; }
+    #headBox #gnbBox ul li.active:after {
+      width: 60%; }
 
 #starBox {
   position: fixed;
@@ -143,6 +164,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
   width: 100%;
   height: 100%;
   background-color: #bbb; }
@@ -172,7 +194,7 @@
     background-image: url("../../img/view_fog_01.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: cover;
+    background-size: 100% auto;
     animation: fogRight 8s infinite alternate ease; }
 
 @keyframes fogRight {
@@ -184,7 +206,7 @@
     background-image: url("../../img/view_fog_02.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: cover;
+    background-size: 100% auto;
     animation: fogLeft 9s infinite alternate ease; }
 
 @keyframes fogLeft {
@@ -193,10 +215,19 @@
   100% {
     transform: translateX(-80px); } }
   #viewBox .view_06 {
-    background-image: url("../../img/view_04.png");
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    margin: auto;
+    margin-top: -150px;
+    width: 50%;
+    height: 50%;
+    transition: all 100ms ease-out;
+    background-image: url("../../img/view_04_crop.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: cover; }
+    background-size: 80% auto; }
 
 @keyframes title {
   0% {
@@ -215,23 +246,162 @@
     background-image: url("../../img/view_05.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: cover; }
+    background-size: 100% auto; }
 
 #contentBox {
+  position: relative;
+  z-index: 0;
   width: 100%;
-  height: 6000px; }
+  height: auto;
+  padding-top: 5500px;
+  background-color: #161411; }
+  #contentBox .cont_area {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    padding-top: 150px; }
+  #contentBox h2 {
+    position: relative;
+    float: left;
+    width: 20%;
+    height: 100%;
+    margin-right: 5%;
+    font-size: 2rem;
+    color: #331302; }
+  #contentBox h2:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: #331302; }
+  #contentBox .text_area {
+    float: right;
+    width: 75%;
+    height: 200px; }
+    #contentBox .text_area p {
+      font-size: 1rem;
+      color: #161411; }
+      #contentBox .text_area p > strong {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        font-weight: bold; }
+  #contentBox .table_area {
+    float: right;
+    width: 75%;
+    height: auto; }
+  #contentBox .common_table {
+    width: 100%;
+    height: auto;
+    border-top: 2px solid #8c441d;
+    border-bottom: 2px solid #8c441d;
+    box-sizing: border-box;
+    color: #444;
+    background-color: #f0f0f0; }
+    #contentBox .common_table > dt {
+      float: left;
+      width: 20%;
+      min-width: 125px;
+      height: auto;
+      padding: 15px 20px;
+      box-sizing: border-box;
+      font-weight: bold;
+      font-size: 1rem; }
+    #contentBox .common_table > dd {
+      float: left;
+      width: 80%;
+      height: auto;
+      min-height: 30px;
+      padding: 15px 25px;
+      box-sizing: border-box;
+      font-size: 1rem;
+      background-color: #fff; }
+      #contentBox .common_table > dd > ul {
+        width: 100%;
+        height: auto;
+        padding-left: 25px;
+        box-sizing: border-box; }
+      #contentBox .common_table > dd > ul li {
+        position: relative; }
+      #contentBox .common_table > dd > ul li:before {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: -20px;
+        width: 6px;
+        height: 6px;
+        background-color: #8c441d; }
 
 #reGuide {
   width: 100%;
-  height: 400px;
-  background-color: #ddd; }
+  height: 800px;
+  background-color: #fff; }
 
 #guide {
   width: 100%;
-  height: 400px;
-  background-color: #ccc; }
+  height: 700px;
+  background-color: #fff; }
+  #guide dd > a {
+    display: inline-block;
+    width: 12px;
+    height: 16px;
+    width: 15px;
+    height: 15px;
+    margin: 0 3px; }
+    #guide dd > a > i {
+      width: 100%;
+      height: 100%;
+      color: #fa3; }
 
 #fee {
   width: 100%;
-  height: 400px;
-  background-color: #bbb; }
+  height: 500px;
+  background-color: #fff; }
+  #fee .fee_table_01 {
+    width: 100%;
+    height: auto;
+    border-top: 2px solid #8c441d;
+    border-bottom: 2px solid #8c441d;
+    box-sizing: border-box;
+    color: #444;
+    text-align: center; }
+    #fee .fee_table_01 > dt ul {
+      width: 100%;
+      height: auto; }
+    #fee .fee_table_01 > dt ul li {
+      float: left;
+      width: 25%;
+      height: 60px;
+      line-height: 60px;
+      border-bottom: 2px solid #8c441d;
+      font-weight: bold;
+      background-color: #f0f0f0; }
+  #fee .fee_table_02 > dt {
+    float: left;
+    width: 25%; }
+    #fee .fee_table_02 > dt > ul {
+      width: 100%;
+      height: auto; }
+    #fee .fee_table_02 > dt > ul li {
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      font-weight: bold;
+      background-color: #f0f0f0; }
+  #fee .fee_table_02 > dd {
+    float: left;
+    width: 75%; }
+    #fee .fee_table_02 > dd > ul {
+      width: 100%;
+      height: auto; }
+    #fee .fee_table_02 > dd > ul li {
+      float: left;
+      width: 33.333333%;
+      height: 60px;
+      line-height: 60px; }
+
+#footBox {
+  width: 100%;
+  height: 100px;
+  background-color: #161411; }
