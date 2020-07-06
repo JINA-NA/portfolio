@@ -1,0 +1,14 @@
+// _footer.scss
+
+// footBox --------------------
+#footBox {
+  @include sectionSize ($h:80px){
+    padding: 20px; box-sizing: border-box;
+    background-color: #1a1a1a;
+
+  }
+  >p{
+    text-align: center;
+    color:$white;
+  }
+}

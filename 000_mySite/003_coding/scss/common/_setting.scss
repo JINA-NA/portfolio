@@ -1,0 +1,57 @@
+// _setting.scss
+
+
+//변수 -----------------------------
+// color -------
+$black : #333;
+$white : #fff;
+$gray : #ccc;
+$bgColor : #fff;
+$keyColor : #fa3;
+$boxShadowColor : rgba(31,31,31,0.5);
+
+
+// size --------
+$maxWidth : 1440px;
+
+// font --------
+$bodyText : 1.1rem;
+$h3 : 2rem;
+
+
+
+
+
+// mixin ---------------------------------
+//각 섹션 사이즈
+@mixin sectionSize ($w: 100%, $h:auto){
+	width: $w; height: $h;
+	margin: auto;
+	@content;
+}
+// area 사이즈
+@mixin areaSize ($mw:$maxWidth){
+	width: 100%; max-width: $mw; height: auto;
+	margin: auto;
+	@content;
+}
+
+//a 영역확보
+@mixin aLink (){
+	display: block; width:100%; height:100%;
+	@content;
+}
+
+//백그라운드 이미지 
+@mixin bgImage ($i, $r: no-repeat, $p: 50% 50%, $s: 100% auto){
+	background-image: url($i);
+	background-repeat: $r;
+	background-position: $p;
+	background-size: $s;
+	@content;
+}
+
+//box-shadow
+@mixin boxShadow {
+	box-shadow: 0 0.2rem 0.8rem $boxShadowColor;
+}

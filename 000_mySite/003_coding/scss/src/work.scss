@@ -1,0 +1,49 @@
+// work.scss
+/* work.css */
+// 개인 포트폴리오 사이트
+// 포트폴리오 페이지
+
+// 불러오기
+@import '../common/setting';
+
+@import '../common/wrap';
+@import '../common/header';
+@import '../common/footer';
+
+
+// 페이지별 디자인
+#contentBox {
+	@include sectionSize(){
+		// background-color:#faf;
+	}
+	.content_area {
+		@include areaSize(){
+			width: 100%;
+			margin:auto;
+		}
+		>ul {width: 100%; height:auto;}
+		>ul li {
+			width: 100%; height: 600px;
+			margin-bottom: 100px;
+			// background-color:#1d1;
+
+			>a  {
+				@include aLink();
+			}
+			>a div {
+				float:left;
+				width: 50%; height: 100%;
+			}
+			>a .title {
+				font-size: 2rem;
+				text-align: center;
+				padding-top: 270px; box-sizing: border-box;
+			}
+			>a .img {
+				@include bgImage($i:'../../img/jazz_01_940.png', $s:120% auto);
+				@include boxShadow();
+				background-color:#ddd;
+			}
+		}
+	}
+}

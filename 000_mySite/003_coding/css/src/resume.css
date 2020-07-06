@@ -1,0 +1,193 @@
+/* resume.css */
+#wrap {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  color: #333;
+  font-size: 1.1rem; }
+
+#headBox {
+  width: 100%;
+  height: 120px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff; }
+  #headBox .head_area {
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    margin: auto; }
+  #headBox h1 {
+    float: left;
+    width: 100px;
+    height: 80px;
+    background-color: #fa3; }
+    #headBox h1 > a {
+      display: block;
+      width: 100%;
+      height: 100%; }
+  #headBox #gnbBox {
+    float: right;
+    width: 300px;
+    height: 40px;
+    margin-top: 30px; }
+    #headBox #gnbBox > ul {
+      width: 100%;
+      height: 100%; }
+    #headBox #gnbBox > ul li {
+      float: left;
+      width: 50%;
+      height: 100%; }
+      #headBox #gnbBox > ul li > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 40px; }
+
+#footBox {
+  width: 100%;
+  height: 80px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #1a1a1a; }
+  #footBox > p {
+    text-align: center;
+    color: #fff; }
+
+#contentBox {
+  width: 100%;
+  height: auto;
+  margin: auto; }
+  #contentBox .content_area {
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    margin: auto; }
+    #contentBox .content_area > div {
+      float: left;
+      width: 49%;
+      height: auto;
+      margin: auto;
+      margin-bottom: 8rem;
+      margin-right: 2%;
+      padding: 1rem;
+      box-sizing: border-box; }
+      #contentBox .content_area > div > h3 {
+        position: relative;
+        font-size: 2rem;
+        margin-bottom: 1.5rem; }
+        #contentBox .content_area > div > h3 > span {
+          position: relative;
+          display: inline-block;
+          padding: 0 10px;
+          padding-right: 30px;
+          text-align: center; }
+          #contentBox .content_area > div > h3 > span:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            width: 100%;
+            height: 20px;
+            background-color: #fa3;
+            border-radius: 10px;
+            transform: skewX(-20deg); }
+      #contentBox .content_area > div p {
+        margin-bottom: 0.8rem;
+        word-break: keep-all; }
+        #contentBox .content_area > div p > .bold {
+          font-weight: bold; }
+    #contentBox .content_area .basic_info {
+      width: 100%;
+      height: 300px;
+      padding: 10px 50px;
+      box-sizing: border-box;
+      background-color: #fa3;
+      border-radius: 150px;
+      transform: skewY(-1deg); }
+      #contentBox .content_area .basic_info > div {
+        float: left;
+        transform: skewY(1deg); }
+      #contentBox .content_area .basic_info .myPhoto {
+        width: 200px;
+        height: 260px;
+        margin-right: 3rem;
+        background-image: url("../../img/008-woman.png");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100% auto; }
+      #contentBox .content_area .basic_info .myInfo {
+        width: 500px;
+        height: 150px;
+        margin-top: 90px; }
+        #contentBox .content_area .basic_info .myInfo strong {
+          font-size: 2.5rem; }
+        #contentBox .content_area .basic_info .myInfo > ul {
+          width: 100%;
+          height: auto; }
+        #contentBox .content_area .basic_info .myInfo > ul li {
+          float: left;
+          width: 40px;
+          height: 40px;
+          margin-right: 10px; }
+          #contentBox .content_area .basic_info .myInfo > ul li a {
+            display: block;
+            width: 100%;
+            height: 100%; }
+          #contentBox .content_area .basic_info .myInfo > ul li a > i {
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-size: 2rem;
+            text-align: center; }
+    #contentBox .content_area .experience {
+      margin-right: 0; }
+    #contentBox .content_area .skills > ul {
+      width: 100%;
+      height: auto; }
+    #contentBox .content_area .skills > ul li {
+      float: left;
+      width: 150px;
+      height: 150px;
+      margin-right: 1%;
+      margin-bottom: 1%;
+      border-radius: 100%;
+      background-color: #fa3; }
+    #contentBox .content_area .cerfi {
+      margin-right: 0; }
+    #contentBox .content_area .interest > ul {
+      width: 100%;
+      height: auto; }
+    #contentBox .content_area .interest > ul li {
+      float: left;
+      width: 100px;
+      height: 100px;
+      background-color: #fa3;
+      border-radius: 100%;
+      margin-right: 10px;
+      text-align: center;
+      line-height: 100px; }
+      #contentBox .content_area .interest > ul li:nth-child(2n) {
+        transform: translateY(50px); }
+    #contentBox .content_area .personality {
+      margin-right: 0; }
+      #contentBox .content_area .personality > ul {
+        width: 100%;
+        height: auto; }
+      #contentBox .content_area .personality > ul li {
+        float: left;
+        width: 130px;
+        height: 130px;
+        border-radius: 100%;
+        border: 4px solid #fa3;
+        box-sizing: border-box;
+        margin-right: 20px;
+        text-align: center;
+        line-height: 130px; }
+    #contentBox .content_area .vision {
+      margin-right: 0; }

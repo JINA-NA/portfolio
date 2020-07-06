@@ -1,0 +1,97 @@
+/* work.css */
+#wrap {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  color: #333;
+  font-size: 1.1rem; }
+
+#headBox {
+  width: 100%;
+  height: 120px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff; }
+  #headBox .head_area {
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    margin: auto; }
+  #headBox h1 {
+    float: left;
+    width: 100px;
+    height: 80px;
+    background-color: #fa3; }
+    #headBox h1 > a {
+      display: block;
+      width: 100%;
+      height: 100%; }
+  #headBox #gnbBox {
+    float: right;
+    width: 300px;
+    height: 40px;
+    margin-top: 30px; }
+    #headBox #gnbBox > ul {
+      width: 100%;
+      height: 100%; }
+    #headBox #gnbBox > ul li {
+      float: left;
+      width: 50%;
+      height: 100%; }
+      #headBox #gnbBox > ul li > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 40px; }
+
+#footBox {
+  width: 100%;
+  height: 80px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #1a1a1a; }
+  #footBox > p {
+    text-align: center;
+    color: #fff; }
+
+#contentBox {
+  width: 100%;
+  height: auto;
+  margin: auto; }
+  #contentBox .content_area {
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    margin: auto;
+    width: 100%;
+    margin: auto; }
+    #contentBox .content_area > ul {
+      width: 100%;
+      height: auto; }
+    #contentBox .content_area > ul li {
+      width: 100%;
+      height: 600px;
+      margin-bottom: 100px; }
+      #contentBox .content_area > ul li > a {
+        display: block;
+        width: 100%;
+        height: 100%; }
+      #contentBox .content_area > ul li > a div {
+        float: left;
+        width: 50%;
+        height: 100%; }
+      #contentBox .content_area > ul li > a .title {
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 270px;
+        box-sizing: border-box; }
+      #contentBox .content_area > ul li > a .img {
+        background-image: url("../../img/jazz_01_940.png");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 120% auto;
+        box-shadow: 0 0.2rem 0.8rem rgba(31, 31, 31, 0.5);
+        background-color: #ddd; }
