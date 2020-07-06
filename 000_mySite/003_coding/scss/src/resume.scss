@@ -14,10 +14,13 @@
 // 페이지별 디자인
 #contentBox {
 	@include sectionSize(){
-		// background-color:#faf;
+		background-color:$black;
+		color:$white;
 	}
 	.content_area {
-		@include areaSize();
+		@include areaSize($w:90%, $mw:$maxWidth){
+			padding-top:20px;
+		};
 	
 
 		>div {
@@ -34,10 +37,11 @@
 				margin-bottom: 1.5rem;
 				
 				>span {
-					position: relative;
-					display:inline-block;
+					position: relative; z-index:0;
+					display: inline-block;
 					padding: 0 10px; padding-right:30px;
-					text-align: center;
+					// text-align: center;
+					@include textShadow();
 										
 					&:before {
 						content: "";
@@ -59,23 +63,26 @@
 
 		// 각자 개별적인 개인정보의 속성
 		.basic_info {
+			position:relative;
 			width: 100%; height: 300px; 
 			padding: 10px 50px; box-sizing: border-box;
-			background-color: $keyColor;
-			border-radius: 150px; transform:skewY(-1deg);
-
+			// background-color: $keyColor;
+			border-radius: 150px; 
+			overflow: hidden;
 			>div { 
 				float:left; 
-				transform:skewY(1deg);
 			}
 			.myPhoto {
-				width: 200px; height: 260px;
+				position: absolute; top: 0; left: 0px;
+				width: 300px; height: 300px;
 				margin-right: 3rem;
-				@include bgImage($i:'../../img/008-woman.png'){}
+				border-top-right-radius: 100%;
+				border-bottom-right-radius: 100%;
+				@include bgImage($i:'../../img/resume.jpg'){}
 			}
 			.myInfo {
 				width: 500px; height: 150px;
-				margin-top: 90px; 
+				margin-top: 90px; margin-left: 300px;
 
 				strong {font-size: 2.5rem}
 

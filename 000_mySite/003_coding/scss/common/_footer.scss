@@ -2,13 +2,13 @@
 
 // footBox --------------------
 #footBox {
-  @include sectionSize ($h:80px){
-    padding: 20px; box-sizing: border-box;
-    background-color: #1a1a1a;
-
+  @include sectionSize ($h:60px){
+    padding: 15px 20px; box-sizing: border-box;
+    background-color: $bgColorFooter;
   }
   >p{
     text-align: center;
-    color:$white;
+    color:$gray;
+    font-size: 0.875rem;
   }
 }

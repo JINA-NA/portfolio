@@ -14,35 +14,51 @@
 // 페이지별 디자인
 #contentBox {
 	@include sectionSize(){
-		// background-color:#faf;
+		background-color:$black;
+		color:$white;
 	}
 	.content_area {
-		@include areaSize(){
-			width: 100%;
-			margin:auto;
+		@include areaSize($w:90%, $mw:$maxWidth){
+			padding-top:20px;
 		}
+
 		>ul {width: 100%; height:auto;}
 		>ul li {
 			width: 100%; height: 600px;
-			margin-bottom: 100px;
+			padding: 50px 0; box-sizing: border-box;
+			border-bottom: 1px solid $gray;
 			// background-color:#1d1;
+			
+			&:last-child{border-bottom:0;}
 
-			>a  {
-				@include aLink();
-			}
-			>a div {
+			>div {
 				float:left;
 				width: 50%; height: 100%;
 			}
-			>a .title {
+
+			.title {
 				font-size: 2rem;
 				text-align: center;
-				padding-top: 270px; box-sizing: border-box;
+				padding-top: 200px; box-sizing: border-box;
 			}
-			>a .img {
+
+			.img {
 				@include bgImage($i:'../../img/jazz_01_940.png', $s:120% auto);
 				@include boxShadow();
 				background-color:#ddd;
+				>a  {
+					@include aLink();
+					position: relative; z-index:0;
+				}
+				>a:hover:before {
+					position: absolute; top:0; left:0; z-index:1;
+					content: "click";
+					color:$white;
+					text-align: center; font-size: 3rem; 
+					padding-top: 30%; box-sizing:border-box;
+					width: 100%; height: 100%;
+					background-color:rgba(0,0,0,0.5);
+				}
 			}
 		}
 	}

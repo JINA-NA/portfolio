@@ -3,12 +3,14 @@
 
 //변수 -----------------------------
 // color -------
-$black : #333;
+$black : #0d0d0d;
 $white : #fff;
 $gray : #ccc;
 $bgColor : #fff;
+$bgColorFooter : #0d0d0d;
 $keyColor : #fa3;
 $boxShadowColor : rgba(31,31,31,0.5);
+$textShadow :rgba(31,31,31,0.5);
 
 
 // size --------
@@ -30,8 +32,8 @@ $h3 : 2rem;
 	@content;
 }
 // area 사이즈
-@mixin areaSize ($mw:$maxWidth){
-	width: 100%; max-width: $mw; height: auto;
+@mixin areaSize ($w: 100%, $mw:$maxWidth, $h:auto){
+	width: $w; max-width: $mw; height: $h;
 	margin: auto;
 	@content;
 }
@@ -54,4 +56,8 @@ $h3 : 2rem;
 //box-shadow
 @mixin boxShadow {
 	box-shadow: 0 0.2rem 0.8rem $boxShadowColor;
+}
+//text-shadow
+@mixin textShadow {
+	text-shadow: 0 0.2rem 0.2rem $textShadow;
 }
