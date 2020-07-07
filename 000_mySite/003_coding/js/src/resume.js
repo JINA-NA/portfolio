@@ -40,55 +40,62 @@ var ctx = canvas.getContext('2d');
 //꾸미는 속성
 var keyColor = '#fa3';
 ctx.strokeStyle = keyColor;
-ctx.fillStyle = keyColor;
-ctx.lineWidth = 30;
+ctx.fillStyle = '#fff';
+ctx.lineWidth = 10;
 ctx.font = 'bold 1.5rem sans-serif';
 ctx.textAlign = 'center';
+ctx.lineCap = 'round';
 
 //본격적으로 도형 만들기
 //html
 ctx.beginPath();
-ctx.arc(75, 75, 60, Math.PI*2, false);
-ctx.fillText('HTML', 75, 75+10);
+ctx.strokeStyle = '#ddf';
+ctx.arc(75, 75, 60, Math.PI*1.5, Math.PI*5.5, true);
+ctx.fillText('HTML', 75, 75+100);
+ctx.stroke();
+ctx.beginPath();
+ctx.strokeStyle = keyColor;
+ctx.arc(75, 75, 60, Math.PI*1.5, Math.PI*4.3, true);
+ctx.fillText('HTML', 75, 75+100);
 ctx.stroke();
 
 //css
 ctx.beginPath();
-ctx.arc(250, 75, 60, Math.PI*2, false);
-ctx.fillText('CSS', 250, 75+10);
+ctx.arc(250, 75, 60, Math.PI*1.5, Math.PI*4.3, true);
+ctx.fillText('CSS', 250, 75+100);
 ctx.stroke();
 
 //jQuery
 ctx.beginPath();
-ctx.arc(425, 75, 60, Math.PI*2, false);
-ctx.fillText('jQuery', 425, 75+10);
+ctx.arc(425, 75, 60, Math.PI*1.5, Math.PI*4.4, true);
+ctx.fillText('jQuery', 425, 75+100);
 ctx.stroke();
 
 //sass
 ctx.beginPath();
-ctx.arc(600, 75, 60, Math.PI*2, false);
-ctx.fillText('sass', 600, 75+10);
+ctx.arc(600, 75, 60, Math.PI*1.5, Math.PI*4.5, true);
+ctx.fillText('SASS', 600, 75+100);
 ctx.stroke();
 
 
-ctx.font = 'bold 1rem sans-serif';
+// ctx.font = 'bold 1rem sans-serif';
 
 //illust
 ctx.beginPath();
-ctx.arc(75, 250, 60, Math.PI*2, false);
-ctx.fillText('illust', 75, 250+5);
+ctx.arc(75, 300, 60, Math.PI*1.5, Math.PI*3.7, true);
+ctx.fillText('Illustrator', 75, 300+100);
 ctx.stroke();
 
 //photoshop
 ctx.beginPath();
-ctx.arc(250, 250, 60, Math.PI*2, false);
-ctx.fillText('photoshop', 250, 250+5);
+ctx.arc(250, 300, 60, Math.PI*1.5, Math.PI*3.9, true);
+ctx.fillText('Photoshop', 250, 300+100);
 ctx.stroke();
 
 //indesign
 ctx.beginPath();
-ctx.arc(425, 250, 60, Math.PI*2, false);
-ctx.fillText('indesign', 425, 250+5);
+ctx.arc(425, 300, 60, Math.PI*1.5, Math.PI*3.7, true);
+ctx.fillText('Indesign', 425, 300+100);
 ctx.stroke();
 
 
