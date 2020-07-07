@@ -7,6 +7,11 @@
   font-size: 1.1rem; }
 
 #headBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   width: 100%;
   height: 100px;
   margin: auto;
@@ -57,7 +62,8 @@
   #footBox > p {
     text-align: center;
     color: #ccc;
-    font-size: 0.875rem; }
+    font-size: 0.875rem;
+    line-height: 30px; }
 
 #gnbBox {
   display: none; }
@@ -66,10 +72,15 @@
   width: 100%;
   height: 100%;
   margin: auto;
+  position: relative;
   background-color: #0d0d0d;
   color: #fff; }
   #contentBox .content_area {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
     overflow: hidden;
     width: 90%;
     max-width: 1440px;
@@ -80,9 +91,11 @@
     #contentBox .content_area .greeting_area {
       float: left;
       width: 40%;
-      min-width: 340px;
+      min-width: 100px;
+      max-width: 340px;
       height: auto;
-      margin-top: 50px;
+      min-height: 432px;
+      margin-left: 100px;
       padding: 0 20px;
       box-sizing: border-box;
       transition: all 300ms ease-out;
@@ -95,11 +108,12 @@
     transform: translateY(0); } }
       #contentBox .content_area .greeting_area p {
         text-align: right;
-        font-size: 8rem;
+        font-size: 9rem;
         font-weight: bold;
         font-family: 'Open Sans', sans-serif;
-        line-height: 8rem;
-        letter-spacing: -0.5rem; }
+        line-height: 9rem;
+        letter-spacing: -0.5rem;
+        text-shadow: 0.5rem 0.1rem 1rem rgba(255, 255, 255, 0.3); }
         #contentBox .content_area .greeting_area p em {
           font-style: normal;
           color: #fa3; }
@@ -182,7 +196,7 @@
 .download {
   position: absolute;
   bottom: 10px;
-  right: 220px;
+  right: 250px;
   width: 200px;
   height: 60px;
   border-radius: 10px;

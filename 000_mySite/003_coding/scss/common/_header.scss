@@ -3,6 +3,7 @@
 
 // headBox --------------------
 #headBox {
+  position: absolute; top:0; left:0; right:0; z-index: 1000;
   @include sectionSize ($h:100px){
     padding: 20px; box-sizing: border-box;
     background-color: $black;

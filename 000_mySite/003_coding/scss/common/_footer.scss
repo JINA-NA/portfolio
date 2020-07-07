@@ -3,12 +3,14 @@
 // footBox --------------------
 #footBox {
   @include sectionSize ($h:60px){
-    padding: 15px 20px; box-sizing: border-box;
+    padding: 15px 20px; 
+    box-sizing: border-box;
     background-color: $bgColorFooter;
   }
   >p{
     text-align: center;
     color:$gray;
     font-size: 0.875rem;
+    line-height: 30px;
   }
 }

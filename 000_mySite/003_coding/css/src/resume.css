@@ -7,6 +7,11 @@
   font-size: 1.1rem; }
 
 #headBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   width: 100%;
   height: 100px;
   margin: auto;
@@ -57,14 +62,16 @@
   #footBox > p {
     text-align: center;
     color: #ccc;
-    font-size: 0.875rem; }
+    font-size: 0.875rem;
+    line-height: 30px; }
 
 #contentBox {
   width: 100%;
   height: auto;
   margin: auto;
   background-color: #0d0d0d;
-  color: #fff; }
+  color: #fff;
+  padding-top: 100px; }
   #contentBox .content_area {
     width: 90%;
     max-width: 1440px;
@@ -98,11 +105,14 @@
             left: 0;
             right: 0;
             z-index: -1;
-            width: 100%;
+            width: 0;
             height: 20px;
             background-color: #fa3;
             border-radius: 10px;
-            transform: skewX(-20deg); }
+            transform: skewX(-20deg);
+            transition: all 300ms ease-out; }
+          #contentBox .content_area > div > h3 > span.active:before {
+            width: 100%; }
       #contentBox .content_area > div p {
         margin-bottom: 0.8rem;
         word-break: keep-all; }
@@ -169,6 +179,10 @@
       margin-bottom: 1%;
       border-radius: 100%;
       background-color: #fa3; }
+    #contentBox .content_area .skills .skill_graph {
+      width: 100%;
+      height: auto;
+      background-color: #ddf; }
     #contentBox .content_area .cerfi {
       margin-right: 0; }
     #contentBox .content_area .interest > ul {
