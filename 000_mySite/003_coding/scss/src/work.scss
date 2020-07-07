@@ -57,7 +57,7 @@
 			
 			
 			.img {
-				@include bgImage($i:'../../img/jazz_01_940.png', $s:120% auto);
+				@include bgImage($i:'../../img/jazzfestival_thum.png', $s:120% auto);
 				@include boxShadow();
 				background-color:#ddd;
 				>a  {
