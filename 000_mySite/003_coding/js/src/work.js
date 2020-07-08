@@ -21,7 +21,7 @@
 
 	var code = '<li>\
 							<div class="title"><span class="siteNameKr"></span><br><span class="siteNameEn"></span></div>\
-							<div class="img"><a href="#"></a></div>\
+							<div class="img"><a href="#" target="_blank"></a></div>\
 							</li>'
 	
 	//외부문서 불러오기

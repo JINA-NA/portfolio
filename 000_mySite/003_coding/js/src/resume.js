@@ -17,24 +17,16 @@ var infoDivOff = [];
 for(var i = 0 ; i < infoDiv.length ; i++){
 	infoDiv = contentArea.children('div');
 	infoDivOff[i] = infoDiv.eq(i).offset().top;
-	console.log(infoDivOff)
+	// console.log(infoDivOff)
 }
 
 infoDiv.eq(0).find('span').addClass('active');
 
-win.on('scroll',function(e){
-	myScroll = win.scrollTop();
-	
-	for(var i = 0 ; i < infoDiv.length ; i++){
-		if( myScroll+700 >= infoDivOff[i] ){
-			infoDiv.eq(i).find('span').addClass('active');
-		}
-	}
-});
+
 // ===============================
 
 // 그래프===============================
-var canvas = document.getElementsByClassName('skill_graph')[0];
+var canvas = document.querySelector('.skill_graph');
 var ctx = canvas.getContext('2d');
 
 //꾸미는 속성
@@ -47,63 +39,94 @@ ctx.textAlign = 'center';
 ctx.lineCap = 'round';
 
 //본격적으로 도형 만들기
-//html
-ctx.beginPath();
-ctx.strokeStyle = '#ddf';
-ctx.arc(75, 75, 60, Math.PI*1.5, Math.PI*5.5, true);
-ctx.fillText('HTML', 75, 75+100);
-ctx.stroke();
-ctx.beginPath();
-ctx.strokeStyle = keyColor;
-ctx.arc(75, 75, 60, Math.PI*1.5, Math.PI*4.3, true);
-ctx.fillText('HTML', 75, 75+100);
-ctx.stroke();
 
-//css
-ctx.beginPath();
-ctx.arc(250, 75, 60, Math.PI*1.5, Math.PI*4.3, true);
-ctx.fillText('CSS', 250, 75+100);
-ctx.stroke();
+var myGraph = function(x,y,p,s){
+	var posX = x;
+	var posY = y;
+	var percent = p;
+	var skill = s || 'program';
+	//--//var
 
-//jQuery
-ctx.beginPath();
-ctx.arc(425, 75, 60, Math.PI*1.5, Math.PI*4.4, true);
-ctx.fillText('jQuery', 425, 75+100);
-ctx.stroke();
-
-//sass
-ctx.beginPath();
-ctx.arc(600, 75, 60, Math.PI*1.5, Math.PI*4.5, true);
-ctx.fillText('SASS', 600, 75+100);
-ctx.stroke();
+	var ani;
+	var i = 0;
+	var myPercent = function(per){
+		var p;
+		if(per == 100){
+			p = -0.5
+		}else{
+			p = ((100-per)/100*2) + 3.5;
+		}
+		return Math.PI * p;
+	};
 
 
-// ctx.font = 'bold 1rem sans-serif';
+	var circleGraph = function(){
+		ani = function(percent){
+			var lineWidth = 20;
+			var r = 80;
+			var rect = (r + lineWidth) * 2 + 10;
+			ctx.lineWidth = lineWidth;
 
-//illust
-ctx.beginPath();
-ctx.arc(75, 300, 60, Math.PI*1.5, Math.PI*3.7, true);
-ctx.fillText('Illustrator', 75, 300+100);
-ctx.stroke();
+		
 
-//photoshop
-ctx.beginPath();
-ctx.arc(250, 300, 60, Math.PI*1.5, Math.PI*3.9, true);
-ctx.fillText('Photoshop', 250, 300+100);
-ctx.stroke();
+			ctx.clearRect(posX - (rect/2), posY - (rect/2), rect, rect+150);
 
-//indesign
-ctx.beginPath();
-ctx.arc(425, 300, 60, Math.PI*1.5, Math.PI*3.7, true);
-ctx.fillText('Indesign', 425, 300+100);
-ctx.stroke();
+			ctx.beginPath();
+			ctx.arc(posX, posY, r, Math.PI*1.5, myPercent(percent), true);
+			ctx.stroke();
+			ctx.textAlign = 'center';
+			ctx.fillstyle = keyColor;
+			
+			ctx.font = 'normal 2rem sans-serif';
+			ctx.fillText(skill, posX, posY+140);
+			
+			ctx.font = 'bold 2.5rem sans-serif';
+			ctx.fillText(percent + '%', posX, posY+15);
+
+		};
+		i += 1;
+		ani( i );
+		
+		if( i < percent){		
+			requestAnimationFrame(circleGraph);
+		}else{
+			cancelAnimationFrame(circleGraph);	
+		}
+	};
+	circleGraph();
+};
 
 
 
 
 
 
+var canvasOff = $('.skills').offset().top;
 
+win.on('scroll',function(e){
+	myScroll = win.scrollTop();
+	
+	for(var i = 0 ; i < infoDiv.length ; i++){
+		if( myScroll+600 >= infoDivOff[i] ){
+			infoDiv.eq(i).find('span').addClass('active');
+		}
+	}
+
+	// canvas 기능수행
+
+	if( myScroll+600 >= canvasOff ){
+		myGraph(90,90,70,'HTML');
+		myGraph(310,90,80,'CSS');
+		myGraph(530,90,55,'jQuery');
+		myGraph(750,90,60,'SCSS');
+
+		myGraph(90,390,90,'Illustrator');
+		myGraph(310,390,80,'Photoshop');
+		myGraph(530,390,90,'Indesign');
+	} else {
+		cancelAnimationFrame(circleGraph);	
+	}
+});
 
 
 

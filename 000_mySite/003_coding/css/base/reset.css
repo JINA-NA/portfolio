@@ -13,7 +13,7 @@ header, article, section, main, aside, footer, nav, figure, figcaption {display:
 ul, ol, li{list-style: none;}
 a{text-decoration: none; color: inherit;}
 button{border:none; background-color: transparent; cursor: pointer; border-radius: 0;} /*border-radius는 사파리 브라우저에서 버튼모양이 기본적으로 둥근 사각형이 되는 것을 방지하기위해.*/
-a:focus, button:focus {outline: 3px solid #ed3424;}
+a:focus, button:focus {outline: 3px solid #ed3424; box-sizing: border-box;}
 
 address{font-style: normal;}
 abbr{text-decoration: none;}

@@ -17,7 +17,8 @@ var gText = greetingText.text().trim();
 greetingText.empty();
 
 var gArr = gText.split('');
-console.log(gArr);
+
+console.log('j', gArr.indexOf('J'));
 
 
 (function(){
@@ -29,7 +30,7 @@ console.log(gArr);
 			//한글자씩 나타나게
 			if( i < gArr.length ){
 				greetingText.append( '<span>' + gArr[i] + '</span>' );
-				// greetingText.find('span').eq(-1).css({color:'#fa3'});
+				greetingText.find('span').eq(11).nextAll().css({color:'#fa3'});
 			} else {
 				clearInterval(textGo);
 			}
