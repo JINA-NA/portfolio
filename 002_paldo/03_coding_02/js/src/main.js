@@ -9,6 +9,7 @@
 // 네비게이션
 var headBox = $('#headBox');
 var gnbBox = $('#gnbBox');
+var gnbUl = gnbBox.children('ul');
 var gnbDt = gnbBox.find('dt')
 var gnbDtLink = gnbBox.find('dt').find('a');
 var gnbDd = gnbBox.find('dd')
@@ -73,6 +74,24 @@ win.on('scroll',function(){
 	
 //scroll 종료태그
 });
+
+//incoming modal 창
+var incomingModal = $('.incoming_modal');
+var modalCloseBtn = incomingModal.find('.close_btn').children('button');
+gnbUl.children('li').eq(2).find('a').on('click',function(e){
+	e.preventDefault();
+	incomingModal.fadeIn();
+});
+gnbUl.children('li').eq(3).find('a').on('click',function(e){
+	e.preventDefault();
+	incomingModal.fadeIn();
+});
+modalCloseBtn.on('click',function(e){
+	e.preventDefault();
+	incomingModal.fadeOut();
+});
+
+
 
 //mousewheel 시, header 나왔다가 들어왔다가
 win.on('mousewheel DOMMouseScroll',function(e){

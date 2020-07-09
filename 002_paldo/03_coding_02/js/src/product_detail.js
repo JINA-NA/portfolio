@@ -11,6 +11,7 @@
 // 네비게이션
 var headBox = $('#headBox');
 var gnbBox = $('#gnbBox');
+var gnbUl = gnbBox.children('ul');
 var gnbDt = gnbBox.find('dt')
 var gnbDtLink = gnbBox.find('dt').find('a');
 var gnbDd = gnbBox.find('dd')
@@ -50,6 +51,21 @@ gnbDdLink.on('mouseleave blur',function(){
 	$(this).removeAttr('style');
 });
 
+//incoming modal 창
+var incomingModal = $('.incoming_modal');
+var modalCloseBtn = incomingModal.find('.close_btn').children('button');
+gnbUl.children('li').eq(2).find('a').on('click',function(e){
+	e.preventDefault();
+	incomingModal.fadeIn();
+});
+gnbUl.children('li').eq(3).find('a').on('click',function(e){
+	e.preventDefault();
+	incomingModal.fadeIn();
+});
+modalCloseBtn.on('click',function(e){
+	e.preventDefault();
+	incomingModal.fadeOut();
+});
 
 //스크롤시 headBox 색상 생성
 var win = $(window);
