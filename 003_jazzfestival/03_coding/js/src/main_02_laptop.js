@@ -4,7 +4,7 @@
 
 	var laptop = function(){
 		// jQuery 시작 
-		console.log('!!!!!!!')
+		// console.log('!!!!!!!')
 
 	var wrap = $('#wrap');
 	var headBox =  $('#headBox');
@@ -71,10 +71,29 @@
 	});
 
 
+	//viewBox ------------------
  //로드시 이미지 나타남
  viewBox.find('.view_text').addClass('active');
+ 
+//슬라이드배너 (작업중)
+var viewArea = viewBox.find('.view_area');
+var slideUl = viewArea.find('ul');
+var slideLi = viewArea.children('li');
 
 
+var bool = true;
+var n = 0;
+var FadeFn = function(n,k){
+	if( k !== n ){
+		slideLi.eq(n).css({zIndex:5, display:'block'});
+		slideLi.eq(k).stop().fadeOut( function(){
+			slideLi.eq(n).css({zIndex:10});
+			slideLi.eq(n).siblings('li').css({zIndex:0});
+			bool = true;
+		});
+	}
+};
+FadeFn();
 
 	//탑버튼 클릭시 최상단으로
 	var topBtn = $('.topBtn');

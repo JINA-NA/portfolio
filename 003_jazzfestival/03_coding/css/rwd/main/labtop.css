@@ -14,8 +14,37 @@
 		width: 100%; height: 800px; 
 		/* background-color: #ddd; */
 	}
+
+	.view_area {
+		position: absolute; top:0; left:0;
+		width:100%; height:100%;
+	}
+
+	.slide_wrap {
+		position: absolute;
+		width: 100%; height: 100%;
+	}
+	.slide_wrap:after, 	.slide_wrap::after {
+		content:"";
+		position: absolute; top: 0; left:0; 
+		width: 100%; height: 100%;
+		background-color:rgba(0, 0, 0, 0.8);
+	}
+	.slide_wrap li {
+		position: absolute; top:0; left:0;
+		width: 100%; height: 100%;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+	}
+	.slide_wrap li.slide_01 { background-image: url('../../../img/view_01.jpg'); }
+	.slide_wrap li.slide_02 { background-image: url('../../../img/view_02.jpg'); }
+	.slide_wrap li.slide_03 { background-image: url('../../../img/view_03.jpg'); }
+	.slide_wrap li.slide_04 { background-image: url('../../../img/view_04.jpg'); }
+
+
 	.view_text {
-		position: absolute; bottom: 30px; right: 30px; z-index: 500;
+		position: absolute; bottom: 30px; right: 30px;
 		width: 400px; height: auto;
 		transition: all 1000ms ease;
 		transform: translateX(500px); 
@@ -47,36 +76,9 @@
 		background-position: 50% 50% ;
 		/* background-color: #211aa1; */
 	}
-	.view_area {
-		position: relative;
-		width:100%; height:100%;
-		background-image: url(../../../img/hall.jpg);
-		background-repeat: no-repeat;
-		background-position: 50% 50%;
-		background-size: cover;
-	}
-	.view_video {
-		position: relative;
-		overflow: hidden;
-		width: 100%; height: 100%;
-	}
-	.view_video iframe{
-		display: block;
-		position: absolute; top:50%; left:50%;
-		transform: translate(-50%, -50%);
-		border:0;
-		width: auto; height: auto; 
-		min-width:100%; min-height: 100%;
-	}
-	.view_area:before,
-	.view_area::before{
-		position: absolute; top: 0; left: 0;
-		content: " ";
-		width: 100%; height: 100%; 
-		background-color: rgba(30, 30, 30, 0.6);
-	}
 	
-	
+
+
 	
 	/* #ticketBox ================================= */
 	#ticketBox {	

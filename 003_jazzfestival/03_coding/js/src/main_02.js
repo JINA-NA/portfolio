@@ -53,7 +53,7 @@ var activeRwd =
 $(window).on('resize',function(){
 	var nw = win.innerWidth();
 	var afterD = sizeCheck(nw);
-	console.log(afterD)
+	// console.log(afterD)
 	if(afterD !== beforeD){
 		location.reload();
 	}

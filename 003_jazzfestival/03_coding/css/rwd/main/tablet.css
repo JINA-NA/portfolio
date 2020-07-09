@@ -34,7 +34,7 @@
 	.view_text div {
 		float: right;
 		width: 400px; height: 400px;
-		background-image: url(../../../img/view_logo.svg);
+		background-image: url('../../../img/view_01.jpg');
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: 50% 50%;
