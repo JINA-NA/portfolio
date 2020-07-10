@@ -14,6 +14,68 @@
 		width: 100%; height: 800px; 
 		/* background-color: #ddd; */
 	}
+
+	.view_area {
+		position: relative;
+		width:100%; height:100%;
+	}
+	.view_area:before,
+	.view_area::before{
+		position: absolute; top: 0; left: 0;
+		content: " ";
+		width: 100%; height: 100%; 
+		background-color: rgba(30, 30, 30, 0.6);
+	}
+
+
+	/* 슬라이드버튼 */
+	.slide_btn {
+		position: absolute; top: 2rem; right: 2.5rem; z-index:1000;
+		width: auto; height: 0;
+	}
+	.slide_btn > button {
+		width: 30px; height: 30px;
+		background-color:rgba(255, 255, 255, 0.3);
+	}
+	.slide_btn i  {
+		color:#fff;
+	}
+	.slide_btn .next_btn {
+		float:right;
+	}
+	.slide_btn .prev_btn {
+		float:left;
+		margin-right: 0.3rem;
+	}
+	
+	/* 슬라이드배너 */
+	.slide_wrap {
+		/* position: absolute; top:0; left:0; */
+		width: 400%; height: 100%;
+		/* overflow: hidden; */
+	}
+
+	.slide_wrap:after, 	
+	.slide_wrap::after {
+		content:"";
+		position: absolute; top: 0; left:0; 
+		width: 100%; height: 100%;
+		background-color:rgba(0, 0, 0, 0.6);
+	}
+	.slide_wrap li {
+		float:left;
+		/* position: absolute; top:0; left:0; */
+		width: 25%; height: 100%;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+	}
+	.slide_wrap li.slide_01 { background-image: url('../../../img/view_01.jpg'); }
+	.slide_wrap li.slide_02 { background-image: url('../../../img/view_02.jpg'); }
+	.slide_wrap li.slide_03 { background-image: url('../../../img/view_03.jpg'); }
+	.slide_wrap li.slide_04 { background-image: url('../../../img/view_04.jpg'); }
+
+	/* 텍스트 */
 	.view_text {
 		position: absolute; bottom: 30px; right: 30px; z-index: 500;
 		width: 400px; height: auto;
@@ -34,27 +96,13 @@
 	.view_text div {
 		float: right;
 		width: 400px; height: 400px;
-		background-image: url('../../../img/view_01.jpg');
+		background-image: url('../../../img/view_logo.svg');
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: 50% 50%;
 		/* background-color: #211aa1; */
 	}
-	.view_area {
-		position: relative;
-		width:100%; height:100%;
-		background-image: url(../../../img/hall.jpg);
-		background-repeat: no-repeat;
-		background-position: 50% 50%;
-		background-size: cover;
-	}
-	.view_area:before,
-	.view_area::before{
-		position: absolute; top: 0; left: 0;
-		content: " ";
-		width: 100%; height: 100%; 
-		background-color: rgba(30, 30, 30, 0.6);
-	}
+
 	
 	
 	

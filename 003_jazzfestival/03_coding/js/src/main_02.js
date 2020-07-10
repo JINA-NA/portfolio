@@ -57,7 +57,7 @@ $(window).on('resize',function(){
 	if(afterD !== beforeD){
 		location.reload();
 	}
-	winWDevice();
+	// winWDevice();
 });
 
 

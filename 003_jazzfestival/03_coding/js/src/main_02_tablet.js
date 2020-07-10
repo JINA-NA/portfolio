@@ -84,7 +84,69 @@ exitBtn.on('click',function(e){
 });
 
 
+	//슬라이드배너
+	var viewArea = viewBox.find('.view_area');
+	var slideUl = viewArea.find('ul');
+	var slideLi = slideUl.children('li');
+	var lastLi = slideLi.eq(-1).clone(true);
+	slideUl.prepend(lastLi);
+	slideLi = slideUl.children('li');
+	// console.log(slideLi.length);
 
+	slideUl.css({width: slideLi.length * 100 + '%', marginLeft: -100 +'%', position:'relative'});
+	slideLi.css({width: 100 / slideLi.length + '%'});
+
+	var slideBtn = viewBox.find('button');
+	var nextBtn = viewBox.find('.next_btn');
+	var prevBtn = viewBox.find('.prev_btn');
+
+	var k = 0;
+	var bool = true;
+	var timed = 2000;
+
+	slideBtn.on('click',function(e){
+		e.preventDefault();
+
+		//next버튼 클릭시
+		var thisBtn = $(this)[0];
+		if(thisBtn === nextBtn[0] && bool ){
+			bool = false;
+			k += 1;
+			// console.log(k)
+			slideUl.stop().animate({left: -100 * k + '%'}, timed, function(){
+				if(k >= slideLi.length-2){
+					k = -1;
+					slideUl.css({left:-100 * k + '%'});
+				}
+				bool = true;
+			});
+			
+			//prev 버튼 클릭시
+		} else if( bool ){
+			bool = false;
+			k -= 1;
+			// console.log(k)
+			slideUl.stop().animate({left: -100 * k + '%'}, timed, function(){
+				if(k <= -1){
+					k = slideLi.length-2;
+					slideUl.css({left: -100 * k + '%'});
+				}
+				bool = true;
+			});
+		}
+	});
+
+	//버튼 자동 클릭
+	var myImg;
+	var MyslideGo = function(){
+		myImg = setInterval(function(){
+			nextBtn.trigger('click');
+		},timed*2)
+	};
+	MyslideGo();
+	var clearFn = function(){ clearInterval(myImg); };
+	var goFn = function(){ MyslideGo();	}
+	viewArea.on({'mouseenter':	clearFn,	'mouseleave': goFn })
 
 
 
@@ -138,13 +200,13 @@ sponsorLiLast = sponsorLi.eq(-1).clone(true);
 var sponLiFistSize =sponsorLi.eq(1).outerWidth(true);
 sponsorUl.css({width:sponsorLeng*100+'%', position:'relative',top:0,left:0});
 
-setInterval(function(){
-	sponsorUl.animate({left:-sponLiFistSize + 'px'}, function(){
-		sponsorLi.eq(1).prevAll('li').appendTo(sponsorUl);
-		sponsorUl.css({left:0});
-		sponsorLi = sponsorUl.find('li');
-	});
-},3000);
+// setInterval(function(){
+// 	sponsorUl.animate({left:-sponLiFistSize + 'px'}, function(){
+// 		sponsorLi.eq(1).prevAll('li').appendTo(sponsorUl);
+// 		sponsorUl.css({left:0});
+// 		sponsorLi = sponsorUl.find('li');
+// 	});
+// },3000);
 // ==========
 
 
