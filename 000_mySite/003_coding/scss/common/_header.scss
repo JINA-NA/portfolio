@@ -18,6 +18,7 @@
     width: 80px; height: 60px;
     // background-color: $keyColor;
     font-size: 1.5rem;
+    text-align:center;
     
     >a {
       @include aLink();

@@ -18,8 +18,6 @@ greetingText.empty();
 
 var gArr = gText.split('');
 
-console.log('j', gArr.indexOf('J'));
-
 
 (function(){
 	var i = 0;
