@@ -27,7 +27,7 @@
 	//외부문서 불러오기
 	$.ajax({
 		url:"../data/portfolio.json",
-	}).done(function(data){
+		success:function(data){
 		// console.log(data);
 		var i = 0;
 		var title, img, thumUrl;
@@ -62,7 +62,7 @@
 		for(; i < pofolLi.length ; i++){
 			pofolLi = contentBox.find('li');
 			liOffset[i] = pofolLi.eq(i).offset().top;
-			console.log(liOffset);
+			// console.log(liOffset);
 		}
 
 		//하나씩 나타나기
@@ -70,7 +70,7 @@
 
 		win.on('scroll',function(e){
 			myScroll = win.scrollTop();
-			console.log('myScroll:'+myScroll);
+			// console.log('myScroll:'+myScroll);
 			
 			for(var i = 0; i < pofolLi.length ; i++){
 				if( myScroll+400 >= liOffset[i] ){
@@ -79,7 +79,7 @@
 			} 
 		});
 
-
+	} //$.ajax.success
 		//--//$.ajax
 	});
 

@@ -39,7 +39,7 @@ ctx.textAlign = 'center';
 ctx.lineCap = 'round';
 
 //본격적으로 도형 만들기
-
+var circleGraph;
 var myGraph = function(x,y,p,s){
 	var posX = x;
 	var posY = y;
@@ -60,7 +60,7 @@ var myGraph = function(x,y,p,s){
 	};
 
 
-	var circleGraph = function(){
+	circleGraph = function(){
 		ani = function(percent){
 			var lineWidth = 20;
 			var r = 80;
@@ -124,7 +124,7 @@ win.on('scroll',function(e){
 		myGraph(310,390,80,'Photoshop');
 		myGraph(530,390,90,'Indesign');
 	} else {
-		cancelAnimationFrame(circleGraph);	
+		cancelAnimationFrame( circleGraph );	
 	}
 });
 
