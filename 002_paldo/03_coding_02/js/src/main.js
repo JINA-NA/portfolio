@@ -59,6 +59,22 @@ var productBox = $('#productBox');
 var iconLi = productBox.find('.product_group').find('li');
 
 
+
+
+
+// ==================
+//메뉴 버튼 누르면 옆에서 메뉴 나오기(mobile, tablet)
+var gnbBtn = $('.gnb_btn');
+var miniGnb = $('#gnbBox_mini');
+
+miniGnb.hide();
+miniGnb.css({transform:'translateY(-100%)', transition: 'all 300ms ease'});
+gnbBtn.on('click',function(e){
+	miniGnb.animate({transform:'translateY(0)'});
+});
+
+
+// ==================
 //각각 offset 파악
 var iconLiArr = [];
 for(var i = 0; i < 3; i++){

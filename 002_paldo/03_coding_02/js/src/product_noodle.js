@@ -28,7 +28,7 @@ gnbDtLink.on('mouseenter focus',function(){
 });
 
 //mouseleave시에 dd 사라지기
-gnbBox.on('mouseleave',function(){
+gnbBox.on('mouseleave blur',function(){
 	gnbDd.stop().slideUp();
 	gnbBox.find('li').removeClass('active');
 
@@ -192,11 +192,11 @@ cateLink.on('click',function(e){
 
 //mouseenter 시에
 var proLiLink = proLi.find('a');
-proLiLink.on('mouseenter',function(){
+proLiLink.on('mouseenter focus',function(){
 	$(this).children('div').addClass('active');
 	$(this).parent('li').siblings().find('div').removeClass('active');
 });
-proLiLink.on('mouseleave',function(){
+proLiLink.on('mouseleave blur',function(){
 	$(this).children('div').removeClass('active');
 });
 
