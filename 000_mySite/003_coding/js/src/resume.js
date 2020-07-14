@@ -26,6 +26,7 @@ infoDiv.eq(0).find('span').addClass('active');
 // ===============================
 
 // 그래프===============================
+var myGraph = function(x,y,p,s){
 var canvas = document.querySelector('.skill_graph');
 var ctx = canvas.getContext('2d');
 
@@ -40,7 +41,6 @@ ctx.lineCap = 'round';
 
 //본격적으로 도형 만들기
 var circleGraph;
-var myGraph = function(x,y,p,s){
 	var posX = x;
 	var posY = y;
 	var percent = p;
@@ -102,7 +102,7 @@ var myGraph = function(x,y,p,s){
 
 
 var canvasOff = $('.skills').offset().top;
-
+var gauge = true; //그래프 애니메이션 한번만 수행하도록하기
 win.on('scroll',function(e){
 	myScroll = win.scrollTop();
 	
@@ -114,7 +114,8 @@ win.on('scroll',function(e){
 
 	// canvas 기능수행
 
-	if( myScroll+600 >= canvasOff ){
+	if( myScroll+600 >= canvasOff && gauge ){
+		gauge = false;
 		myGraph(90,90,70,'HTML');
 		myGraph(310,90,80,'CSS');
 		myGraph(530,90,55,'jQuery');
