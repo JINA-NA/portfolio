@@ -2,6 +2,15 @@
 
 
 //변수 -----------------------------
+// device size --------
+$mobile : 640px;
+$tablet : 940px;
+$labtop : 1240px;
+
+// size --------
+$maxWidth : 1440px;
+
+
 // color -------
 $black : #0d0d0d;
 $white : #fff;
@@ -13,8 +22,6 @@ $boxShadowColor : rgba(31,31,31,0.5);
 $textShadow :rgba(31,31,31,0.5);
 
 
-// size --------
-$maxWidth : 1440px;
 
 // font --------
 $bodyText : 1.1rem;
