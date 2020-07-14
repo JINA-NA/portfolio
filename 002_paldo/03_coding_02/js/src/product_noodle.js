@@ -94,16 +94,6 @@ var noodleArr =  [
 	{name:'남자라면', img:'lunch_con_001.png'},
 	{name:'일품 해물라면', img:'tab_0001_txt05.png'},
 	{name:'일품 짜장면', img:'tab_0001_txt01.png'},
-	{name:'팔도 짜장면', img:'tab_paldo_jjajangmen_txt01.png'},
-	{name:'팔도 짜장면', img:'tab_paldo_jjajangmen_txt01.png'},
-	{name:'팔도 짜장면', img:'tab_paldo_jjajangmen_txt01.png'},
-	{name:'팔도 짜장면', img:'tab_paldo_jjajangmen_txt01.png'},
-	{name:'팔도 짜장면', img:'tab_paldo_jjajangmen_txt01.png'},
-	{name:'팔도 짜장면', img:'tab_paldo_jjajangmen_txt01.png'},
-	{name:'팔도 짜장면', img:'tab_paldo_jjajangmen_txt01.png'},
-	{name:'팔도 짜장면', img:'tab_paldo_jjajangmen_txt01.png'},
-	{name:'팔도 짜장면', img:'tab_paldo_jjajangmen_txt01.png'},
-	{name:'팔도 짜장면', img:'tab_paldo_jjajangmen_txt01.png'},
 	{name:'팔도 짜장면', img:'tab_paldo_jjajangmen_txt01.png'}
 ];
 var beverageArr = [

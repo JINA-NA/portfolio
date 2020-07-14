@@ -98,7 +98,7 @@ thumImg.append('<ul></ul>');
 
 var productImg = {
 	'big':['bibims_con_001.png', 'bibimmen_con_039.png', 'big3_bokkimchi_men_con_001.png'],
-	'thum': ['bibims_con_001.png', 'bibimmen_con_039.png', 'big3_bokkimchi_men_con_001.png']
+	'thum': ['bibims_con_001.png']
 };
 var url = '../img/product/';
 for( var i = 0; i < productImg.thum.length ; i++){
