@@ -8,19 +8,27 @@
 // -----
 @import '../common/wrap';
 // -----
-@import '../common/header';
+@import '../common/header_m';
+@import '../common/header_t';
+@import '../common/header_l';
 // -----
 @import '../page/main_m';
 @import '../page/main_t';
 @import '../page/main_l';
 // -----
-@import '../common/footer';
+@import '../common/footer_m';
+@import '../common/footer_t';
+@import '../common/footer_l';
+
 // -----
 
 
 
 
 // footer 일부 수정
-#footBox {
-  position: absolute; bottom:0; left:0; right:0;
+@media all and (min-width:$mobile){
+
+	#footBox {
+		position: absolute; bottom:0; left:0; right:0;
+	}
 }
