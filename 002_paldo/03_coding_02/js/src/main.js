@@ -15,51 +15,52 @@ var gnbDtLink = gnbBox.find('dt').find('a');
 var gnbDd = gnbBox.find('dd')
 var gnbDdLink = gnbBox.find('dd').find('a');
 
-//mouseenter시에 dd 나타나기
-gnbDtLink.on('mouseenter focus',function(){
-	gnbDd.stop().slideDown();
-	$(this).parents('li').addClass('active');
-	$(this).parents('li').siblings().removeClass('active');
+var pcHeaderFn = function(){
+	//mouseenter시에 dd 나타나기
+	gnbDtLink.on('mouseenter focus',function(){
+		gnbDd.stop().slideDown();
+		$(this).parents('li').addClass('active');
+		$(this).parents('li').siblings().removeClass('active');
 
-	headBox.addClass('active');
-});
-
-
-//mouseleave시에 dd 사라지기
-gnbBox.on('mouseleave',function(){
-	gnbDd.stop().slideUp();
-	gnbBox.find('li').removeClass('active');
-
-	headBox.removeClass('active');
-});
-
-//blur시에 dd 사라지기
-gnbDdLink.eq(-1).on('blur',function(){
-	gnbDd.stop().slideUp();
-	headBox.removeClass('active');
-});
-//dd mouseenter 시 속성
-gnbDdLink.on('mouseenter focus',function(){
-	$(this).css({color:'#E43D30', fontWeight:'bold'});
-	$(this).parent('li').siblings().find('a').removeAttr('style');
-
-	$(this).parents('li').addClass('active');
-	$(this).parents('li').siblings().removeClass('active');
-});
-gnbDdLink.on('mouseleave blur',function(){
-	$(this).removeAttr('style');
-});
+		headBox.addClass('active');
+	});
 
 
-//스크롤시 headBox 색상 생성
-var win = $(window);
-var winH = win.outerHeight();
-var winW = win.outerWidth();
-var myScroll;
+	//mouseleave시에 dd 사라지기
+	gnbBox.on('mouseleave',function(){
+		gnbDd.stop().slideUp();
+		gnbBox.find('li').removeClass('active');
 
-var productBox = $('#productBox');
-var iconLi = productBox.find('.product_group').find('li');
+		headBox.removeClass('active');
+	});
 
+	//blur시에 dd 사라지기
+	gnbDdLink.eq(-1).on('blur',function(){
+		gnbDd.stop().slideUp();
+		headBox.removeClass('active');
+	});
+	//dd mouseenter 시 속성
+	gnbDdLink.on('mouseenter focus',function(){
+		$(this).css({color:'#E43D30', fontWeight:'bold'});
+		$(this).parent('li').siblings().find('a').removeAttr('style');
+
+		$(this).parents('li').addClass('active');
+		$(this).parents('li').siblings().removeClass('active');
+	});
+	gnbDdLink.on('mouseleave blur',function(){
+		$(this).removeAttr('style');
+	});
+};
+
+
+	//스크롤시 headBox 색상 생성
+	var win = $(window);
+	var winH = win.outerHeight();
+	var winW = win.outerWidth();
+	var myScroll;
+
+	var productBox = $('#productBox');
+	var iconLi = productBox.find('.product_group').find('li');
 
 
 
@@ -70,16 +71,32 @@ var gnbBtn = $('.gnb_btn');
 var gnbArea = $('.gnb_area');
 var gnbClose = $('.gnb_close_btn');
 
-gnbArea.css({width: winW, height: winH, maxWidth:'320px'});
+
+var mobileHeaerFn = function(){
+	gnbArea.css({width: winW, height: winH, maxWidth:'320px'});
+	
+	gnbBtn.on('click',function(e){
+		e.preventDefault();
+		gnbArea.show();
+	});
+	gnbClose.on('click',function(e){
+		e.preventDefault();
+		gnbArea.hide();
+	});
+};
 
 
-gnbBtn.on('click',function(e){
-	e.preventDefault();
-	gnbArea.show();
-});
-gnbClose.on('click',function(e){
-	e.preventDefault();
-	gnbArea.hide();
+// 반응형 header 기능(창 너비에 따라서 다르게)
+win.on('resize',function(e){
+	if(winW > 1200){
+		pcHeaderFn();
+	} else if (winW > 940){
+		pcHeaderFn();
+	} else if (winW > 640){
+		mobileHeaerFn();
+	} else {
+		mobileHeaerFn();
+	}
 });
 
 
