@@ -4,12 +4,18 @@
 // 네비게이션
 var headBox = $('#headBox');
 var gnbBox = $('#gnbBox');
-var gnbUl = gnbBox.children('ul');
+var gnbArea = $('.gnb_area');
+var gnbUl = gnbArea.children('ul');
 var gnbDt = gnbBox.find('dt')
 var gnbDtLink = gnbBox.find('dt').find('a');
 var gnbDd = gnbBox.find('dd')
 var gnbDdLink = gnbBox.find('dd').find('a');
 
+var gnbBtn = $('.gnb_btn');
+var gnbClose = $('.gnb_close_btn');
+
+
+// 함수 정의내리기
 var pcHeaderFn = function(){
 	//mouseenter시에 dd 나타나기
 	gnbDtLink.on('mouseenter focus',function(){
@@ -74,11 +80,6 @@ var pcHeaderFn = function(){
 
 // ==================
 //메뉴 버튼 누르면 옆에서 메뉴 나오기(mobile, tablet)
-var gnbBtn = $('.gnb_btn');
-var gnbArea = $('.gnb_area');
-var gnbClose = $('.gnb_close_btn');
-
-
 var mobileHeaerFn = function(){
 	gnbArea.css({position:'fixed', width: winW, height: winH, maxWidth:'320px'});
 	

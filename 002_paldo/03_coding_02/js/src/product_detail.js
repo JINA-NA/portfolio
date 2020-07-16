@@ -6,26 +6,6 @@
 	// jQuery 시작 
 
 
-//스크롤시 headBox 색상 생성
-var win = $(window);
-var winH = win.outerHeight();
-var myScroll;
-
-
-//mousewheel 시, header 나왔다가 들어왔다가
-win.on('mousewheel DOMMouseScroll',function(e){
-	var eo = e.originalEvent;
-	var delta = eo.wheelDelta;
-	// console.log(delta)
-	if(delta <= 0){
-		headBox.hide();
-		} else {
-			headBox.show();
-		}
-});
-
-
-
 
 
 // 페이지 개별 속성--------------------------------------
