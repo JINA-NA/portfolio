@@ -11,6 +11,7 @@
 			background-color:$black;
 			color:$white;
 			padding-top: 100px;
+			overflow-x: hidden;
 		}
 		.content_area {
 			@include areaSize($w:100%, $mw:$maxWidth){
@@ -121,12 +122,11 @@
 				// }
 	
 				.skill_graph {
-					width: 100%; height: auto;
+					width:400px; height: auto;
 				}
 			}
 	
-			.cerfi {
-			}
+			.cerfi {	}
 			.interest {
 				>ul { width: 100%; height: auto; }
 				>ul li {

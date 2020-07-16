@@ -156,7 +156,8 @@
     margin: auto;
     background-color: #0d0d0d;
     color: #fff;
-    padding-top: 100px; }
+    padding-top: 100px;
+    overflow-x: hidden; }
     #contentBox .content_area {
       width: 100%;
       max-width: 1440px;
@@ -247,7 +248,7 @@
       #contentBox .content_area .experience {
         margin-right: 0; }
       #contentBox .content_area .skills .skill_graph {
-        width: 100%;
+        width: 400px;
         height: auto; }
       #contentBox .content_area .interest > ul {
         width: 100%;
@@ -308,7 +309,7 @@
         box-sizing: border-box; }
         #contentBox .content_area > div > h3 {
           position: relative;
-          font-size: 2rem;
+          font-size: 1.5rem;
           margin-bottom: 1.5rem; }
           #contentBox .content_area > div > h3 > span {
             position: relative;
@@ -396,7 +397,7 @@
         border-radius: 100%;
         background-color: #fa3; }
       #contentBox .content_area .skills .skill_graph {
-        width: 100%;
+        width: 450px;
         height: auto; }
       #contentBox .content_area .cerfi {
         margin-right: 0; }

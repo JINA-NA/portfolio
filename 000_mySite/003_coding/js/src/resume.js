@@ -27,20 +27,20 @@ infoDiv.eq(0).find('span').addClass('active');
 
 // 그래프===============================
 var myGraph = function(x,y,p,s){
-var canvas = document.querySelector('.skill_graph');
-var ctx = canvas.getContext('2d');
-
-//꾸미는 속성
-var keyColor = '#fa3';
-ctx.strokeStyle = keyColor;
-ctx.fillStyle = '#fff';
-ctx.lineWidth = 10;
-ctx.font = 'bold 1.5rem sans-serif';
-ctx.textAlign = 'center';
-ctx.lineCap = 'round';
-
-//본격적으로 도형 만들기
-var circleGraph;
+	var canvas = document.querySelector('.skill_graph');
+	var ctx = canvas.getContext('2d');
+	
+	//꾸미는 속성
+	var keyColor = '#fa3';
+	ctx.strokeStyle = keyColor;
+	ctx.fillStyle = '#fff';
+	ctx.lineWidth = 10;
+	ctx.font = 'bold 1.5rem sans-serif';
+	ctx.textAlign = 'center';
+	ctx.lineCap = 'round';
+	
+	//본격적으로 도형 만들기
+	var circleGraph;
 	var posX = x;
 	var posY = y;
 	var percent = p;
@@ -117,7 +117,7 @@ win.on('scroll',function(e){
 	if( myScroll+600 >= canvasOff && gauge ){
 		gauge = false;
 		myGraph(90,90,70,'HTML');
-		myGraph(310,90,80,'CSS');
+		myGraph(310,90,70,'CSS');
 		myGraph(530,90,55,'jQuery');
 		myGraph(750,90,60,'SCSS');
 
@@ -125,7 +125,7 @@ win.on('scroll',function(e){
 		myGraph(310,390,80,'Photoshop');
 		myGraph(530,390,90,'Indesign');
 	} else {
-		cancelAnimationFrame( circleGraph );	
+		cancelAnimationFrame( myGraph );	
 	}
 });
 
