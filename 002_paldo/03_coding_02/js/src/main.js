@@ -50,6 +50,7 @@ var pcHeaderFn = function(){
 	gnbDdLink.on('mouseleave blur',function(){
 		$(this).removeAttr('style');
 	});
+	// 끝 pcHeaderFn
 };
 
 
@@ -73,21 +74,27 @@ var gnbClose = $('.gnb_close_btn');
 
 
 var mobileHeaerFn = function(){
-	gnbArea.css({width: winW, height: winH, maxWidth:'320px'});
+	gnbArea.css({position:'fixed', width: winW, height: winH, maxWidth:'320px'});
 	
 	gnbBtn.on('click',function(e){
 		e.preventDefault();
-		gnbArea.show();
+		gnbArea.addClass('active');
 	});
 	gnbClose.on('click',function(e){
 		e.preventDefault();
-		gnbArea.hide();
+		gnbArea.removeClass('active');
 	});
+	
+	gnbDtLink.on('mouseenter focus',function(){
+		$(this).parents('dt').next('dd').stop().slideDown();
+		$(this).parents('li').siblings().find('dd').stop().slideUp();
+	});
+	//  끝 mobileHeaerFn
 };
 
 
-// 반응형 header 기능(창 너비에 따라서 다르게)
-win.on('resize',function(e){
+// 디바이스 너비 파악하여 알맞은 header 보여주기
+var deviceHeader = function(){
 	if(winW > 1200){
 		pcHeaderFn();
 	} else if (winW > 940){
@@ -97,6 +104,13 @@ win.on('resize',function(e){
 	} else {
 		mobileHeaerFn();
 	}
+}
+// 최초 로드시 너비 파악하여 맞는 header 보여주기
+deviceHeader();
+
+// 반응형 header 기능(창 너비에 따라서 다르게)
+win.on('resize',function(e){
+	deviceHeader();
 });
 
 
@@ -155,7 +169,7 @@ var slideLi = slideWrap.find('li');
 var lastLi = slideLi.eq(-1).clone(true);
 slideWrap.prepend(lastLi);
 slideLi = slideWrap.find('li');
-console.log(slideLi.length);
+// console.log(slideLi.length);
 
 slideWrap.css({width: 400 +'%', position:'relative', left:-100+'%'});
 slideLi.css({width: 25 + '%'});
