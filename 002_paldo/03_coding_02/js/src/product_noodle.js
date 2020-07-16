@@ -8,65 +8,6 @@
 	var winH = win.outerHeight();
 	var myScroll;
 
-// 모든페이지 공통 속성----------------------------
-//headBox 영역 제어 =========================
-// 네비게이션
-var headBox = $('#headBox');
-var gnbBox = $('#gnbBox');
-var gnbUl = gnbBox.children('ul');
-var gnbDtLink = gnbBox.find('dt').find('a');
-var gnbDd = gnbBox.find('dd')
-var gnbDdLink = gnbBox.find('dd').find('a');
-
-//mouseenter시에 dd 나타나기
-gnbDtLink.on('mouseenter focus',function(){
-	gnbDd.stop().slideDown();
-	$(this).parents('li').addClass('active');
-	$(this).parents('li').siblings().removeClass('active');
-
-	headBox.addClass('active');
-});
-
-//mouseleave시에 dd 사라지기
-gnbBox.on('mouseleave blur',function(){
-	gnbDd.stop().slideUp();
-	gnbBox.find('li').removeClass('active');
-
-	headBox.removeClass('active');
-});
-
-//blur시에 dd 사라지기
-gnbDdLink.eq(-1).on('blur',function(){
-	gnbDd.stop().slideUp();
-	headBox.removeClass('active');
-});
-//dd mouseenter 시 속성
-gnbDdLink.on('mouseenter focus',function(){
-	$(this).css({color:'#E43D30', fontWeight:'bold'});
-	$(this).parent('li').siblings().find('a').removeAttr('style');
-
-	$(this).parents('li').addClass('active');
-	$(this).parents('li').siblings().removeClass('active');
-});
-gnbDdLink.on('mouseleave blur',function(){
-	$(this).removeAttr('style');
-});
-
-//incoming modal 창
-var incomingModal = $('.incoming_modal');
-var modalCloseBtn = incomingModal.find('.close_btn').children('button');
-gnbUl.children('li').eq(2).find('a').on('click',function(e){
-	e.preventDefault();
-	incomingModal.fadeIn();
-});
-gnbUl.children('li').eq(3).find('a').on('click',function(e){
-	e.preventDefault();
-	incomingModal.fadeIn();
-});
-modalCloseBtn.on('click',function(e){
-	e.preventDefault();
-	incomingModal.fadeOut();
-});
 
 
 //mousewheel 시, header 나왔다가 들어왔다가
