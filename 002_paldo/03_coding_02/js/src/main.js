@@ -24,6 +24,7 @@ gnbDtLink.on('mouseenter focus',function(){
 	headBox.addClass('active');
 });
 
+
 //mouseleave시에 dd 사라지기
 gnbBox.on('mouseleave',function(){
 	gnbDd.stop().slideUp();
@@ -53,6 +54,7 @@ gnbDdLink.on('mouseleave blur',function(){
 //스크롤시 headBox 색상 생성
 var win = $(window);
 var winH = win.outerHeight();
+var winW = win.outerWidth();
 var myScroll;
 
 var productBox = $('#productBox');
@@ -65,13 +67,21 @@ var iconLi = productBox.find('.product_group').find('li');
 // ==================
 //메뉴 버튼 누르면 옆에서 메뉴 나오기(mobile, tablet)
 var gnbBtn = $('.gnb_btn');
-var miniGnb = $('#gnbBox_mini');
+var gnbArea = $('.gnb_area');
+var gnbClose = $('.gnb_close_btn');
 
-miniGnb.hide();
-miniGnb.css({transform:'translateY(-100%)', transition: 'all 300ms ease'});
+gnbArea.css({width: winW, height: winH, maxWidth:'320px'});
+
+
 gnbBtn.on('click',function(e){
-	miniGnb.animate({transform:'translateY(0)'});
+	e.preventDefault();
+	gnbArea.show();
 });
+gnbClose.on('click',function(e){
+	e.preventDefault();
+	gnbArea.hide();
+});
+
 
 
 // ==================
