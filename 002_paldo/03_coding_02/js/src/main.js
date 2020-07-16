@@ -29,18 +29,6 @@ win.on('scroll',function(){
 
 
 
-//mousewheel 시, header 나왔다가 들어왔다가
-win.on('mousewheel DOMMouseScroll',function(e){
-	var eo = e.originalEvent;
-	var delta = eo.wheelDelta;
-	// console.log(delta)
-	if(delta <= 0){
-		headBox.hide();
-		} else {
-			headBox.show();
-		}
-});
-
 //슬라이드배너====================================
 var viewBox = $('#viewBox');
 var slideWrap = $('.slide_wrap');

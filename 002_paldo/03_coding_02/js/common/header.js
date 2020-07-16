@@ -20,7 +20,6 @@ var pcHeaderFn = function(){
 		headBox.addClass('active');
 	});
 
-
 	//mouseleave시에 dd 사라지기
 	gnbBox.on('mouseleave',function(){
 		gnbDd.stop().slideUp();
@@ -45,6 +44,18 @@ var pcHeaderFn = function(){
 	gnbDdLink.on('mouseleave blur',function(){
 		$(this).removeAttr('style');
 	});
+
+	//mousewheel 시, header 나왔다가 들어왔다가
+	win.on('mousewheel DOMMouseScroll',function(e){
+		var eo = e.originalEvent;
+		var delta = eo.wheelDelta;
+		// console.log(delta)
+		if(delta <= 0){
+			headBox.hide();
+			} else {
+				headBox.show();
+			}
+});
 	// 끝 pcHeaderFn
 };
 
@@ -73,17 +84,19 @@ var mobileHeaerFn = function(){
 	
 	gnbBtn.on('click',function(e){
 		e.preventDefault();
+		gnbArea.show();
 		gnbArea.addClass('active');
+		
+		gnbDtLink.on('mouseenter focus',function(){
+			$(this).parents('dt').next('dd').stop().slideDown();
+			$(this).parents('li').siblings().find('dd').stop().slideUp();
+		});
 	});
 	gnbClose.on('click',function(e){
 		e.preventDefault();
 		gnbArea.removeClass('active');
 	});
 	
-	gnbDtLink.on('mouseenter focus',function(){
-		$(this).parents('dt').next('dd').stop().slideDown();
-		$(this).parents('li').siblings().find('dd').stop().slideUp();
-	});
 	//  끝 mobileHeaerFn
 };
 
